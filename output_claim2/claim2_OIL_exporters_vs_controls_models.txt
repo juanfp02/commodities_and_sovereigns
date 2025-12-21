@@ -1,0 +1,28 @@
+=== CLAIM 2 MODELS:  OIL_exporters_vs_controls  ===
+
+
+--- Jump probability (country+date FE) ---
+GLM estimation, family = binomial, Dep. Var.: jump_neg
+Observations: 1,426
+Fixed-effects: country: 7,  date: 217
+Standard-errors: Clustered (country) 
+              Estimate Std. Error  z value Pr(>|z|)    
+oil_crash_exp  1.57828    0.68691 2.297646 0.021582 *  
+r_fx          12.82039   14.70354 0.871925 0.383249    
+---
+Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
+Log-Likelihood:  -719.3   Adj. Pseudo R2: -0.096844
+           BIC: 3,072.6     Squared Cor.:  0.202708
+
+--- Jump severity (jump weeks only; country+date FE) ---
+OLS estimation, Dep. Var.: jump_mag
+Observations: 307
+Fixed-effects: country: 7,  date: 97
+Standard-errors: Clustered (country) 
+               Estimate Std. Error   t value Pr(>|t|)    
+oil_crash_exp  0.050333   0.013724  3.667452 0.010486 *  
+r_fx          -0.054151   0.115925 -0.467122 0.656894    
+---
+Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
+RMSE: 0.03195     Adj. R2: 0.595264
+                Within R2: 0.047497

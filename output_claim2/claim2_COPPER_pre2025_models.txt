@@ -1,0 +1,28 @@
+=== CLAIM 2 MODELS:  COPPER_pre2025  ===
+
+
+--- Jump probability (country+date FE) ---
+GLM estimation, family = binomial, Dep. Var.: jump_neg
+Observations: 1,093
+Fixed-effects: country: 6,  date: 197
+Standard-errors: Clustered (country) 
+                  Estimate Std. Error  z value Pr(>|z|) 
+copper_crash_exp  0.776526   0.970346 0.800257  0.42356 
+r_fx             14.030519  15.203528 0.922846  0.35609 
+---
+Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
+Log-Likelihood:  -582.7   Adj. Pseudo R2: -0.15419 
+           BIC: 2,592.8     Squared Cor.:  0.189403
+
+--- Jump severity (jump weeks only; country+date FE) ---
+OLS estimation, Dep. Var.: jump_mag
+Observations: 237
+Fixed-effects: country: 6,  date: 80
+Standard-errors: Clustered (country) 
+                  Estimate Std. Error  t value Pr(>|t|)    
+copper_crash_exp -0.054161   0.016916 -3.20172 0.023949 *  
+r_fx              0.139745   0.126324  1.10624 0.318986    
+---
+Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
+RMSE: 0.019775     Adj. R2: 0.534809
+                 Within R2: 0.047286

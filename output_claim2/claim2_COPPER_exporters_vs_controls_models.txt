@@ -1,0 +1,28 @@
+=== CLAIM 2 MODELS:  COPPER_exporters_vs_controls  ===
+
+
+--- Jump probability (country+date FE) ---
+GLM estimation, family = binomial, Dep. Var.: jump_neg
+Observations: 1,111
+Fixed-effects: country: 6,  date: 200
+Standard-errors: Clustered (country) 
+                  Estimate Std. Error  z value Pr(>|z|) 
+copper_crash_exp  0.975029    1.09262 0.892380  0.37219 
+r_fx             13.366221   15.00296 0.890906  0.37298 
+---
+Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
+Log-Likelihood:  -593.8   Adj. Pseudo R2: -0.15413 
+           BIC: 2,639.3     Squared Cor.:  0.187262
+
+--- Jump severity (jump weeks only; country+date FE) ---
+OLS estimation, Dep. Var.: jump_mag
+Observations: 243
+Fixed-effects: country: 6,  date: 82
+Standard-errors: Clustered (country) 
+                  Estimate Std. Error   t value Pr(>|t|)    
+copper_crash_exp -0.044610   0.016659 -2.677752 0.043938 *  
+r_fx              0.110361   0.128681  0.857628 0.430279    
+---
+Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
+RMSE: 0.01986     Adj. R2: 0.524366
+                Within R2: 0.034732

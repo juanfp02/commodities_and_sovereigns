@@ -1,0 +1,188 @@
+=== ROBUSTNESS: PRE-2025 ONLY ===
+
+
+--------------------------------------------
+SHOCK_Q= 0.1  | JUMP_Q= 0.05 
+--------------------------------------------
+
+
+[OIL] Jump prob FE:
+GLM estimation, family = binomial, Dep. Var.: jump_neg
+Observations: 1,359
+Fixed-effects: country: 7,  date: 207
+Standard-errors: Clustered (country) 
+              Estimate Std. Error  z value Pr(>|z|)    
+oil_crash_exp  1.41576   0.622062 2.275918 0.022851 *  
+r_fx          11.87400  13.829182 0.858619 0.390551    
+---
+Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
+Log-Likelihood:  -686.7   Adj. Pseudo R2: -0.099609
+           BIC: 2,924.5     Squared Cor.:  0.200538
+
+[COPPER] Jump prob FE:
+GLM estimation, family = binomial, Dep. Var.: jump_neg
+Observations: 1,076
+Fixed-effects: country: 6,  date: 194
+Standard-errors: Clustered (country) 
+                  Estimate Std. Error  z value Pr(>|z|) 
+copper_crash_exp  0.162784    1.12673 0.144474  0.88513 
+r_fx             15.157868   14.56344 1.040816  0.29796 
+---
+Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
+Log-Likelihood:  -571.6   Adj. Pseudo R2: -0.157615
+           BIC: 2,546.3     Squared Cor.:  0.189249
+
+--------------------------------------------
+SHOCK_Q= 0.1  | JUMP_Q= 0.1 
+--------------------------------------------
+
+
+[OIL] Jump prob FE:
+GLM estimation, family = binomial, Dep. Var.: jump_neg
+Observations: 2,451
+Fixed-effects: country: 7,  date: 372
+Standard-errors: Clustered (country) 
+              Estimate Std. Error z value Pr(>|z|)    
+oil_crash_exp  1.51933   0.706686 2.14993 0.031561 *  
+r_fx          19.87589  13.486323 1.47378 0.140540    
+---
+Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
+Log-Likelihood: -1,257.7   Adj. Pseudo R2: -0.081933
+           BIC:  5,481.0     Squared Cor.:  0.209165
+
+[COPPER] Jump prob FE:
+GLM estimation, family = binomial, Dep. Var.: jump_neg
+Observations: 1,924
+Fixed-effects: country: 6,  date: 346
+Standard-errors: Clustered (country) 
+                  Estimate Std. Error  z value Pr(>|z|) 
+copper_crash_exp  0.408717    1.67689 0.243736  0.80744 
+r_fx             17.237510   13.66115 1.261790  0.20702 
+---
+Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
+Log-Likelihood: -1,028.5   Adj. Pseudo R2: -0.126187
+           BIC:  4,726.4     Squared Cor.:  0.210573
+
+--------------------------------------------
+SHOCK_Q= 0.1  | JUMP_Q= 0.02 
+--------------------------------------------
+
+
+[OIL] Jump prob FE:
+GLM estimation, family = binomial, Dep. Var.: jump_neg
+Observations: 603
+Fixed-effects: country: 7,  date: 92
+Standard-errors: Clustered (country) 
+              Estimate Std. Error z value   Pr(>|z|)    
+oil_crash_exp  2.22812   0.629577 3.53907 0.00040153 ***
+r_fx          10.83295   8.435180 1.28426 0.19905149    
+---
+Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
+Log-Likelihood:  -296.3   Adj. Pseudo R2: -0.129675
+           BIC: 1,232.7     Squared Cor.:  0.186698
+
+[COPPER] Jump prob FE:
+GLM estimation, family = binomial, Dep. Var.: jump_neg
+Observations: 448
+Fixed-effects: country: 6,  date: 81
+Standard-errors: Clustered (country) 
+                 Estimate Std. Error   z value   Pr(>|z|)    
+copper_crash_exp -2.48889   0.319895 -7.780337 7.2331e-15 ***
+r_fx              9.09633   9.816976  0.926592 3.5414e-01    
+---
+Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
+Log-Likelihood:  -235.9   Adj. Pseudo R2: -0.196729
+           BIC: 1,009.1     Squared Cor.:  0.157797
+
+--------------------------------------------
+SHOCK_Q= 0.05  | JUMP_Q= 0.05 
+--------------------------------------------
+
+
+[OIL] Jump prob FE:
+GLM estimation, family = binomial, Dep. Var.: jump_neg
+Observations: 1,359
+Fixed-effects: country: 7,  date: 207
+Standard-errors: Clustered (country) 
+              Estimate Std. Error  z value Pr(>|z|)    
+oil_crash_exp   1.7773   0.814627 2.181734 0.029129 *  
+r_fx           12.0293  14.086709 0.853947 0.393134    
+---
+Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
+Log-Likelihood:  -686.2   Adj. Pseudo R2: -0.099021
+           BIC: 2,923.6     Squared Cor.:  0.202708
+
+[COPPER] Jump prob FE:
+GLM estimation, family = binomial, Dep. Var.: jump_neg
+Observations: 1,076
+Fixed-effects: country: 6,  date: 194
+Standard-errors: Clustered (country) 
+                  Estimate Std. Error  z value Pr(>|z|) 
+copper_crash_exp  0.274148    1.24102 0.220905  0.82517 
+r_fx             15.131979   14.39962 1.050860  0.29332 
+---
+Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
+Log-Likelihood:  -571.6   Adj. Pseudo R2: -0.157611
+           BIC: 2,546.3     Squared Cor.:  0.189192
+
+--------------------------------------------
+SHOCK_Q= 0.05  | JUMP_Q= 0.1 
+--------------------------------------------
+
+
+[OIL] Jump prob FE:
+GLM estimation, family = binomial, Dep. Var.: jump_neg
+Observations: 2,451
+Fixed-effects: country: 7,  date: 372
+Standard-errors: Clustered (country) 
+              Estimate Std. Error z value Pr(>|z|)    
+oil_crash_exp  1.96937    1.15873 1.69960 0.089207 .  
+r_fx          20.20257   13.76015 1.46819 0.142051    
+---
+Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
+Log-Likelihood: -1,257.8   Adj. Pseudo R2: -0.082   
+           BIC:  5,481.2     Squared Cor.:  0.208615
+
+[COPPER] Jump prob FE:
+GLM estimation, family = binomial, Dep. Var.: jump_neg
+Observations: 1,924
+Fixed-effects: country: 6,  date: 346
+Standard-errors: Clustered (country) 
+                 Estimate Std. Error z value Pr(>|z|) 
+copper_crash_exp  1.18405    1.04103 1.13738  0.25538 
+r_fx             17.15971   13.56630 1.26488  0.20592 
+---
+Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
+Log-Likelihood: -1,028.2   Adj. Pseudo R2: -0.125932
+           BIC:  4,725.8     Squared Cor.:  0.210936
+
+--------------------------------------------
+SHOCK_Q= 0.05  | JUMP_Q= 0.02 
+--------------------------------------------
+
+
+[OIL] Jump prob FE:
+GLM estimation, family = binomial, Dep. Var.: jump_neg
+Observations: 603
+Fixed-effects: country: 7,  date: 92
+Standard-errors: Clustered (country) 
+              Estimate Std. Error z value Pr(>|z|)    
+oil_crash_exp  2.49409    1.29697 1.92300  0.05448 .  
+r_fx          11.32028    8.92046 1.26902  0.20443    
+---
+Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
+Log-Likelihood:  -296.3   Adj. Pseudo R2: -0.129891
+           BIC: 1,232.9     Squared Cor.:  0.187155
+
+[COPPER] Jump prob FE:
+GLM estimation, family = binomial, Dep. Var.: jump_neg
+Observations: 448
+Fixed-effects: country: 6,  date: 81
+Standard-errors: Clustered (country) 
+                 Estimate Std. Error  z value Pr(>|z|) 
+copper_crash_exp 0.068047    1.14339 0.059514  0.95254 
+r_fx             9.032875    9.96407 0.906545  0.36465 
+---
+Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
+Log-Likelihood:  -237.2   Adj. Pseudo R2: -0.201638
+           BIC: 1,011.7     Squared Cor.:  0.154339

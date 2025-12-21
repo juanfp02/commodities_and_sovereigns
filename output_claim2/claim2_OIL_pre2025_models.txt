@@ -1,0 +1,28 @@
+=== CLAIM 2 MODELS:  OIL_pre2025  ===
+
+
+--- Jump probability (country+date FE) ---
+GLM estimation, family = binomial, Dep. Var.: jump_neg
+Observations: 1,391
+Fixed-effects: country: 7,  date: 212
+Standard-errors: Clustered (country) 
+              Estimate Std. Error  z value Pr(>|z|)    
+oil_crash_exp  1.46195   0.700501 2.087008 0.036887 *  
+r_fx          12.63148  14.332132 0.881340 0.378134    
+---
+Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
+Log-Likelihood:  -702.4   Adj. Pseudo R2: -0.099324
+           BIC: 2,997.1     Squared Cor.:  0.201135
+
+--- Jump severity (jump weeks only; country+date FE) ---
+OLS estimation, Dep. Var.: jump_mag
+Observations: 299
+Fixed-effects: country: 7,  date: 95
+Standard-errors: Clustered (country) 
+               Estimate Std. Error   t value Pr(>|t|)    
+oil_crash_exp  0.051883   0.015068  3.443188 0.013747 *  
+r_fx          -0.049698   0.115585 -0.429973 0.682229    
+---
+Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
+RMSE: 0.03228     Adj. R2: 0.59494 
+                Within R2: 0.048517

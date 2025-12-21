@@ -1,0 +1,27 @@
+FRED: 
+Market Yield on U.S. Treasury Securities at 10-Year Constant Maturity, Quoted on an Investment Basis (DGS10)
+Market Yield on U.S. Treasury Securities at 2-Year Constant Maturity, Quoted on an Investment Basis (DGS2)
+CBOE Volatility Index: VIX (VIXCLS)
+Crude Oil Prices: Brent - Europe (DCOILBRENTEU)
+Nominal Broad U.S. Dollar Index (DTWEXBGS)
+BLOOMBERG
+LP1 Comdty
+ANGOL CDS USD SR 5Y D14 Corp
+NIGERIA CDS USD SR 5Y D14 Corp
+ECUA CDS USD SR 5Y D14 Corp
+OMAN CDS USD SR 5Y D14 Corp
+BHRAIN CDS USD SR 5Y D14 Corp
+KAZAKS CDS USD SR 5Y D14 Corp
+CHILE CDS USD SR 5Y D14 Corp
+PERU CDS USD SR 5Y D14 Corp
+MOROC CDS USD SR 5Y D14 Corp
+EGYPT CDS USD SR 5Y D14 Corp
+COLOM CDS USD SR 5Y D14 Corp
+KENYA CDS USD SR 5Y D14 Corp
+BRAZIL CDS USD SR 5Y D14 Corp
+EMB US Equity
+SPX Index
+CO1 Comdty
+CL1 Comdty
+
+
