@@ -1,4 +1,13 @@
-.Rproj.user
+# OS / R
+.DS_Store
 .Rhistory
 .RData
-.Ruserdata
+.Rproj.user/
+
+# outputs
+output/
+output_claim2/
+
+# optional: if you have huge raw files you don't want committed
+# data/raw/
+# data/intermediate/

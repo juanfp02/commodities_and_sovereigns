@@ -1,0 +1,38 @@
+
+\begin{table}[htbp]
+   \caption{\label{tab:main_results} Commodity Price Sensitivity and Export Exposure}
+   \centering
+   \begin{tabular}{lccc}
+      \tabularnewline \midrule \midrule
+      Dependent Variable: & \multicolumn{3}{c}{d\_log\_embi}\\
+      Model:                                          & (1)           & (2)           & (3)\\  
+      \midrule
+      \emph{Variables}\\
+      d\_log\_commodity                               & 3.587         & 3.587         &   \\   
+                                                      & (2.557)       & (2.557)       &   \\   
+      d\_log\_fx                                      & 6.812         & 6.812         & 11.52$^{*}$\\   
+                                                      & (4.975)       & (4.975)       & (6.111)\\   
+      d\_vix                                          & -1.072        & -1.072        &   \\   
+                                                      & (0.6025)      & (0.6025)      &   \\   
+      diff\_us10y                                     & 0.2196        & 0.2196        &   \\   
+                                                      & (0.7591)      & (0.7591)      &   \\   
+      d\_log\_spx                                     & -12.76        & -12.76        &   \\   
+                                                      & (7.755)       & (7.755)       &   \\   
+      d\_log\_commodity $\times$ crude\_oil\_exp      & -16.73$^{**}$ & -16.73$^{**}$ & -16.31$^{**}$\\   
+                                                      & (7.434)       & (7.434)       & (7.086)\\   
+      \midrule
+      \emph{Fixed-effects}\\
+      country                                         & Yes           & Yes           & Yes\\  
+      date                                            &               &               & Yes\\  
+      \midrule
+      \emph{Fit statistics}\\
+      Observations                                    & 10,866        & 10,866        & 10,866\\  
+      R$^2$                                           & 0.00174       & 0.00174       & 0.11552\\  
+      Within R$^2$                                    & 0.00174       & 0.00174       & 0.00101\\  
+      \midrule \midrule
+      \multicolumn{4}{l}{\emph{Clustered (country) standard-errors in parentheses}}\\
+      \multicolumn{4}{l}{\emph{Signif. Codes: ***: 0.01, **: 0.05, *: 0.1}}\\
+   \end{tabular}
+\end{table}
+
+
