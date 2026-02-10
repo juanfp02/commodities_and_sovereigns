@@ -1,0 +1,2854 @@
+<rdf:RDF
+ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+ xmlns:z="http://www.zotero.org/namespaces/export#"
+ xmlns:dcterms="http://purl.org/dc/terms/"
+ xmlns:bib="http://purl.org/net/biblio#"
+ xmlns:foaf="http://xmlns.com/foaf/0.1/"
+ xmlns:link="http://purl.org/rss/1.0/modules/link/"
+ xmlns:dc="http://purl.org/dc/elements/1.1/"
+ xmlns:prism="http://prismstandard.org/namespaces/1.2/basic/"
+ xmlns:vcard="http://nwalsh.com/rdf/vCard#">
+    <bib:Article rdf:about="https://www.aeaweb.org/articles?id=10.1257/mac.3.2.75">
+        <z:itemType>journalArticle</z:itemType>
+        <dcterms:isPartOf rdf:resource="urn:issn:1945-7707"/>
+        <bib:authors>
+            <rdf:Seq>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Longstaff</foaf:surname>
+                        <foaf:givenName>Francis A.</foaf:givenName>
+                    </foaf:Person>
+                </rdf:li>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Pan</foaf:surname>
+                        <foaf:givenName>Jun</foaf:givenName>
+                    </foaf:Person>
+                </rdf:li>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Pedersen</foaf:surname>
+                        <foaf:givenName>Lasse H.</foaf:givenName>
+                    </foaf:Person>
+                </rdf:li>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Singleton</foaf:surname>
+                        <foaf:givenName>Kenneth J.</foaf:givenName>
+                    </foaf:Person>
+                </rdf:li>
+            </rdf:Seq>
+        </bib:authors>
+        <link:link rdf:resource="#item_2"/>
+        <dc:subject>
+            <z:AutomaticTag>
+                <rdf:value>Corporate Finance and Governance, International Linkages to Development</rdf:value>
+            </z:AutomaticTag>
+        </dc:subject>
+        <dc:subject>
+            <z:AutomaticTag>
+                <rdf:value>Economic Development: Financial Markets; Saving and Capital Investment; Corporate Finance and Governance</rdf:value>
+            </z:AutomaticTag>
+        </dc:subject>
+        <dc:subject>
+            <z:AutomaticTag>
+               <rdf:value>International Financial Markets</rdf:value>
+            </z:AutomaticTag>
+        </dc:subject>
+        <dc:subject>
+            <z:AutomaticTag>
+               <rdf:value>International Lending and Debt Problems</rdf:value>
+            </z:AutomaticTag>
+        </dc:subject>
+        <dc:subject>
+            <z:AutomaticTag>
+                <rdf:value>International Lending and Debt Problems, International Financial Markets, Economic Development: Financial Markets</rdf:value>
+            </z:AutomaticTag>
+        </dc:subject>
+        <dc:subject>
+            <z:AutomaticTag>
+                <rdf:value>International Linkages to Development; Role of International Organizations</rdf:value>
+            </z:AutomaticTag>
+        </dc:subject>
+        <dc:subject>
+            <z:AutomaticTag>
+                <rdf:value>Role of International Organizations, Socialist Institutions and Their Transitions: Financial Economics</rdf:value>
+            </z:AutomaticTag>
+        </dc:subject>
+        <dc:subject>
+            <z:AutomaticTag>
+               <rdf:value>Saving and Capital Investment</rdf:value>
+            </z:AutomaticTag>
+        </dc:subject>
+        <dc:subject>
+            <z:AutomaticTag>
+                <rdf:value>Socialist Institutions and Their Transitions: Financial Economics</rdf:value>
+            </z:AutomaticTag>
+        </dc:subject>
+        <dc:title>How Sovereign Is Sovereign Credit Risk?</dc:title>
+        <dcterms:abstract>We study the nature of sovereign credit risk using an extensive set of sovereign CDS data. We find that the majority of sovereign credit risk can be linked to global factors. A single principal component accounts for 64 percent of the variation in sovereign credit spreads. Furthermore, sovereign credit spreads are more related to the US stock and high-yield markets than they are to local economic measures.
+We decompose credit spreads into their risk premium and default risk components. On average, the risk premium represents about a third of the credit spread. (JEL F34, G15, O16, O19, P34)</dcterms:abstract>
+        <dc:date>2011/04</dc:date>
+        <dc:identifier>
+            <dcterms:URI>
+                <rdf:value>https://www.aeaweb.org/articles?id=10.1257/mac.3.2.75</rdf:value>
+            </dcterms:URI>
+        </dc:identifier>
+        <dcterms:dateSubmitted>2026-02-01 11:49:15</dcterms:dateSubmitted>
+        <z:language>en</z:language>
+        <z:libraryCatalog>www.aeaweb.org</z:libraryCatalog>
+        <bib:pages>75-103</bib:pages>
+    </bib:Article>
+    <bib:Journal rdf:about="urn:issn:1945-7707">
+        <dc:identifier>DOI 10.1257/mac.3.2.75</dc:identifier>
+        <prism:volume>3</prism:volume>
+        <dc:title>American Economic Journal: Macroeconomics</dc:title>
+        <dc:identifier>ISSN 1945-7707</dc:identifier>
+        <prism:number>2</prism:number>
+    </bib:Journal>
+    <z:Attachment rdf:about="#item_2">
+        <z:itemType>attachment</z:itemType>
+        <rdf:resource rdf:resource="files/2/Longstaff et al. - 2011 - How Sovereign Is Sovereign Credit Risk.pdf"/>
+        <dc:title>Full Text</dc:title>
+        <dc:identifier>
+            <dcterms:URI>
+               <rdf:value>https://papers.nber.org/papers/w13658.pdf</rdf:value>
+            </dcterms:URI>
+        </dc:identifier>
+        <dcterms:dateSubmitted>2026-02-01 11:49:18</dcterms:dateSubmitted>
+        <z:linkMode>1</z:linkMode>
+        <link:type>application/pdf</link:type>
+    </z:Attachment>
+    <bib:Article rdf:about="https://www.sciencedirect.com/science/article/pii/S0378426620300285">
+        <z:itemType>journalArticle</z:itemType>
+        <dcterms:isPartOf rdf:resource="urn:issn:0378-4266"/>
+        <bib:authors>
+            <rdf:Seq>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Bostanci</foaf:surname>
+                        <foaf:givenName>Gorkem</foaf:givenName>
+                    </foaf:Person>
+                </rdf:li>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Yilmaz</foaf:surname>
+                        <foaf:givenName>Kamil</foaf:givenName>
+                    </foaf:Person>
+                </rdf:li>
+            </rdf:Seq>
+        </bib:authors>
+        <link:link rdf:resource="#item_4"/>
+        <dc:subject>
+           <z:AutomaticTag><rdf:value>Lasso</rdf:value></z:AutomaticTag>
+        </dc:subject>
+        <dc:subject>
+            <z:AutomaticTag>
+               <rdf:value>Network estimation</rdf:value>
+            </z:AutomaticTag>
+        </dc:subject>
+        <dc:subject>
+            <z:AutomaticTag>
+               <rdf:value>Sovereign credit risk</rdf:value>
+            </z:AutomaticTag>
+        </dc:subject>
+        <dc:subject>
+           <z:AutomaticTag><rdf:value>Systemic risk</rdf:value></z:AutomaticTag>
+        </dc:subject>
+        <dc:subject>
+            <z:AutomaticTag>
+               <rdf:value>Variance decomposition</rdf:value>
+            </z:AutomaticTag>
+        </dc:subject>
+        <dc:subject>
+            <z:AutomaticTag>
+               <rdf:value>Vector autoregression</rdf:value>
+            </z:AutomaticTag>
+        </dc:subject>
+        <dc:title>How connected is the global sovereign credit risk network?</dc:title>
+        <dcterms:abstract>This paper estimates the global network structure of sovereign credit risk by applying the Diebold-Yilmaz connectedness methodology on sovereign credit default swaps (SCDSs). The level of credit risk connectedness among sovereigns, which is quite high, is comparable to the connectedness among stock markets and foreign exchange markets. In the aftermath of the recent financial crises that originated in developed countries, emerging market countries have played a crucial role in the transmission of sovereign credit risk, while developed countries and debt-ridden developing countries have played marginal roles. Secondary regressions show that both trade and capital flows are important determinants of pairwise connectedness across countries. The capital flows became increasingly important after 2013, while the effect of trade flows decreased during the crisis and did not recover afterwards.</dcterms:abstract>
+        <dc:date>2020-04-01</dc:date>
+        <dc:identifier>
+            <dcterms:URI>
+                <rdf:value>https://www.sciencedirect.com/science/article/pii/S0378426620300285</rdf:value>
+            </dcterms:URI>
+        </dc:identifier>
+        <dcterms:dateSubmitted>2026-02-01 11:49:50</dcterms:dateSubmitted>
+        <z:libraryCatalog>ScienceDirect</z:libraryCatalog>
+        <bib:pages>105761</bib:pages>
+    </bib:Article>
+    <bib:Journal rdf:about="urn:issn:0378-4266">
+        <dc:identifier>DOI 10.1016/j.jbankfin.2020.105761</dc:identifier>
+        <prism:volume>113</prism:volume>
+        <dc:title>Journal of Banking &amp; Finance</dc:title>
+        <dc:identifier>ISSN 0378-4266</dc:identifier>
+        <dcterms:alternative>Journal of Banking &amp; Finance</dcterms:alternative>
+    </bib:Journal>
+    <z:Attachment rdf:about="#item_4">
+        <z:itemType>attachment</z:itemType>
+        <rdf:resource rdf:resource="files/4/S0378426620300285.html"/>
+        <dc:title>ScienceDirect Snapshot</dc:title>
+        <dc:identifier>
+            <dcterms:URI>
+                <rdf:value>https://www.sciencedirect.com/science/article/pii/S0378426620300285</rdf:value>
+            </dcterms:URI>
+        </dc:identifier>
+        <dcterms:dateSubmitted>2026-02-01 11:49:54</dcterms:dateSubmitted>
+        <z:linkMode>1</z:linkMode>
+        <link:type>text/html</link:type>
+    </z:Attachment>
+    <bib:Article rdf:about="#item_5">
+        <z:itemType>journalArticle</z:itemType>
+        <dcterms:isPartOf>
+            <bib:Journal>
+                <dc:identifier>DOI 10.1016/j.jbankfin.2020.105761</dc:identifier>
+                <prism:volume>113</prism:volume>
+                <dc:title>Journal of Banking &amp; Finance</dc:title>
+                <dc:identifier>ISSN 0378-4266</dc:identifier>
+                <dcterms:alternative>Journal of Banking &amp; Finance</dcterms:alternative>
+            </bib:Journal>
+        </dcterms:isPartOf>
+        <bib:authors>
+            <rdf:Seq>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Bostanci</foaf:surname>
+                        <foaf:givenName>Gorkem</foaf:givenName>
+                    </foaf:Person>
+                </rdf:li>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Yilmaz</foaf:surname>
+                        <foaf:givenName>Kamil</foaf:givenName>
+                    </foaf:Person>
+                </rdf:li>
+            </rdf:Seq>
+        </bib:authors>
+        <link:link rdf:resource="#item_7"/>
+        <link:link rdf:resource="#item_6"/>
+        <dc:subject>
+           <z:AutomaticTag><rdf:value>Lasso</rdf:value></z:AutomaticTag>
+        </dc:subject>
+        <dc:subject>
+            <z:AutomaticTag>
+               <rdf:value>Network estimation</rdf:value>
+            </z:AutomaticTag>
+        </dc:subject>
+        <dc:subject>
+            <z:AutomaticTag>
+               <rdf:value>Sovereign credit risk</rdf:value>
+            </z:AutomaticTag>
+        </dc:subject>
+        <dc:subject>
+           <z:AutomaticTag><rdf:value>Systemic risk</rdf:value></z:AutomaticTag>
+        </dc:subject>
+        <dc:subject>
+            <z:AutomaticTag>
+               <rdf:value>Variance decomposition</rdf:value>
+            </z:AutomaticTag>
+        </dc:subject>
+        <dc:subject>
+            <z:AutomaticTag>
+               <rdf:value>Vector autoregression</rdf:value>
+            </z:AutomaticTag>
+        </dc:subject>
+        <dc:title>How connected is the global sovereign credit risk network?</dc:title>
+        <dcterms:abstract>This paper estimates the global network structure of sovereign credit risk by applying the Diebold-Yilmaz connectedness methodology on sovereign credit default swaps (SCDSs). The level of credit risk connectedness among sovereigns, which is quite high, is comparable to the connectedness among stock markets and foreign exchange markets. In the aftermath of the recent financial crises that originated in developed countries, emerging market countries have played a crucial role in the transmission of sovereign credit risk, while developed countries and debt-ridden developing countries have played marginal roles. Secondary regressions show that both trade and capital flows are important determinants of pairwise connectedness across countries. The capital flows became increasingly important after 2013, while the effect of trade flows decreased during the crisis and did not recover afterwards.</dcterms:abstract>
+        <dc:date>2020-04-01</dc:date>
+        <dc:identifier>
+            <dcterms:URI>
+                <rdf:value>https://www.sciencedirect.com/science/article/pii/S0378426620300285</rdf:value>
+            </dcterms:URI>
+        </dc:identifier>
+        <dcterms:dateSubmitted>2026-02-01 11:50:22</dcterms:dateSubmitted>
+        <z:libraryCatalog>ScienceDirect</z:libraryCatalog>
+        <bib:pages>105761</bib:pages>
+    </bib:Article>
+    <z:Attachment rdf:about="#item_7">
+        <z:itemType>attachment</z:itemType>
+        <rdf:resource rdf:resource="files/7/Bostanci and Yilmaz - 2020 - How connected is the global sovereign credit risk network.pdf"/>
+        <dc:title>ScienceDirect Full Text PDF</dc:title>
+        <dc:identifier>
+            <dcterms:URI>
+                <rdf:value>https://pdf.sciencedirectassets.com/271679/1-s2.0-S0378426620X00021/1-s2.0-S0378426620300285/main.pdf?X-Amz-Security-Token=IQoJb3JpZ2luX2VjEAMaCXVzLWVhc3QtMSJGMEQCIBx5dqIFiMt4oxK2AU59XFXWXT5bbwGbDAgg9Y4j1VNoAiBErn7yRekaMHhmM3tsfkrKcnC0nJeiHsfwbe%2FE6xBjiyq7BQjM%2F%2F%2F%2F%2F%2F%2F%2F%2F%2F8BEAUaDDA1OTAwMzU0Njg2NSIMq5bdkxepf0xeooNRKo8F61IyftRhaKnnBwtBtsJMPrnpleKTRre6ezCdzhgFhJn8GKejBpd5xleLr24ibfvthw3yKF%2FwEB7aZXQmKC2CiAJ%2FGRY3bzcdLTeTsyhPbTXEx3hSRVbncGx0J8Zwb2gGPVCwCtcZDv%2FpkwTQ4rhkH8C5N9OZX%2Fa3p2pAdA2%2FYpv8yVUB0vkX3PlBxSQ3MF8Sed7EY0wLxCjyqe1DdzWFyAkAJe08PTMOOVvkspsXo0LzLlNuwnhA9P5QsaY5lqvFgwMCINdteRP37h9MAxULzRBuihBwt%2FjqqCCu1wEl7fY4x8bRKOdYlKipMb1FwKQQ%2BUZY0p8uMcKTUb%2FViHJeF8FKbRMxv7y1hGccPTMogOllcTo4YYDYcPher9ffYAohMqIM%2BmpIOZm6ac58ZSyABPpNt6qMCcYjJKXgbfjUhTwlXpPHMto6mXbbb88A2BzygVxAwx%2FcOhZBmRFM7w4bZx3D7yB7VOPZgSrbGcRAcs82hcU%2B%2FXzfxWFxF7rqGH8GomEtefXtHUkhtLb1rM3XVJSXKRcCfChTF4eM20k%2F0NZLz3x7Pss14Jz9IQVgQ2hfk3jrVO3sOEp%2FMRWUQAVyCGm9Qq1uURcNO4brunWFUmuoCLg0WMQSQ8%2FagBiMwcjH28hASqqzKNOOx%2BiXbPo2YUIJtxdaGWRCcmbvtzTsp3X6Oy6AtAGFHiwnSHLWyuDbjwxZ5YX6PDribwFph3CRVeTJyuMipoRlcRvnObCyxAfNFM1X77EqHbX3jSRSQsrkW53wSE6kR0rGD4KnvEOi9%2FwV%2BdwgDxFirMmabP7%2BFgpye3oPG4Au6Y1UJdA23EbRHt6mZvivAvSwgdeOC%2FjXPNLm0mFq7GAT3B%2Bkwvi1jTDv3fzLBjqyAQN%2F9WGnVprg7sFLz%2FriIm12fq05n5de8n33BpDq2rdYmovfr2TMzyK4UWZ3zqXIfuxM2mCTHqDXtbxL3J2tPY5SyhtO4bYGxQ1A8b5g4O3YXiiaUW5%2BUx6m9G%2BgjdAiDbjbBij7OTE7B%2BFgPV7pRcVRH4TvPevnwRG4IYvenA%2FlJLDCopm77fPBL0K54faJKdlalLxL8btREjLuaPuMfv93%2BSSnerMdR1Lyw%2BrO1htAhO8%3D&amp;X-Amz-Algorithm=AWS4-HMAC-SHA256&amp;X-Amz-Date=20260201T115029Z&amp;X-Amz-SignedHeaders=host&amp;X-Amz-Expires=300&amp;X-Amz-Credential=ASIAQ3PHCVTYYKZEWIAW%2F20260201%2Fus-east-1%2Fs3%2Faws4_request&amp;X-Amz-Signature=53a5e8a3da0d05f5173292c92595af1548a136e0825d4e509fd99df8e3ef3c2b&amp;hash=0d7a83c28b4a0575d5af3607861e009e4f92cb4f6a69d71ba53c606362ed774f&amp;host=68042c943591013ac2b2430a89b270f6af2c76d8dfd086a07176afe7c76c2c61&amp;pii=S0378426620300285&amp;tid=spdf-21e9dcbc-56eb-4b32-854b-fb99f82ddb3d&amp;sid=6bdf6a0b4968d044ca4b08412a6acbf88072gxrqb&amp;type=client&amp;tsoh=d3d3LnNjaWVuY2VkaXJlY3QuY29t&amp;rh=d3d3LnNjaWVuY2VkaXJlY3QuY29t&amp;ua=190e56055952550c5b5000&amp;rr=9c713b42ed32be63&amp;cc=ch</rdf:value>
+            </dcterms:URI>
+        </dc:identifier>
+        <dcterms:dateSubmitted>2026-02-01 11:50:32</dcterms:dateSubmitted>
+        <z:linkMode>1</z:linkMode>
+        <link:type>application/pdf</link:type>
+    </z:Attachment>
+    <z:Attachment rdf:about="#item_6">
+        <z:itemType>attachment</z:itemType>
+        <rdf:resource rdf:resource="files/6/S0378426620300285.html"/>
+        <dc:title>ScienceDirect Snapshot</dc:title>
+        <dc:identifier>
+            <dcterms:URI>
+                <rdf:value>https://www.sciencedirect.com/science/article/pii/S0378426620300285</rdf:value>
+            </dcterms:URI>
+        </dc:identifier>
+        <dcterms:dateSubmitted>2026-02-01 11:50:28</dcterms:dateSubmitted>
+        <z:linkMode>1</z:linkMode>
+        <link:type>text/html</link:type>
+    </z:Attachment>
+    <bib:Article rdf:about="https://www.cambridge.org/core/journals/journal-of-financial-and-quantitative-analysis/article/abs/dynamics-of-sovereign-credit-risk/EF9C2B942A403DD3A8EFCA47A41282E8">
+        <z:itemType>journalArticle</z:itemType>
+        <dcterms:isPartOf rdf:resource="urn:issn:0022-1090,%201756-6916"/>
+        <bib:authors>
+            <rdf:Seq>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Jeanneret</foaf:surname>
+                        <foaf:givenName>Alexandre</foaf:givenName>
+                    </foaf:Person>
+                </rdf:li>
+            </rdf:Seq>
+        </bib:authors>
+        <dc:title>The Dynamics of Sovereign Credit Risk</dc:title>
+        <dcterms:abstract>This article proposes a structural model for sovereign credit risk with endogenous sovereign debt and default policies. A maximum-likelihood estimation of the model with local stock market prices generates daily model-implied sovereign spreads. This approach explains two-thirds of the daily variation in observed sovereign spreads for emerging and European economies over the 2000–2011 period. Global factors help to further explain the time variation in sovereign credit risk. In particular, sovereign spreads in emerging markets vary with U.S. market uncertainty, whereas European spreads depend on Euro-zone bond factors.</dcterms:abstract>
+        <dc:date>2015/10</dc:date>
+        <dc:identifier>
+            <dcterms:URI>
+                <rdf:value>https://www.cambridge.org/core/journals/journal-of-financial-and-quantitative-analysis/article/abs/dynamics-of-sovereign-credit-risk/EF9C2B942A403DD3A8EFCA47A41282E8</rdf:value>
+            </dcterms:URI>
+        </dc:identifier>
+        <dcterms:dateSubmitted>2026-02-01 11:51:06</dcterms:dateSubmitted>
+        <z:language>en</z:language>
+        <z:libraryCatalog>Cambridge University Press</z:libraryCatalog>
+        <bib:pages>963-985</bib:pages>
+    </bib:Article>
+    <bib:Journal rdf:about="urn:issn:0022-1090,%201756-6916">
+        <dc:identifier>DOI 10.1017/S002210901500040X</dc:identifier>
+        <prism:volume>50</prism:volume>
+        <dc:title>Journal of Financial and Quantitative Analysis</dc:title>
+        <dc:identifier>ISSN 0022-1090, 1756-6916</dc:identifier>
+        <prism:number>5</prism:number>
+    </bib:Journal>
+    <bib:Article rdf:about="https://doi.org/10.1007/s11156-015-0532-2">
+        <z:itemType>journalArticle</z:itemType>
+        <dcterms:isPartOf rdf:resource="urn:issn:1573-7179"/>
+        <bib:authors>
+            <rdf:Seq>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Lee</foaf:surname>
+                        <foaf:givenName>Han-Hsing</foaf:givenName>
+                    </foaf:Person>
+                </rdf:li>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Shih</foaf:surname>
+                        <foaf:givenName>Kuanyu</foaf:givenName>
+                    </foaf:Person>
+                </rdf:li>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Wang</foaf:surname>
+                        <foaf:givenName>Kehluh</foaf:givenName>
+                    </foaf:Person>
+                </rdf:li>
+            </rdf:Seq>
+        </bib:authors>
+        <dc:subject>
+           <z:AutomaticTag><rdf:value>CDS</rdf:value></z:AutomaticTag>
+        </dc:subject>
+        <dc:subject>
+            <z:AutomaticTag>
+               <rdf:value>Default probability</rdf:value>
+            </z:AutomaticTag>
+        </dc:subject>
+        <dc:subject>
+           <z:AutomaticTag><rdf:value>G01</rdf:value></z:AutomaticTag>
+        </dc:subject>
+        <dc:subject>
+           <z:AutomaticTag><rdf:value>G13</rdf:value></z:AutomaticTag>
+        </dc:subject>
+        <dc:subject>
+           <z:AutomaticTag><rdf:value>G32</rdf:value></z:AutomaticTag>
+        </dc:subject>
+        <dc:subject>
+           <z:AutomaticTag><rdf:value>G33</rdf:value></z:AutomaticTag>
+        </dc:subject>
+        <dc:subject>
+            <z:AutomaticTag>
+               <rdf:value>Sovereign credit risk</rdf:value>
+            </z:AutomaticTag>
+        </dc:subject>
+        <dc:subject>
+            <z:AutomaticTag>
+               <rdf:value>Structural model</rdf:value>
+            </z:AutomaticTag>
+        </dc:subject>
+        <dc:title>Measuring sovereign credit risk using a structural model approach</dc:title>
+        <dcterms:abstract>In this paper, we use three structural models to investigate a country’s credit risk by applying it to a sovereign balance sheet. The transformed-data maximum likelihood estimation method and the maximization–maximization algorithm are adopted for model calibration. The derived probability of default over time for four sample countries matched well with the events and economic conditions that occurred during the sample period. Our empirical analyses show that structural models can be used to determine with high accuracy whether the credit of a sovereign country is in a precarious situation. We then illustrate how the structural approach can be an effective tool to monitor the sovereign credit risk.</dcterms:abstract>
+        <dc:date>2016-11-01</dc:date>
+        <dc:identifier>
+            <dcterms:URI>
+               <rdf:value>https://doi.org/10.1007/s11156-015-0532-2</rdf:value>
+            </dcterms:URI>
+        </dc:identifier>
+        <dcterms:dateSubmitted>2026-02-01 11:51:49</dcterms:dateSubmitted>
+        <z:language>en</z:language>
+        <z:libraryCatalog>Springer Link</z:libraryCatalog>
+        <bib:pages>1097-1128</bib:pages>
+    </bib:Article>
+    <bib:Journal rdf:about="urn:issn:1573-7179">
+        <dc:identifier>DOI 10.1007/s11156-015-0532-2</dc:identifier>
+        <prism:volume>47</prism:volume>
+        <dc:title>Review of Quantitative Finance and Accounting</dc:title>
+        <dc:identifier>ISSN 1573-7179</dc:identifier>
+        <prism:number>4</prism:number>
+        <dcterms:alternative>Rev Quant Finan Acc</dcterms:alternative>
+    </bib:Journal>
+    <bib:Document rdf:about="https://academic.oup.com/raps/article-abstract/7/1/43/2983743?login=false">
+        <z:itemType>webpage</z:itemType>
+        <dcterms:isPartOf>
+           <z:Website></z:Website>
+        </dcterms:isPartOf>
+        <link:link rdf:resource="#item_11"/>
+        <dc:title>Economic and Financial Determinants of Credit Risk Premiums in the Sovereign CDS Market* | The Review of Asset Pricing Studies | Oxford Academic</dc:title>
+        <dc:identifier>
+            <dcterms:URI>
+                <rdf:value>https://academic.oup.com/raps/article-abstract/7/1/43/2983743?login=false</rdf:value>
+            </dcterms:URI>
+        </dc:identifier>
+        <dcterms:dateSubmitted>2026-02-01 11:52:01</dcterms:dateSubmitted>
+    </bib:Document>
+    <z:Attachment rdf:about="#item_11">
+        <z:itemType>attachment</z:itemType>
+        <rdf:resource rdf:resource="files/11/2983743.html"/>
+        <dc:title>Economic and Financial Determinants of Credit Risk Premiums in the Sovereign CDS Market* | The Review of Asset Pricing Studies | Oxford Academic</dc:title>
+        <dc:identifier>
+            <dcterms:URI>
+                <rdf:value>https://academic.oup.com/raps/article-abstract/7/1/43/2983743?login=false</rdf:value>
+            </dcterms:URI>
+        </dc:identifier>
+        <dcterms:dateSubmitted>2026-02-01 11:52:05</dcterms:dateSubmitted>
+        <z:linkMode>1</z:linkMode>
+        <link:type>text/html</link:type>
+    </z:Attachment>
+    <rdf:Description rdf:about="https://papers.ssrn.com/abstract=942491">
+        <z:itemType>preprint</z:itemType>
+        <dc:publisher>
+            <foaf:Organization>
+                <vcard:adr>
+                    <vcard:Address>
+                       <vcard:locality>Rochester, NY</vcard:locality>
+                    </vcard:Address>
+                </vcard:adr>
+                <foaf:name>Social Science Research Network</foaf:name>
+            </foaf:Organization>
+        </dc:publisher>
+        <bib:authors>
+            <rdf:Seq>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Wong</foaf:surname>
+                        <foaf:givenName>Hoi Ying</foaf:givenName>
+                    </foaf:Person>
+                </rdf:li>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Li</foaf:surname>
+                        <foaf:givenName>Chi Pang</foaf:givenName>
+                    </foaf:Person>
+                </rdf:li>
+            </rdf:Seq>
+        </bib:authors>
+        <link:link rdf:resource="#item_13"/>
+        <dc:subject>
+           <z:AutomaticTag><rdf:value>Credit Risk</rdf:value></z:AutomaticTag>
+        </dc:subject>
+        <dc:subject>
+           <z:AutomaticTag><rdf:value>Jump-Diffusion</rdf:value></z:AutomaticTag>
+        </dc:subject>
+        <dc:subject>
+            <z:AutomaticTag>
+               <rdf:value>Maximum Likelihood</rdf:value>
+            </z:AutomaticTag>
+        </dc:subject>
+        <dc:subject>
+           <z:AutomaticTag><rdf:value>Quasi-Bayesian</rdf:value></z:AutomaticTag>
+        </dc:subject>
+        <dc:title>Estimating Jump Diffusion Structural Credit Risk Models</dc:title>
+        <dcterms:abstract>There is strong evidence that structural models of credit risk significantly underestimate both credit yield spreads and the probability of default if the value of corporate assets follows a diffusion process. Adding a jump component to the firm value process is a potential remedy for the underestimation. However, there are very few empirical studies of jump-diffusion (or Levy) structural models in the literature. The major challenge is the estimation of hidden variables, such as the firm value, volatility, and parameters of the jump component, as the value of corporate assets is not directly observable. In practice, parameters and the value of the firm should be estimated using the market values of equities. This paper provides a promising estimation method for jump-diffusion processes in structural models that are based on observed stock data. We show that the traditional estimation methods for structural models, the variance-restriction method and maximum likelihood estimation, fail when jumps appear in credit risk models. We then propose a penalized likelihood approach and devise a corresponding expectationmaximum algorithm. The approach is applied to the jump-diffusion processes of Merton (1976) and Kou (2002) and the performance is examined through a series of simulations and empirical data.</dcterms:abstract>
+        <dc:date>2006-08-21</dc:date>
+        <dc:identifier>DOI 10.2139/ssrn.942491</dc:identifier>
+        <dc:identifier>
+            <dcterms:URI>
+               <rdf:value>https://papers.ssrn.com/abstract=942491</rdf:value>
+            </dcterms:URI>
+        </dc:identifier>
+        <dcterms:dateSubmitted>2026-02-01 11:52:40</dcterms:dateSubmitted>
+        <z:language>en</z:language>
+        <z:libraryCatalog>papers.ssrn.com</z:libraryCatalog>
+        <z:type>SSRN Scholarly Paper</z:type>
+        <prism:number>942491</prism:number>
+    </rdf:Description>
+    <z:Attachment rdf:about="#item_13">
+        <z:itemType>attachment</z:itemType>
+        <rdf:resource rdf:resource="files/13/Wong and Li - 2006 - Estimating Jump Diffusion Structural Credit Risk Models.pdf"/>
+        <dc:title>Full Text PDF</dc:title>
+        <dc:identifier>
+            <dcterms:URI>
+                <rdf:value>https://papers.ssrn.com/sol3/Delivery.cfm/SSRN_ID942491_code387445.pdf?abstractid=942491&amp;mirid=1</rdf:value>
+            </dcterms:URI>
+        </dc:identifier>
+        <dcterms:dateSubmitted>2026-02-01 11:52:42</dcterms:dateSubmitted>
+        <z:linkMode>1</z:linkMode>
+        <link:type>application/pdf</link:type>
+    </z:Attachment>
+    <bib:Article rdf:about="https://www.federalreserve.gov/econres/feds/a-jump-diffusion-approach-to-modeling-credit-risk-and-valuing-defaultable-securities.htm">
+        <z:itemType>journalArticle</z:itemType>
+        <dcterms:isPartOf>
+           <bib:Journal></bib:Journal>
+        </dcterms:isPartOf>
+        <bib:authors>
+            <rdf:Seq>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Zhou</foaf:surname>
+                        <foaf:givenName>Chunsheng</foaf:givenName>
+                    </foaf:Person>
+                </rdf:li>
+            </rdf:Seq>
+        </bib:authors>
+        <link:link rdf:resource="#item_15"/>
+        <dc:title>A Jump-Diffusion Approach to Modeling Credit Risk and Valuing Defaultable Securities</dc:title>
+        <dcterms:abstract>The Federal Reserve Board of Governors in Washington DC.</dcterms:abstract>
+        <dc:date>05-01-1997</dc:date>
+        <dc:identifier>
+            <dcterms:URI>
+                <rdf:value>https://www.federalreserve.gov/econres/feds/a-jump-diffusion-approach-to-modeling-credit-risk-and-valuing-defaultable-securities.htm</rdf:value>
+            </dcterms:URI>
+        </dc:identifier>
+        <dcterms:dateSubmitted>2026-02-01 11:52:54</dcterms:dateSubmitted>
+        <z:language>en</z:language>
+        <z:libraryCatalog>www.federalreserve.gov</z:libraryCatalog>
+    </bib:Article>
+    <z:Attachment rdf:about="#item_15">
+        <z:itemType>attachment</z:itemType>
+        <rdf:resource rdf:resource="files/15/Zhou - 1997 - A Jump-Diffusion Approach to Modeling Credit Risk and Valuing Defaultable Securities.pdf"/>
+        <dc:title>Full Text PDF</dc:title>
+        <dc:identifier>
+            <dcterms:URI>
+                <rdf:value>https://www.federalreserve.gov/pubs/feds/1997/199715/199715pap.pdf</rdf:value>
+            </dcterms:URI>
+        </dc:identifier>
+        <dcterms:dateSubmitted>2026-02-01 11:52:55</dcterms:dateSubmitted>
+        <z:linkMode>1</z:linkMode>
+        <link:type>application/pdf</link:type>
+    </z:Attachment>
+    <bib:Article rdf:about="https://www.sciencedirect.com/science/article/pii/S0377042716300796">
+        <z:itemType>journalArticle</z:itemType>
+        <dcterms:isPartOf rdf:resource="urn:issn:0377-0427"/>
+        <bib:authors>
+            <rdf:Seq>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Ma</foaf:surname>
+                        <foaf:givenName>Yong</foaf:givenName>
+                    </foaf:Person>
+                </rdf:li>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Xu</foaf:surname>
+                        <foaf:givenName>Weidong</foaf:givenName>
+                    </foaf:Person>
+                </rdf:li>
+            </rdf:Seq>
+        </bib:authors>
+        <link:link rdf:resource="#item_17"/>
+        <dc:subject>
+            <z:AutomaticTag>
+               <rdf:value>Default clustering</rdf:value>
+            </z:AutomaticTag>
+        </dc:subject>
+        <dc:subject>
+            <z:AutomaticTag>
+               <rdf:value>Default correlation</rdf:value>
+            </z:AutomaticTag>
+        </dc:subject>
+        <dc:subject>
+           <z:AutomaticTag><rdf:value>Hawkes process</rdf:value></z:AutomaticTag>
+        </dc:subject>
+        <dc:subject>
+           <z:AutomaticTag><rdf:value>Jump clustering</rdf:value></z:AutomaticTag>
+        </dc:subject>
+        <dc:title>Structural credit risk modelling with Hawkes jump diffusion processes</dc:title>
+        <dcterms:abstract>To describe the unexpectedness of default and especially default clustering in the framework of Merton’s structural default, we propose a novel jump diffusion model for the firm’s value. In this model, the jumps, which reflect the systematic risk common to all firms and an idiosyncratic risk, arrive dependently and they are described by self-exciting Hawkes processes rather than the classical Poisson processes. Some classical models are the special cases of the proposed model. The analytical solution to the value of the firm is derived. Numerical analysis shows that Hawkes jump diffusion model can better explain the behavior of default clustering than Poisson jump diffusion model.</dcterms:abstract>
+        <dc:date>2016-09-01</dc:date>
+        <dc:identifier>
+            <dcterms:URI>
+                <rdf:value>https://www.sciencedirect.com/science/article/pii/S0377042716300796</rdf:value>
+            </dcterms:URI>
+        </dc:identifier>
+        <dcterms:dateSubmitted>2026-02-01 11:53:03</dcterms:dateSubmitted>
+        <z:libraryCatalog>ScienceDirect</z:libraryCatalog>
+        <bib:pages>69-80</bib:pages>
+    </bib:Article>
+    <bib:Journal rdf:about="urn:issn:0377-0427">
+        <dc:identifier>DOI 10.1016/j.cam.2016.02.032</dc:identifier>
+        <prism:volume>303</prism:volume>
+        <dc:title>Journal of Computational and Applied Mathematics</dc:title>
+        <dc:identifier>ISSN 0377-0427</dc:identifier>
+        <dcterms:alternative>Journal of Computational and Applied Mathematics</dcterms:alternative>
+    </bib:Journal>
+    <z:Attachment rdf:about="#item_17">
+        <z:itemType>attachment</z:itemType>
+        <rdf:resource rdf:resource="files/17/Ma and Xu - 2016 - Structural credit risk modelling with Hawkes jump diffusion processes.pdf"/>
+        <dc:title>ScienceDirect Full Text PDF</dc:title>
+        <dc:identifier>
+            <dcterms:URI>
+                <rdf:value>https://pdf.sciencedirectassets.com/271610/1-s2.0-S0377042716X00052/1-s2.0-S0377042716300796/main.pdf?X-Amz-Security-Token=IQoJb3JpZ2luX2VjEAQaCXVzLWVhc3QtMSJIMEYCIQCxaJfVrKDJaRt6yk1O1jj3p1OBCanlcVSUJ68ts6PAQgIhALcqqGS9DOapxwjqXsgEJAphMJAlpHl1A8ytPrthzqKFKrsFCMz%2F%2F%2F%2F%2F%2F%2F%2F%2F%2FwEQBRoMMDU5MDAzNTQ2ODY1IgzbIQFwLFpyv4MOs50qjwWC28zx8VxI3I%2FGayrV9HJfyfB46xkIiBeQHW4G%2Bey%2FGbNAcMlwETKDK7JZ%2BueEBMQ4xEwcaa8g64NljC%2BFzUX1ekv%2FZUrEcLc0xwBMVGC4%2B5VGgITfS23EBmeFRVvll5l6U0XOQdByyOJURzJ3JKzX3g%2FdYhSxhy0k%2FHkXgc4f8hmN5MhDVSjur4D0KO7F%2B7UxRKxl%2BpjAjdAnRfKztmADV9bzmz%2BamjY%2FIjTT9EhtrdVwZiJEjEcgEPcyI95XgTROoom8dNtINp7yeYHlJ0R99YnQ%2FxBlwXUQuC6rdfuruICsSHFNaJWU0pbYV7%2F3itTFlKi4hmgOGFGO3f42T%2BkduNS8PjHcNC632VHBRdi2TMt6YKy9wCa%2FhwpV45mTSApTwdy0uA5R6HkVIXT5TBYISAkSeVARfP%2BEwUv5IiyxpKDfNA9G8ZpvFTaSfC0ViG3xv%2FX0ViTI34m0LcJgyjETp1M9WCrZl%2FE%2FxTqgIdHUV3nFiWbjLCsIyCjMcmzNegmRh70KsloJEO%2B5k4LE4E9RBKKwy5mWFtJRDGnVD1MnjZf9mUFQaqoTSvXRV2tOnUmOBDsk9hG9EFai4guwVWj4B%2BbYMvqJt0zG1rhGiLfGgHMkK1V8oJ3nLEv1MMpaXfn2JFE0KjxxEOdbJD2eknE11q8XJkKVKsGUGPNTeYtTvcIH8H15pqW1hwz7xjqKDsMEQJ0JpNmqPyZFNBwi4kPZi2gG9Moz3pBFp2c5kO6Q%2BBfcQWTS74hfsSYarenT7p%2Fye0QZZv9Y5zucEL4abfeukmERYB4PRWmvLUk2BRG%2F%2BAZg06oB%2F%2F3RSlmcvVwcqY6cCwj4GS2pIl9ifk39SxGugxV6SJeSNVf7OkCoB8haML%2Fq%2FMsGOrAB6mIYX4kPDD2979ZU9HUpwYQOSgQAbSsSs5OtLZBMFuS3IdgWSuka8i6iyg1%2FVcAHkbK2Qjk8hFKwsnLjtig2fQguGXXbMGnq5x2%2FpBo6ziPirjkBoS3vUXyaBLUXf2xT%2FWihbxZVeFmzLs7PZ2ClzBFe3q5yBNoeH92CQeWM9sNeZc%2F%2BjUpvEjn%2FPmVb4UZ%2BnoOWwTGnTpoJ1YwaJ0Er%2FNkH9dZrcbJWkGdrBZlPcTk%3D&amp;X-Amz-Algorithm=AWS4-HMAC-SHA256&amp;X-Amz-Date=20260201T115310Z&amp;X-Amz-SignedHeaders=host&amp;X-Amz-Expires=300&amp;X-Amz-Credential=ASIAQ3PHCVTY5Z74633X%2F20260201%2Fus-east-1%2Fs3%2Faws4_request&amp;X-Amz-Signature=66a753870065d826ab8173736b55aba38c623096470c2702e8bf6f529225c864&amp;hash=75764c39b3205a0b744f72d63fed9e4bb386f874d73f3386aa93c8898f16906a&amp;host=68042c943591013ac2b2430a89b270f6af2c76d8dfd086a07176afe7c76c2c61&amp;pii=S0377042716300796&amp;tid=spdf-82b7fd5e-987d-472b-96aa-ede969c9604b&amp;sid=6bdf6a0b4968d044ca4b08412a6acbf88072gxrqb&amp;type=client&amp;tsoh=d3d3LnNjaWVuY2VkaXJlY3QuY29t&amp;rh=d3d3LnNjaWVuY2VkaXJlY3QuY29t&amp;ua=190e5605595255085d0653&amp;rr=9c713f2d6827be63&amp;cc=ch</rdf:value>
+            </dcterms:URI>
+        </dc:identifier>
+        <dcterms:dateSubmitted>2026-02-01 11:53:11</dcterms:dateSubmitted>
+        <z:linkMode>1</z:linkMode>
+        <link:type>application/pdf</link:type>
+    </z:Attachment>
+    <bib:Article rdf:about="https://www.sciencedirect.com/science/article/pii/S0167668703001719">
+        <z:itemType>journalArticle</z:itemType>
+        <dcterms:isPartOf rdf:resource="urn:issn:0167-6687"/>
+        <bib:authors>
+            <rdf:Seq>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Chen</foaf:surname>
+                        <foaf:givenName>Cho-Jieh</foaf:givenName>
+                    </foaf:Person>
+                </rdf:li>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Panjer</foaf:surname>
+                        <foaf:givenName>Harry</foaf:givenName>
+                    </foaf:Person>
+                </rdf:li>
+            </rdf:Seq>
+        </bib:authors>
+        <link:link rdf:resource="#item_19"/>
+        <dc:subject>
+           <z:AutomaticTag><rdf:value>Default risk</rdf:value></z:AutomaticTag>
+        </dc:subject>
+        <dc:subject>
+            <z:AutomaticTag>
+               <rdf:value>Jump-diffusion process</rdf:value>
+            </z:AutomaticTag>
+        </dc:subject>
+        <dc:subject>
+            <z:AutomaticTag>
+               <rdf:value>Reduced-form model</rdf:value>
+            </z:AutomaticTag>
+        </dc:subject>
+        <dc:subject>
+            <z:AutomaticTag>
+               <rdf:value>Structural model</rdf:value>
+            </z:AutomaticTag>
+        </dc:subject>
+        <dc:title>Unifying discrete structural models and reduced-form models in credit risk using a jump-diffusion process</dc:title>
+        <dcterms:abstract>Merton [The Journal of Finance 29 (1974) 449] pioneered the structural model using a diffusion process to model the firm value evolution. Since a sudden drop of firm value is impossible, Jones et al. [Journal of Finance 39 (1984) 611] argue that the short-term yield spread and the default probability are too small. Zhou [A Jump-diffusion Approach to Modelling Credit Risk and Valuing Defaultable Securities, Federal Reserve Board, Washington, 1997] uses a jump-diffusion process that is originally proposed by Merton [Journal of Financial Economics 3 (1976) 125] to model the firm value process. However, a method for finding the jump distribution is not developed. In a reduced-form model, the default probability (or intensity of default) and the mean recovery rate are obtained from the market spread by using model-specific assumptions. However, the capital structure that triggers the default usually is not used. In this paper, we propose methods to remove the discrepancy of yield spreads between structural models and reduced-form models and unify these two models. We first show the equivalence of yield spreads between structural models and reduced-form models and then find the implied jump distribution based on the market spread. The mean recovery rate for multiple seniorities and the mean recovery rate are thus obtained.</dcterms:abstract>
+        <dc:date>2003-10-20</dc:date>
+        <dc:identifier>
+            <dcterms:URI>
+                <rdf:value>https://www.sciencedirect.com/science/article/pii/S0167668703001719</rdf:value>
+            </dcterms:URI>
+        </dc:identifier>
+        <dcterms:dateSubmitted>2026-02-01 11:53:37</dcterms:dateSubmitted>
+        <z:libraryCatalog>ScienceDirect</z:libraryCatalog>
+        <bib:pages>357-380</bib:pages>
+    </bib:Article>
+    <bib:Journal rdf:about="urn:issn:0167-6687">
+        <dcterms:isPartOf>
+            <bib:Series>
+                <dc:title>Papers presented at the 6th IME Conference, Lisbon, 15-17 July 2002</dc:title>
+            </bib:Series>
+        </dcterms:isPartOf>
+        <dc:identifier>DOI 10.1016/j.insmatheco.2003.08.005</dc:identifier>
+        <prism:volume>33</prism:volume>
+        <dc:title>Insurance: Mathematics and Economics</dc:title>
+        <dc:identifier>ISSN 0167-6687</dc:identifier>
+        <prism:number>2</prism:number>
+        <dcterms:alternative>Insurance: Mathematics and Economics</dcterms:alternative>
+    </bib:Journal>
+    <z:Attachment rdf:about="#item_19">
+        <z:itemType>attachment</z:itemType>
+        <rdf:resource rdf:resource="files/19/Chen and Panjer - 2003 - Unifying discrete structural models and reduced-form models in credit risk using a jump-diffusion pr.pdf"/>
+        <dc:title>ScienceDirect Full Text PDF</dc:title>
+        <dc:identifier>
+            <dcterms:URI>
+                <rdf:value>https://pdf.sciencedirectassets.com/271685/1-s2.0-S0167668700X01059/1-s2.0-S0167668703001719/main.pdf?X-Amz-Security-Token=IQoJb3JpZ2luX2VjEAMaCXVzLWVhc3QtMSJGMEQCIG2FvbuZk%2BaMSbfHIvHBdeGRyN0j4VKqDNAedwJh2l%2BVAiA5KX7NPeap7Xseo%2BZ3FPUWMb6dJBpymyIp75z5VVpEbCq8BQjM%2F%2F%2F%2F%2F%2F%2F%2F%2F%2F8BEAUaDDA1OTAwMzU0Njg2NSIMOx8TE%2BLFLNKzDySAKpAFVxpe6m8omQKD8MZMVa8PI9MEQc4EYC55yGCKuZTWM7BtXB%2B9KOa41xyoGeSlr%2BsNo2XiDRJNYx3QGxWRCsyKSECOW96N0i%2FuKdYSa8CwHrehRw%2B%2FW0s52OyZeQw3hJVUwwWgUvwBcN9Ab%2Fd5M4hmAKHuB2P3DjGD0Brf%2BLhnVZuLNyBo5LL%2BUj%2BFnU4YXKP09m9fVLfyKOOmoKG05n0LcQ3huCXD5G8mvbaeDNAgWMj8kMHNmJKFT9PW%2FCcOTL2BaHw2172OBY42nou2AQE4dtgCd8638s5ynGtPsUCEUnBCucKxiUEPyhrfB89tRPH2xLIAVEmHFDLX68YnA2x2sp2sUfqjl6b5B%2F6ZI4JVWrZvIfFzsf1moCFUvtDvjQWVeCVpCoPt3SSJJlnToXh11T53VSg9gyMlejwvzK%2BIaiLNzHFvPjw3EaWTpksovtSCBT9oe7DuyhLPfvjrUlHnCO6eKTR1vy8VjAYURPnpwqNGE3aaAK9uKMnnpdeBlEwYUVzHPlAMBrKcOJbukpdDlzCabIDtj4%2B6INXM%2B2PEiZ9pZkOkLl3t4cr20WZkYsdrXHD6Tdx1X4592MbhZQG5TJHGX7AlEiv8AsfholmYXOVecsibgxKwhQZcTIYx6GV0CmYNPD4KVlI5CdepO88yaXFqmpnMvAsSwwVLlx%2Fz72vCOniPCh5jTKMhjlWF5vbFo4fi4LPryI3T1zpUhS9gt3Ve9B8HMNDVRz%2BiCz3vjXH6iBQBPmw0ENer1C6sgnmubcSomy0d6PDaKNg%2BifCB2uR8vpKTQXrJD0AVPkfaix2KodXtlRp0vGgPhGyXn1HSYr29Zj6XqYD9QSYtkqlpmYDWDuxewOYNNUoMNu79pb4wsdv8ywY6sgHxeLt3r2X1hvOOcGZdAyu5j0F5F08jalai%2FWxUKGsWjwbxl6ZmNBhfRZVzjo%2BkWjfUCqUiBKWGyq6VoULTQf05hruLPjiT1xZkdnYqhXi%2FeZZBvm3BhQXdRvSskmiz%2Fv%2F9tw0AZPWvRPbmYMqlEPQUkXXs8lCZRYTWDvRtr1Qj4krKtz8MO7R9Zm0b2IKsHNosGG4JXpzCIl%2FJNURogdrEPkcrCJuvRFI74qAfyGUhmkVL&amp;X-Amz-Algorithm=AWS4-HMAC-SHA256&amp;X-Amz-Date=20260201T115344Z&amp;X-Amz-SignedHeaders=host&amp;X-Amz-Expires=300&amp;X-Amz-Credential=ASIAQ3PHCVTYYD23OWER%2F20260201%2Fus-east-1%2Fs3%2Faws4_request&amp;X-Amz-Signature=7bfe480fe813b7cc5abbb0ce3e3d0d071676e828d589914d110b603ba9965d9f&amp;hash=95ed930ec75baef923246106f46428b82787c261d0e715fa2f01283c0d686513&amp;host=68042c943591013ac2b2430a89b270f6af2c76d8dfd086a07176afe7c76c2c61&amp;pii=S0167668703001719&amp;tid=spdf-b5af6389-7ad9-4cc2-8fdd-e820a809dbae&amp;sid=6bdf6a0b4968d044ca4b08412a6acbf88072gxrqb&amp;type=client&amp;tsoh=d3d3LnNjaWVuY2VkaXJlY3QuY29t&amp;rh=d3d3LnNjaWVuY2VkaXJlY3QuY29t&amp;ua=190e56055952525e5f5303&amp;rr=9c714001fa38be63&amp;cc=ch</rdf:value>
+            </dcterms:URI>
+        </dc:identifier>
+        <dcterms:dateSubmitted>2026-02-01 11:53:45</dcterms:dateSubmitted>
+        <z:linkMode>1</z:linkMode>
+        <link:type>application/pdf</link:type>
+    </z:Attachment>
+    <rdf:Description rdf:about="https://papers.ssrn.com/abstract=4376851">
+        <z:itemType>preprint</z:itemType>
+        <dc:publisher>
+            <foaf:Organization>
+                <vcard:adr>
+                    <vcard:Address>
+                       <vcard:locality>Rochester, NY</vcard:locality>
+                    </vcard:Address>
+                </vcard:adr>
+                <foaf:name>Social Science Research Network</foaf:name>
+            </foaf:Organization>
+        </dc:publisher>
+        <bib:authors>
+            <rdf:Seq>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Dominguez-Cardoza</foaf:surname>
+                        <foaf:givenName>Angelica</foaf:givenName>
+                    </foaf:Person>
+                </rdf:li>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Gamarow</foaf:surname>
+                        <foaf:givenName>Adelina</foaf:givenName>
+                    </foaf:Person>
+                </rdf:li>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Meyer</foaf:surname>
+                        <foaf:givenName>Josefin</foaf:givenName>
+                    </foaf:Person>
+                </rdf:li>
+            </rdf:Seq>
+        </bib:authors>
+        <link:link rdf:resource="#item_21"/>
+        <dc:subject>
+            <z:AutomaticTag>
+               <rdf:value>commodity prices</rdf:value>
+            </z:AutomaticTag>
+        </dc:subject>
+        <dc:subject>
+           <z:AutomaticTag><rdf:value>Sovereign Risk</rdf:value></z:AutomaticTag>
+        </dc:subject>
+        <dc:title>Global Commodity Markets and Sovereign Risk across 150 Years</dc:title>
+        <dcterms:abstract>How do commodity price movements affect sovereign default risk over the long-run? Using a novel dataset covering 41 countries and 42 raw commodities, we take a comprehensive long-run view to shed light on this so far understudied relationship between commodity risk and sovereign risk across 150 years. We create a novel country-specific commodity price index that allows us to take advantage of countries’ variation in their commodity export compositions. Our results are twofold: first, commodity price fluctuations show a persistent association with sovereign borrowing costs for countries that are commodity export dependent across the last one and a half centuries. Second, historically this relationship was driven by agricultural price movements; today it is driven by mineral and energy price movements.</dcterms:abstract>
+        <dc:date>2023-02-01</dc:date>
+        <dc:identifier>DOI 10.2139/ssrn.4376851</dc:identifier>
+        <dc:identifier>
+            <dcterms:URI>
+               <rdf:value>https://papers.ssrn.com/abstract=4376851</rdf:value>
+            </dcterms:URI>
+        </dc:identifier>
+        <dcterms:dateSubmitted>2026-02-01 11:54:09</dcterms:dateSubmitted>
+        <z:language>en</z:language>
+        <z:libraryCatalog>papers.ssrn.com</z:libraryCatalog>
+        <z:type>SSRN Scholarly Paper</z:type>
+        <prism:number>4376851</prism:number>
+    </rdf:Description>
+    <z:Attachment rdf:about="#item_21">
+        <z:itemType>attachment</z:itemType>
+        <rdf:resource rdf:resource="files/21/Dominguez-Cardoza et al. - 2023 - Global Commodity Markets and Sovereign Risk across 150 Years.pdf"/>
+        <dc:title>Full Text PDF</dc:title>
+        <dc:identifier>
+            <dcterms:URI>
+                <rdf:value>https://papers.ssrn.com/sol3/Delivery.cfm/SSRN_ID4376851_code428549.pdf?abstractid=4376851&amp;mirid=1</rdf:value>
+            </dcterms:URI>
+        </dc:identifier>
+        <dcterms:dateSubmitted>2026-02-01 11:54:11</dcterms:dateSubmitted>
+        <z:linkMode>1</z:linkMode>
+        <link:type>application/pdf</link:type>
+    </z:Attachment>
+    <bib:Article rdf:about="https://www.sciencedirect.com/science/article/pii/S0301420717304579">
+        <z:itemType>journalArticle</z:itemType>
+        <dcterms:isPartOf rdf:resource="urn:issn:0301-4207"/>
+        <bib:authors>
+            <rdf:Seq>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Bouri</foaf:surname>
+                        <foaf:givenName>Elie</foaf:givenName>
+                    </foaf:Person>
+                </rdf:li>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Jalkh</foaf:surname>
+                        <foaf:givenName>Naji</foaf:givenName>
+                    </foaf:Person>
+                </rdf:li>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Roubaud</foaf:surname>
+                        <foaf:givenName>David</foaf:givenName>
+                    </foaf:Person>
+                </rdf:li>
+            </rdf:Seq>
+        </bib:authors>
+        <link:link rdf:resource="#item_23"/>
+        <dc:subject>
+           <z:AutomaticTag><rdf:value>BRIC</rdf:value></z:AutomaticTag>
+        </dc:subject>
+        <dc:subject>
+           <z:AutomaticTag><rdf:value>C10</rdf:value></z:AutomaticTag>
+        </dc:subject>
+        <dc:subject>
+            <z:AutomaticTag>
+               <rdf:value>Energy commodities</rdf:value>
+            </z:AutomaticTag>
+        </dc:subject>
+        <dc:subject>
+           <z:AutomaticTag><rdf:value>G10</rdf:value></z:AutomaticTag>
+        </dc:subject>
+        <dc:subject>
+           <z:AutomaticTag><rdf:value>Q02</rdf:value></z:AutomaticTag>
+        </dc:subject>
+        <dc:subject>
+           <z:AutomaticTag><rdf:value>Q40</rdf:value></z:AutomaticTag>
+        </dc:subject>
+        <dc:subject>
+            <z:AutomaticTag>
+               <rdf:value>Quantile regression</rdf:value>
+            </z:AutomaticTag>
+        </dc:subject>
+        <dc:subject>
+           <z:AutomaticTag><rdf:value>Sovereign CDS</rdf:value></z:AutomaticTag>
+        </dc:subject>
+        <dc:subject>
+            <z:AutomaticTag>
+               <rdf:value>Volatility transmission</rdf:value>
+            </z:AutomaticTag>
+        </dc:subject>
+        <dc:title>Commodity volatility shocks and BRIC sovereign risk: A GARCH-quantile approach</dc:title>
+        <dcterms:abstract>We study whether the contemporaneous and lagged volatility of the commodity/energy markets can help predict the volatility of Brazil, Russia, India, China (BRIC) sovereign risk in the quantiles. We first define the latent volatility using Generalized Autoregressive Conditional Heteroscedasticity (GARCH) specifications and then use it within a quantile-based regression augmented with a dichotomous variable identifying the periods before and after the mid-2014 energy price decline. The analysis on daily data from January 4, 2010 to August 31, 2016 provides evidence that the volatility relation between commodity/energy and sovereign Credit Default Swap (CDS) markets is not the same under different volatility conditions, although energy volatility is slightly more important than commodity volatility. Importantly, the volatility of commodity/energy markets shapes sovereign risk in middle and upper volatility quantiles of commodities/energy exporters (Brazil and Russia). While in commodities/energy importers, such as China, predictability is only significant in upper volatility quantiles. Notably, we reveal the importance of the mid-2014 energy price decline for the volatility dynamics of BRIC sovereign risk; after the mid-2014, the volatility of the sovereign risk has increased in Brazil and Russia, while it has decreased in India. Finally, we recommend adoption of measures to reduce commodity and energy dependency.</dcterms:abstract>
+        <dc:date>2019-06-01</dc:date>
+        <dc:identifier>
+            <dcterms:URI>
+                <rdf:value>https://www.sciencedirect.com/science/article/pii/S0301420717304579</rdf:value>
+            </dcterms:URI>
+        </dc:identifier>
+        <dcterms:dateSubmitted>2026-02-01 11:54:28</dcterms:dateSubmitted>
+        <z:shortTitle>Commodity volatility shocks and BRIC sovereign risk</z:shortTitle>
+        <z:libraryCatalog>ScienceDirect</z:libraryCatalog>
+        <bib:pages>385-392</bib:pages>
+    </bib:Article>
+    <bib:Journal rdf:about="urn:issn:0301-4207">
+        <dc:identifier>DOI 10.1016/j.resourpol.2017.12.002</dc:identifier>
+        <prism:volume>61</prism:volume>
+        <dc:title>Resources Policy</dc:title>
+        <dc:identifier>ISSN 0301-4207</dc:identifier>
+        <dcterms:alternative>Resources Policy</dcterms:alternative>
+    </bib:Journal>
+    <z:Attachment rdf:about="#item_23">
+        <z:itemType>attachment</z:itemType>
+        <rdf:resource rdf:resource="files/23/Bouri et al. - 2019 - Commodity volatility shocks and BRIC sovereign risk A GARCH-quantile approach.pdf"/>
+        <dc:title>ScienceDirect Full Text PDF</dc:title>
+        <dc:identifier>
+            <dcterms:URI>
+                <rdf:value>https://pdf.sciencedirectassets.com/271807/1-s2.0-S0301420719X00021/1-s2.0-S0301420717304579/main.pdf?X-Amz-Security-Token=IQoJb3JpZ2luX2VjEAMaCXVzLWVhc3QtMSJGMEQCIAuJwL2Jz5mEqI1kUFMLjts6cT79iRSbZAy1%2FwMremdKAiBOXj%2FGIZduyWqQ3ptUXTmDoH%2FLJobDXXSsmSUAqiPRkyq7BQjM%2F%2F%2F%2F%2F%2F%2F%2F%2F%2F8BEAUaDDA1OTAwMzU0Njg2NSIMuAMaZvwuME1PNTAXKo8FUfcjxG0VPoWCY2xzTFk1pymlZRfR5vIXXEOhBY4LGIkHUEZOhNjuHb77Xh066KMlrVELy6q%2BTCT%2Bqj7dXK8Ja4GgyfIYecgDSn716%2FYHCev%2FOOdROnqB%2F9CjQd6TLjSYwKHiRJlPNbJTfREUkeYR1VoH3T47nSGSuCpZepEHSL9PwSG%2Fs%2FUQCAlefX06kIRIIq4FcrRID20PPrwUzK7AExYhzz1SwPvPMWwluAGquLyUlxm8ncM8lqpBHHbn55NqsrJq2LMhb1%2F8SzCHaYsOYYIIIdWbB9XNN0gaigaewMAQkGpAMRRkXqksE%2Bmr4wLQuasP7dZfhgH0BKEDD4u5nPfxBzHHcOOQOunzhT65P8eCk9879NCJMFkAwOYNRVnrK40ksx2B27krzwLkNPBsUqCJUEcLMUFOL6jGAo%2FwnP9L6Ic%2F1Xt2JGcRNZg0FjR6nwbDvP%2Brh3z0tTzuknChzfih3%2BB5ns2mbWAQIwFBa%2FKKHpYvVqJrDlZMh5aTOiYaE%2FEoIEhUsXBbmatzt1SnakMB3JnniJ40zTxSYF%2FDva4p5F6cwUskxVvQ7yikTaDuIYan6%2BffoZSnHhf9RACigOfRUYkDuUeqW6oUr1N%2BXsaRMbw8u8qs3xmHewLXviL7vY5Pfr0%2BF8J6T7wN7wK0Io1NVGXQyGK1ZfkD2IXnktctt96QPF7PVAMxGyKQi%2BIO%2FMPEWtrZ1EnJEF8CzT%2FySE8AL5Qag4nqTSAFCHV6DXWMFEPTUQzIPv54EqVGJ1wGtkkf0SRGPrqppsueBxKquVyvS%2BD5qTexLL80gEXAyLcJ%2BFM%2BFnA1uqagqBjq2bpgXi6EyWyEHFXQmNQMx%2BFXbQnSsfdgW8eLN%2Be2uyiq3zCO5PzLBjqyAZjdl40NPVf02Ut9LZORuZCdgWteI3MYZTGxrzKfb7lybU9BwW8nUpW7D6r4Ht7gmc3Q9kHMOvjDN7by6QxujPRjTBBoSGTtgswx4moJMh5%2B9jAHBJN9AL17jzHrrDZlDeTUVNFLQ823w%2BrupqcUURuxpRVFmSxpiDpEsE4UMFBHP9FHaYsAWA5gmeeNAKyGR8%2FqN%2B1AoaJOrlVcUMvv25NVvo4QC9sI5wkxdxMxK2%2FggKg%3D&amp;X-Amz-Algorithm=AWS4-HMAC-SHA256&amp;X-Amz-Date=20260201T115435Z&amp;X-Amz-SignedHeaders=host&amp;X-Amz-Expires=300&amp;X-Amz-Credential=ASIAQ3PHCVTY4GMQKCO3%2F20260201%2Fus-east-1%2Fs3%2Faws4_request&amp;X-Amz-Signature=1eb1566306982ca41b7a00a2b31ffe43cb2dd1b3e57132eab01b886fa691a3a6&amp;hash=e22feb7e2cb456c8d8d8789b2b68d72e32016c38695ae494b79381cdc1fbd96e&amp;host=68042c943591013ac2b2430a89b270f6af2c76d8dfd086a07176afe7c76c2c61&amp;pii=S0301420717304579&amp;tid=spdf-b219a09e-4b28-4a2a-bcd5-00fe09791b2d&amp;sid=6bdf6a0b4968d044ca4b08412a6acbf88072gxrqb&amp;type=client&amp;tsoh=d3d3LnNjaWVuY2VkaXJlY3QuY29t&amp;rh=d3d3LnNjaWVuY2VkaXJlY3QuY29t&amp;ua=190e56055952525f5b535d&amp;rr=9c7141418ed9be63&amp;cc=ch</rdf:value>
+            </dcterms:URI>
+        </dc:identifier>
+        <dcterms:dateSubmitted>2026-02-01 11:54:36</dcterms:dateSubmitted>
+        <z:linkMode>1</z:linkMode>
+        <link:type>application/pdf</link:type>
+    </z:Attachment>
+    <bib:Article rdf:about="https://www.researchgate.net/publication/228218610_Contingent_claims_approach_to_measuring_and_managing_sovereign_credit_risk">
+        <z:itemType>journalArticle</z:itemType>
+        <dcterms:isPartOf>
+           <bib:Journal><dc:title>ResearchGate</dc:title></bib:Journal>
+        </dcterms:isPartOf>
+        <link:link rdf:resource="#item_25"/>
+        <dc:title>(PDF) Contingent claims approach to measuring and managing sovereign credit risk</dc:title>
+        <dcterms:abstract>PDF | This paper proposes a new approach to measure, analyze, and manage sovereign risk based on the theory and practice of modern contingent claims... | Find, read and cite all the research you need on ResearchGate</dcterms:abstract>
+        <dc:date>2025-08-06</dc:date>
+        <dc:identifier>
+            <dcterms:URI>
+                <rdf:value>https://www.researchgate.net/publication/228218610_Contingent_claims_approach_to_measuring_and_managing_sovereign_credit_risk</rdf:value>
+            </dcterms:URI>
+        </dc:identifier>
+        <dcterms:dateSubmitted>2026-02-01 12:11:34</dcterms:dateSubmitted>
+        <z:language>en</z:language>
+        <z:libraryCatalog>www.researchgate.net</z:libraryCatalog>
+    </bib:Article>
+    <z:Attachment rdf:about="#item_25">
+        <z:itemType>attachment</z:itemType>
+        <rdf:resource rdf:resource="files/25/228218610_Contingent_claims_approach_to_measuring_and_managing_sovereign_credit_risk.html"/>
+        <dc:title>Snapshot</dc:title>
+        <dc:identifier>
+            <dcterms:URI>
+                <rdf:value>https://www.researchgate.net/publication/228218610_Contingent_claims_approach_to_measuring_and_managing_sovereign_credit_risk</rdf:value>
+            </dcterms:URI>
+        </dc:identifier>
+        <dcterms:dateSubmitted>2026-02-01 12:11:40</dcterms:dateSubmitted>
+        <z:linkMode>1</z:linkMode>
+        <link:type>text/html</link:type>
+    </z:Attachment>
+    <bib:Document rdf:about="https://www.researchgate.net/publication/228680898_Contingent_claims_approach_to_measuring_and_managing_sovereign_credit_risk">
+        <z:itemType>webpage</z:itemType>
+        <dcterms:isPartOf>
+           <z:Website><dc:title>ResearchGate</dc:title></z:Website>
+        </dcterms:isPartOf>
+        <link:link rdf:resource="#item_27"/>
+        <dc:title>(PDF) Contingent claims approach to measuring and managing sovereign credit risk</dc:title>
+        <dcterms:abstract>PDF | On Aug 3, 2007, Dale F Gray and others published Contingent claims approach to measuring and managing sovereign credit risk | Find, read and cite all the research you need on ResearchGate</dcterms:abstract>
+        <dc:identifier>
+            <dcterms:URI>
+                <rdf:value>https://www.researchgate.net/publication/228680898_Contingent_claims_approach_to_measuring_and_managing_sovereign_credit_risk</rdf:value>
+            </dcterms:URI>
+        </dc:identifier>
+        <dcterms:dateSubmitted>2026-02-01 12:11:50</dcterms:dateSubmitted>
+        <z:language>en</z:language>
+    </bib:Document>
+    <z:Attachment rdf:about="#item_27">
+        <z:itemType>attachment</z:itemType>
+        <rdf:resource rdf:resource="files/27/228680898_Contingent_claims_approach_to_measuring_and_managing_sovereign_credit_risk.html"/>
+        <dc:title>Snapshot</dc:title>
+        <dc:identifier>
+            <dcterms:URI>
+                <rdf:value>https://www.researchgate.net/publication/228680898_Contingent_claims_approach_to_measuring_and_managing_sovereign_credit_risk</rdf:value>
+            </dcterms:URI>
+        </dc:identifier>
+        <dcterms:dateSubmitted>2026-02-01 12:11:56</dcterms:dateSubmitted>
+        <z:linkMode>1</z:linkMode>
+        <link:type>text/html</link:type>
+    </z:Attachment>
+    <bib:Article rdf:about="https://www.worldscientific.com/worldscibooks/10.1142/9857-vol4">
+        <z:itemType>journalArticle</z:itemType>
+        <dcterms:isPartOf>
+            <bib:Journal>
+                <dc:identifier>DOI 10.1142/9857-vol4</dc:identifier>
+                <prism:volume>4</prism:volume>
+            </bib:Journal>
+        </dcterms:isPartOf>
+        <dc:publisher>
+            <foaf:Organization>
+               <foaf:name>World Scientific Publishing Company</foaf:name>
+            </foaf:Organization>
+        </dc:publisher>
+        <bib:authors>
+            <rdf:Seq>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Crouhy</foaf:surname>
+                        <foaf:givenName>Michel</foaf:givenName>
+                    </foaf:Person>
+                </rdf:li>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Galai</foaf:surname>
+                        <foaf:givenName>Dan</foaf:givenName>
+                    </foaf:Person>
+                </rdf:li>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Wiener</foaf:surname>
+                        <foaf:givenName>Zvi</foaf:givenName>
+                    </foaf:Person>
+                </rdf:li>
+            </rdf:Seq>
+        </bib:authors>
+        <link:link rdf:resource="#item_29"/>
+        <dc:title>World Scientific Reference on Contingent Claims Analysis in Corporate Finance: Volume 4: Contingent Claims Approach for Banks and Sovereign Debt</dc:title>
+        <dcterms:abstract>This paper proposes a new approach to measure, analyze, and manage sovereign risk based on the theory and practice of modern contingent claims analysis (CCA). The paper provides a new framework for adapting the CCA model to the sovereign balance sheet in a way that can help forecast credit spreads and evaluate the impact of market risks and risks transferred from other sectors. This new framework is useful for assessing vulnerability, policy analysis, sovereign credit risk analysis, and design of sovereign risk mitigation and control strategies. Applications for investors in three areas are discussed. First, CCA provides a new framework for valuing, investing, and trading sovereign securities, including sovereign capital structure arbitrage. Second, it provides a new framework for analysis and management of sovereign wealth funds being created by many emerging market and resource rich countries. Third, the framework provides quantitative measures of sovereign risk exposures which facilitates the design of new instruments and contracts to control or transfer sovereign risk.</dcterms:abstract>
+        <dc:date>03/2019</dc:date>
+        <dc:identifier>
+            <dcterms:URI>
+                <rdf:value>https://www.worldscientific.com/worldscibooks/10.1142/9857-vol4</rdf:value>
+            </dcterms:URI>
+        </dc:identifier>
+        <dcterms:dateSubmitted>2026-02-01 12:12:15</dcterms:dateSubmitted>
+        <z:shortTitle>World Scientific Reference on Contingent Claims Analysis in Corporate Finance</z:shortTitle>
+        <z:language>en</z:language>
+        <z:libraryCatalog>Semantic Scholar</z:libraryCatalog>
+        <dc:description>ISBN: 9789814740982 9789814759618
+DOI: 10.1142/9857-vol4</dc:description>
+    </bib:Article>
+    <z:Attachment rdf:about="#item_29">
+        <z:itemType>attachment</z:itemType>
+        <dc:title>Semantic Scholar Link</dc:title>
+        <dc:identifier>
+            <dcterms:URI>
+                <rdf:value>https://www.semanticscholar.org/paper/Contingent-Claims-Approach-to-Measuring-and-Credit-Gray-Merton/8d9906a82da873c6bfff60d0d696bdfcae9502ce</rdf:value>
+            </dcterms:URI>
+        </dc:identifier>
+        <dcterms:dateSubmitted>2026-02-01 12:12:15</dcterms:dateSubmitted>
+        <z:linkMode>3</z:linkMode>
+        <link:type>text/html</link:type>
+    </z:Attachment>
+    <bib:BookSection rdf:about="urn:isbn:978-1-4843-6858-9">
+        <z:itemType>bookSection</z:itemType>
+        <dcterms:isPartOf>
+            <bib:Book>
+                <dc:identifier>ISBN 978-1-4843-6858-9</dc:identifier>
+                <dc:title>A Guide to IMF Stress Testing</dc:title>
+            </bib:Book>
+        </dcterms:isPartOf>
+        <dc:publisher>
+            <foaf:Organization>
+               <foaf:name>International Monetary Fund</foaf:name>
+            </foaf:Organization>
+        </dc:publisher>
+        <bib:authors>
+            <rdf:Seq>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Gapen</foaf:surname>
+                        <foaf:givenName>Michael T.</foaf:givenName>
+                    </foaf:Person>
+                </rdf:li>
+            </rdf:Seq>
+        </bib:authors>
+        <link:link rdf:resource="#item_31"/>
+        <dc:title>Chapter 24. Measuring and Analyzing Sovereign Risk with Contingent Claims</dc:title>
+        <dcterms:abstract>Abstract This chapter develops a comprehensive new framework to measure and analyze sovereign risk. Given that traditional macroeconomic vulnerability indicators and accounting-based measures do not address risk in a comprehensive and forward-looking way, the contingent claims approach is used to construct a marked-to-market balance sheet for the sovereign and derive a set of credit risk indicators that serve as a barometer of sovereign risk. Applications to 12 emerging market economies show the risk indicators to be robust and highly correlated with market spreads. The framework can help policymakers design risk mitigation strategies and rank policy options using a calibrated structural model unique to each economy.</dcterms:abstract>
+        <dc:identifier>
+            <dcterms:URI>
+                <rdf:value>https://www.elibrary.imf.org/display/book/9781484368589/ch024.xml</rdf:value>
+            </dcterms:URI>
+        </dc:identifier>
+        <dcterms:dateSubmitted>2026-02-01 12:12:29</dcterms:dateSubmitted>
+        <z:language>en</z:language>
+        <z:libraryCatalog>www.elibrary.imf.org</z:libraryCatalog>
+        <dc:description>Section: A Guide to IMF Stress Testing</dc:description>
+    </bib:BookSection>
+    <z:Attachment rdf:about="#item_31">
+        <z:itemType>attachment</z:itemType>
+        <rdf:resource rdf:resource="files/31/Gapen - Chapter 24. Measuring and Analyzing Sovereign Risk with Contingent Claims.pdf"/>
+        <dc:title>Full Text PDF</dc:title>
+        <dc:identifier>
+            <dcterms:URI>
+                <rdf:value>https://www.elibrary.imf.org/downloadpdf/display/book/9781484368589/ch024.pdf</rdf:value>
+            </dcterms:URI>
+        </dc:identifier>
+        <dcterms:dateSubmitted>2026-02-01 12:12:30</dcterms:dateSubmitted>
+        <z:linkMode>1</z:linkMode>
+        <link:type>application/pdf</link:type>
+    </z:Attachment>
+    <bib:Article rdf:about="https://onlinelibrary.wiley.com/doi/abs/10.1111/j.1540-6261.1974.tb03058.x">
+        <z:itemType>journalArticle</z:itemType>
+        <dcterms:isPartOf rdf:resource="urn:issn:1540-6261"/>
+        <bib:authors>
+            <rdf:Seq>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Merton</foaf:surname>
+                        <foaf:givenName>Robert C.</foaf:givenName>
+                    </foaf:Person>
+                </rdf:li>
+            </rdf:Seq>
+        </bib:authors>
+        <link:link rdf:resource="#item_33"/>
+        <link:link rdf:resource="#item_34"/>
+        <dc:title>On the Pricing of Corporate Debt: The Risk Structure of Interest Rates</dc:title>
+        <dc:date>1974</dc:date>
+        <dc:identifier>
+            <dcterms:URI>
+                <rdf:value>https://onlinelibrary.wiley.com/doi/abs/10.1111/j.1540-6261.1974.tb03058.x</rdf:value>
+            </dcterms:URI>
+        </dc:identifier>
+        <dcterms:dateSubmitted>2026-02-01 12:12:44</dcterms:dateSubmitted>
+        <z:shortTitle>On the Pricing of Corporate Debt</z:shortTitle>
+        <z:language>en</z:language>
+        <z:libraryCatalog>Wiley Online Library</z:libraryCatalog>
+        <dc:rights>© 1974 the American Finance Association</dc:rights>
+        <dc:description>_eprint: https://onlinelibrary.wiley.com/doi/pdf/10.1111/j.1540-6261.1974.tb03058.x</dc:description>
+        <bib:pages>449-470</bib:pages>
+    </bib:Article>
+    <bib:Journal rdf:about="urn:issn:1540-6261">
+        <dc:identifier>DOI 10.1111/j.1540-6261.1974.tb03058.x</dc:identifier>
+        <prism:volume>29</prism:volume>
+        <dc:title>The Journal of Finance</dc:title>
+        <dc:identifier>ISSN 1540-6261</dc:identifier>
+        <prism:number>2</prism:number>
+    </bib:Journal>
+    <z:Attachment rdf:about="#item_33">
+        <z:itemType>attachment</z:itemType>
+        <rdf:resource rdf:resource="files/33/Merton - 1974 - On the Pricing of Corporate Debt The Risk Structure of Interest Rates.pdf"/>
+        <dc:title>Full Text PDF</dc:title>
+        <dc:identifier>
+            <dcterms:URI>
+                <rdf:value>https://onlinelibrary.wiley.com/doi/pdfdirect/10.1111/j.1540-6261.1974.tb03058.x</rdf:value>
+            </dcterms:URI>
+        </dc:identifier>
+        <dcterms:dateSubmitted>2026-02-01 12:12:45</dcterms:dateSubmitted>
+        <z:linkMode>1</z:linkMode>
+        <link:type>application/pdf</link:type>
+    </z:Attachment>
+    <z:Attachment rdf:about="#item_34">
+        <z:itemType>attachment</z:itemType>
+        <rdf:resource rdf:resource="files/34/j.1540-6261.1974.tb03058.html"/>
+        <dc:title>Snapshot</dc:title>
+        <dc:identifier>
+            <dcterms:URI>
+                <rdf:value>https://onlinelibrary.wiley.com/doi/abs/10.1111/j.1540-6261.1974.tb03058.x</rdf:value>
+            </dcterms:URI>
+        </dc:identifier>
+        <dcterms:dateSubmitted>2026-02-01 12:12:54</dcterms:dateSubmitted>
+        <z:linkMode>1</z:linkMode>
+        <link:type>text/html</link:type>
+    </z:Attachment>
+    <bib:Article rdf:about="https://academic.oup.com/jfec/article-lookup/doi/10.1093/jjfinec/nbi022">
+        <z:itemType>journalArticle</z:itemType>
+        <dcterms:isPartOf rdf:resource="urn:issn:1479-8409,%201479-8417"/>
+        <bib:authors>
+            <rdf:Seq>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Barndorff-Nielsen</foaf:surname>
+                        <foaf:givenName>O. E.</foaf:givenName>
+                    </foaf:Person>
+                </rdf:li>
+            </rdf:Seq>
+        </bib:authors>
+        <link:link rdf:resource="#item_35"/>
+        <dc:title>Econometrics of Testing for Jumps in Financial Economics Using Bipower Variation</dc:title>
+        <dcterms:abstract>In this article we provide an asymptotic distribution theory for some nonparametric tests of the hypothesis that asset prices have continuous sample paths. We study the behaviour of the tests using simulated data and see that certain versions of the tests have good finite sample behavior. We also apply the tests to exchange rate data and show that the null of a continuous sample path is frequently rejected. Most of the jumps the statistics identify are associated with governmental macroeconomic announcements.</dcterms:abstract>
+        <dc:date>2005-08-19</dc:date>
+        <dc:identifier>
+            <dcterms:URI>
+                <rdf:value>https://academic.oup.com/jfec/article-lookup/doi/10.1093/jjfinec/nbi022</rdf:value>
+            </dcterms:URI>
+        </dc:identifier>
+        <dcterms:dateSubmitted>2026-02-01 12:13:06</dcterms:dateSubmitted>
+        <z:language>en</z:language>
+        <z:libraryCatalog>DOI.org (Crossref)</z:libraryCatalog>
+        <bib:pages>1-30</bib:pages>
+    </bib:Article>
+    <bib:Journal rdf:about="urn:issn:1479-8409,%201479-8417">
+        <dc:identifier>DOI 10.1093/jjfinec/nbi022</dc:identifier>
+        <prism:volume>4</prism:volume>
+        <dc:title>Journal of Financial Econometrics</dc:title>
+        <dc:identifier>ISSN 1479-8409, 1479-8417</dc:identifier>
+        <prism:number>1</prism:number>
+        <dcterms:alternative>Journal of Financial Econometrics</dcterms:alternative>
+    </bib:Journal>
+    <z:Attachment rdf:about="#item_35">
+        <z:itemType>attachment</z:itemType>
+        <rdf:resource rdf:resource="files/35/Barndorff-Nielsen - 2005 - Econometrics of Testing for Jumps in Financial Economics Using Bipower Variation.pdf"/>
+        <dc:title>PDF</dc:title>
+        <dc:identifier>
+            <dcterms:URI>
+                <rdf:value>https://public.econ.duke.edu/~get/browse/courses/883/Spr15/COURSE-MATERIALS/Z_Papers/BNSJFEC2006.pdf</rdf:value>
+            </dcterms:URI>
+        </dc:identifier>
+        <dcterms:dateSubmitted>2026-02-01 12:13:04</dcterms:dateSubmitted>
+        <z:linkMode>1</z:linkMode>
+        <link:type>application/pdf</link:type>
+    </z:Attachment>
+    <bib:Article rdf:about="http://www.scopus.com/inward/record.url?scp=84892552634&amp;partnerID=8YFLogxK">
+        <z:itemType>journalArticle</z:itemType>
+        <dcterms:isPartOf>
+            <bib:Journal>
+                <dc:identifier>DOI 10.1016/j.jbankfin.2013.04.025</dc:identifier>
+                <prism:volume>40</prism:volume>
+                <dc:title>Journal of Banking and Finance</dc:title>
+                <dc:identifier>ISSN 0378-4266</dc:identifier>
+                <prism:number>1</prism:number>
+            </bib:Journal>
+        </dcterms:isPartOf>
+        <bib:authors>
+            <rdf:Seq>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Gilder</foaf:surname>
+                        <foaf:givenName>Dudley</foaf:givenName>
+                    </foaf:Person>
+                </rdf:li>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Shackleton</foaf:surname>
+                        <foaf:givenName>Mark B.</foaf:givenName>
+                    </foaf:Person>
+                </rdf:li>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Taylor</foaf:surname>
+                        <foaf:givenName>Stephen J.</foaf:givenName>
+                    </foaf:Person>
+                </rdf:li>
+            </rdf:Seq>
+        </bib:authors>
+        <dcterms:isReferencedBy rdf:resource="#item_38"/>
+        <link:link rdf:resource="#item_39"/>
+        <dc:subject>
+            <z:AutomaticTag>
+               <rdf:value>high-frequency stock prices</rdf:value>
+            </z:AutomaticTag>
+        </dc:subject>
+        <dc:subject>
+            <z:AutomaticTag>
+               <rdf:value>macroeconomic news</rdf:value>
+            </z:AutomaticTag>
+        </dc:subject>
+        <dc:subject>
+            <z:AutomaticTag>
+               <rdf:value>non-parametric jump tests</rdf:value>
+            </z:AutomaticTag>
+        </dc:subject>
+        <dc:subject>
+            <z:AutomaticTag>
+               <rdf:value>realised volatility</rdf:value>
+            </z:AutomaticTag>
+        </dc:subject>
+        <dc:title>Cojumps in stock prices: empirical evidence</dc:title>
+        <dcterms:abstract>We examine contemporaneous jumps (cojumps) among individual stocks and a proxy for the market portfolio. We show, through a Monte Carlo study, that using intraday jump tests and a coexceedance criterion to detect cojumps has a power similar to the cojump test proposed by Bollerslev et al. (2008). However, we also show that we should not expect to detect all common jumps comprising a cojump when using such coexceedance based detection methods. Empirically, we provide evidence of an association between jumps in the market portfolio and cojumps in the underlying stocks. Consistent with our Monte Carlo evidence, moderate numbers of stocks are often detected to be involved in these (systematic) cojumps. Importantly, the results suggest that market-level news is able to generate simultaneous large jumps in individual stocks. We also find evidence of an association between systematic cojumps and Federal Funds Target Rate announcements.</dcterms:abstract>
+        <dc:date>2014-03-01</dc:date>
+        <dc:identifier>
+            <dcterms:URI>
+                <rdf:value>http://www.scopus.com/inward/record.url?scp=84892552634&amp;partnerID=8YFLogxK</rdf:value>
+            </dcterms:URI>
+        </dc:identifier>
+        <dcterms:dateSubmitted>2026-02-01 12:13:20</dcterms:dateSubmitted>
+        <z:shortTitle>Cojumps in stock prices</z:shortTitle>
+        <z:libraryCatalog>Aston Research Explorer</z:libraryCatalog>
+        <bib:pages>443-459</bib:pages>
+    </bib:Article>
+    <bib:Memo rdf:about="#item_38">
+        <rdf:value>&lt;p&gt;© 2013, Elsevier. Licensed under the Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 International http://creativecommons.org/licenses/by-nc-nd/4.0/&lt;/p&gt;</rdf:value>
+    </bib:Memo>
+    <z:Attachment rdf:about="#item_39">
+        <z:itemType>attachment</z:itemType>
+        <rdf:resource rdf:resource="files/39/Gilder et al. - 2014 - Cojumps in stock prices empirical evidence.pdf"/>
+        <dc:title>Accepted Version</dc:title>
+        <dc:identifier>
+            <dcterms:URI>
+                <rdf:value>https://publications.aston.ac.uk/id/eprint/23642/1/Cojumps_in_stock_prices.pdf</rdf:value>
+            </dcterms:URI>
+        </dc:identifier>
+        <dcterms:dateSubmitted>2026-02-01 12:13:21</dcterms:dateSubmitted>
+        <z:linkMode>1</z:linkMode>
+        <link:type>application/pdf</link:type>
+    </z:Attachment>
+    <bib:Article rdf:about="https://www.sciencedirect.com/science/article/pii/S0304405X17301332">
+        <z:itemType>journalArticle</z:itemType>
+        <dcterms:isPartOf rdf:resource="urn:issn:0304-405X"/>
+        <bib:authors>
+            <rdf:Seq>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Caporin</foaf:surname>
+                        <foaf:givenName>Massimiliano</foaf:givenName>
+                    </foaf:Person>
+                </rdf:li>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Kolokolov</foaf:surname>
+                        <foaf:givenName>Aleksey</foaf:givenName>
+                    </foaf:Person>
+                </rdf:li>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Renò</foaf:surname>
+                        <foaf:givenName>Roberto</foaf:givenName>
+                    </foaf:Person>
+                </rdf:li>
+            </rdf:Seq>
+        </bib:authors>
+        <link:link rdf:resource="#item_41"/>
+        <link:link rdf:resource="#item_42"/>
+        <dc:subject>
+           <z:AutomaticTag><rdf:value>Jumps</rdf:value></z:AutomaticTag>
+        </dc:subject>
+        <dc:subject>
+            <z:AutomaticTag>
+               <rdf:value>Return predictability</rdf:value>
+            </z:AutomaticTag>
+        </dc:subject>
+        <dc:subject>
+           <z:AutomaticTag><rdf:value>Systemic events</rdf:value></z:AutomaticTag>
+        </dc:subject>
+        <dc:subject>
+            <z:AutomaticTag>
+               <rdf:value>Variance risk premium</rdf:value>
+            </z:AutomaticTag>
+        </dc:subject>
+        <dc:title>Systemic co-jumps</dc:title>
+        <dcterms:abstract>The simultaneous occurrence of jumps in several stocks can be associated with major financial news, triggers short-term predictability in stock returns, is correlated with sudden spikes of the variance risk premium, and determines a persistent increase (decrease) of stock variances and correlations when they come along with bad (good) news. These systemic events and their implications can be easily overlooked by traditional univariate jump statistics applied to stock indices. They are instead revealed in a clearly cut way by using a novel test procedure applied to individual assets, which is particularly effective on high-volume stocks.</dcterms:abstract>
+        <dc:date>2017-12-01</dc:date>
+        <dc:identifier>
+            <dcterms:URI>
+                <rdf:value>https://www.sciencedirect.com/science/article/pii/S0304405X17301332</rdf:value>
+            </dcterms:URI>
+        </dc:identifier>
+        <dcterms:dateSubmitted>2026-02-01 12:13:37</dcterms:dateSubmitted>
+        <z:libraryCatalog>ScienceDirect</z:libraryCatalog>
+        <bib:pages>563-591</bib:pages>
+    </bib:Article>
+    <bib:Journal rdf:about="urn:issn:0304-405X">
+        <dc:identifier>DOI 10.1016/j.jfineco.2017.06.016</dc:identifier>
+        <prism:volume>126</prism:volume>
+        <dc:title>Journal of Financial Economics</dc:title>
+        <dc:identifier>ISSN 0304-405X</dc:identifier>
+        <prism:number>3</prism:number>
+        <dcterms:alternative>Journal of Financial Economics</dcterms:alternative>
+    </bib:Journal>
+    <z:Attachment rdf:about="#item_41">
+        <z:itemType>attachment</z:itemType>
+        <rdf:resource rdf:resource="files/41/Caporin et al. - 2017 - Systemic co-jumps.pdf"/>
+        <dc:title>ScienceDirect Full Text PDF</dc:title>
+        <dc:identifier>
+            <dcterms:URI>
+                <rdf:value>https://pdf.sciencedirectassets.com/271671/1-s2.0-S0304405X17X00123/1-s2.0-S0304405X17301332/main.pdf?X-Amz-Security-Token=IQoJb3JpZ2luX2VjEAMaCXVzLWVhc3QtMSJHMEUCIFmzA9kHvwK1wfvtTm2k9I%2BID82jyQjNbLj1EH%2BubihpAiEAhxL2kpFrkEBFc8ZIOWnIs2b92uWv6M%2FOrhCzM5zVC2UqvAUIzP%2F%2F%2F%2F%2F%2F%2F%2F%2F%2FARAFGgwwNTkwMDM1NDY4NjUiDIHYKmfqcyLDQT4uJiqQBaNyhJOYEPdkAbV6EsI30ffd0DTclZ48JWcGqVef6qeQonwlFOcc4z5twibXRq0IYIl2UU%2FNG8cAkRBkLdJGGqoNcfTQiODgXhDUDar9er4s6APZPSPdEeHn83PuRognSvuqgGeaXiJGRqGpgFYwBdegulQxjUR%2FHa0kvWFxZzd5SuzbKYP7cuKDceEpnWrV9QIVXQUNUD2Alq5Oj%2BnSkYciBDa6m7vvOSKDqLvNRTLPOAVH1LIbEQ4dVj4Dd0wbT%2FlbJ2y94tWLTmd82E7CrY7ebmrGiclW84OeFUjxC3dCeqQfvNH%2FeCGkivsE1mpognsJw3Kw6qnf3rIHPiYF1SDd4UfThcvg3qgqaU%2F5UEqlR05a6IjX9r04EQOMmGA9%2F%2FxiJF%2FSD9am2wSaIikMNEshCFO8zjXWzGnVEa0InMitbcoOXeQ5NE8sO7Bu%2Fs2yDrY4KvHDFbj6AvFA0otW1DJX3Rl0JTGsvQd9TkhNNfMLy47SDoO7KwT0IHDST2cMobNY03ZEmjJ%2FMFH44f1JuYlRYcNKunUnnNgXb%2F2VU2Y81%2FAox8G74bDJbpn73TEH3H5Hnpz1wbZPbZooTl1oFP4MRmI984cf%2FU6z%2BtxJjrl3oY5gl7ndY2Ld5g5J84wRlKDsPWvE0wMxaIuQXzbEkNrOcWa2vsys7cYJgaeZGqtho1KdF9ln4FSzsSufZS2fTyQPlCHOkJNJJw4q7BtO44rAgxD9iVkdVLTcc3Rp8UQ3TdaRYTmRnYiRBJQeomBYDQ5CWwYuqVsDb%2FToc1Z8FI%2FvjlS%2BNFJi%2FXkd%2FpKMgy4vwFfuUmkDR1fv3NyLja6E4z18PUpMFWrDG%2BTpv9ESX682SqAoktqrnJPN%2BGsiNc5iMMjd%2FMsGOrEBssQtZfldXZVnxEZ1btpVxqbT5bp46kIuSqhtSFpaOdqI6bwIU6Z1MKFyxciF8GaEQI2Pbg74YQV8TDxC91CdLq%2BJC6aSj81Aon7fe6%2BcE4MDMRfK%2B48P6znvzo0hPVeGE1n5Zes%2BuW796WIFQMUNfngckthrfz2JgYFRpMaCM5DQycHcdr68dJtNA1c8JMpprdEvLAr8PQ4UHjYUvnM%2By9OxGOWM05B3wr0170o9VS8c&amp;X-Amz-Algorithm=AWS4-HMAC-SHA256&amp;X-Amz-Date=20260201T121351Z&amp;X-Amz-SignedHeaders=host&amp;X-Amz-Expires=300&amp;X-Amz-Credential=ASIAQ3PHCVTY6MDJWSZC%2F20260201%2Fus-east-1%2Fs3%2Faws4_request&amp;X-Amz-Signature=d3f9bb451654b90b81b0283c7e814f05b3a86962857429aeaed3932a81fa02a1&amp;hash=53d173906369f9d73ee48773ee48c904437632032d3c9ef7a48c4c5d106fcccc&amp;host=68042c943591013ac2b2430a89b270f6af2c76d8dfd086a07176afe7c76c2c61&amp;pii=S0304405X17301332&amp;tid=spdf-28aac319-dad1-46df-959a-53f1c31b01e5&amp;sid=6bdf6a0b4968d044ca4b08412a6acbf88072gxrqb&amp;type=client&amp;tsoh=d3d3LnNjaWVuY2VkaXJlY3QuY29t&amp;rh=d3d3LnNjaWVuY2VkaXJlY3QuY29t&amp;ua=190e56055952530a580307&amp;rr=9c715d7ab8f03dba&amp;cc=ch</rdf:value>
+            </dcterms:URI>
+        </dc:identifier>
+        <dcterms:dateSubmitted>2026-02-01 12:13:53</dcterms:dateSubmitted>
+        <z:linkMode>1</z:linkMode>
+        <link:type>application/pdf</link:type>
+    </z:Attachment>
+    <z:Attachment rdf:about="#item_42">
+        <z:itemType>attachment</z:itemType>
+        <rdf:resource rdf:resource="files/42/S0304405X17301332.html"/>
+        <dc:title>ScienceDirect Snapshot</dc:title>
+        <dc:identifier>
+            <dcterms:URI>
+                <rdf:value>https://www.sciencedirect.com/science/article/pii/S0304405X17301332</rdf:value>
+            </dcterms:URI>
+        </dc:identifier>
+        <dcterms:dateSubmitted>2026-02-01 12:14:07</dcterms:dateSubmitted>
+        <z:linkMode>1</z:linkMode>
+        <link:type>text/html</link:type>
+    </z:Attachment>
+    <bib:Article rdf:about="https://www.sciencedirect.com/science/article/pii/S0140988325001999">
+        <z:itemType>journalArticle</z:itemType>
+        <dcterms:isPartOf rdf:resource="urn:issn:0140-9883"/>
+        <bib:authors>
+            <rdf:Seq>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Wegener</foaf:surname>
+                        <foaf:givenName>Christoph</foaf:givenName>
+                    </foaf:Person>
+                </rdf:li>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Basse</foaf:surname>
+                        <foaf:givenName>Tobias</foaf:givenName>
+                    </foaf:Person>
+                </rdf:li>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Maiani</foaf:surname>
+                        <foaf:givenName>Stefano</foaf:givenName>
+                    </foaf:Person>
+                </rdf:li>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Nguyen</foaf:surname>
+                        <foaf:givenName>Tam Huu</foaf:givenName>
+                    </foaf:Person>
+                </rdf:li>
+            </rdf:Seq>
+        </bib:authors>
+        <link:link rdf:resource="#item_44"/>
+        <link:link rdf:resource="#item_45"/>
+        <dc:subject>
+            <z:AutomaticTag>
+               <rdf:value>Fiscal stability</rdf:value>
+            </z:AutomaticTag>
+        </dc:subject>
+        <dc:subject>
+           <z:AutomaticTag><rdf:value>Oil prices</rdf:value></z:AutomaticTag>
+        </dc:subject>
+        <dc:subject>
+            <z:AutomaticTag>
+               <rdf:value>Predictive regressions</rdf:value>
+            </z:AutomaticTag>
+        </dc:subject>
+        <dc:title>Predictive power of oil prices on CDS spread dynamics of oil-producing countries</dc:title>
+        <dcterms:abstract>This paper employs predictive regressions to explore the predictability of sovereign Credit Default Swap (CDS) spread dynamics of relevant oil-producing countries. By incorporating oil prices and additional control variables, we predict the rate of CDS spread changes for Brazil, the UK, Malaysia, Norway, Qatar, Russia, Saudi Arabia, the US, and Venezuela. Our findings reveal that (i) the empirical coefficients of determination (R2) indicate low in-sample predictability for our entire period of analysis (2010–2024), the R2 increases markedly when dividing the analysis period into more relevant sub-samples (2010–2016 and 2016–2024); (ii) oil prices are not significant predictors for the full period but become significant in many regressions within sub-samples; (iii) for countries where oil prices are significant in both sub-samples, the coefficient sign changes from negative to positive, suggesting that in more recent years, rising (falling) oil prices signal increasing (decreasing) geopolitical risk, positively (negatively) influencing CDS spreads.</dcterms:abstract>
+        <dc:date>2025-05-01</dc:date>
+        <dc:identifier>
+            <dcterms:URI>
+                <rdf:value>https://www.sciencedirect.com/science/article/pii/S0140988325001999</rdf:value>
+            </dcterms:URI>
+        </dc:identifier>
+        <dcterms:dateSubmitted>2026-02-01 12:14:11</dcterms:dateSubmitted>
+        <z:libraryCatalog>ScienceDirect</z:libraryCatalog>
+        <bib:pages>108375</bib:pages>
+    </bib:Article>
+    <bib:Journal rdf:about="urn:issn:0140-9883">
+        <dc:identifier>DOI 10.1016/j.eneco.2025.108375</dc:identifier>
+        <prism:volume>145</prism:volume>
+        <dc:title>Energy Economics</dc:title>
+        <dc:identifier>ISSN 0140-9883</dc:identifier>
+        <dcterms:alternative>Energy Economics</dcterms:alternative>
+    </bib:Journal>
+    <z:Attachment rdf:about="#item_44">
+        <z:itemType>attachment</z:itemType>
+        <rdf:resource rdf:resource="files/44/Wegener et al. - 2025 - Predictive power of oil prices on CDS spread dynamics of oil-producing countries.pdf"/>
+        <dc:title>ScienceDirect Full Text PDF</dc:title>
+        <dc:identifier>
+            <dcterms:URI>
+                <rdf:value>https://pdf.sciencedirectassets.com/271683/1-s2.0-S0140988325X00049/1-s2.0-S0140988325001999/main.pdf?X-Amz-Security-Token=IQoJb3JpZ2luX2VjEAMaCXVzLWVhc3QtMSJGMEQCIBx5dqIFiMt4oxK2AU59XFXWXT5bbwGbDAgg9Y4j1VNoAiBErn7yRekaMHhmM3tsfkrKcnC0nJeiHsfwbe%2FE6xBjiyq7BQjM%2F%2F%2F%2F%2F%2F%2F%2F%2F%2F8BEAUaDDA1OTAwMzU0Njg2NSIMq5bdkxepf0xeooNRKo8F61IyftRhaKnnBwtBtsJMPrnpleKTRre6ezCdzhgFhJn8GKejBpd5xleLr24ibfvthw3yKF%2FwEB7aZXQmKC2CiAJ%2FGRY3bzcdLTeTsyhPbTXEx3hSRVbncGx0J8Zwb2gGPVCwCtcZDv%2FpkwTQ4rhkH8C5N9OZX%2Fa3p2pAdA2%2FYpv8yVUB0vkX3PlBxSQ3MF8Sed7EY0wLxCjyqe1DdzWFyAkAJe08PTMOOVvkspsXo0LzLlNuwnhA9P5QsaY5lqvFgwMCINdteRP37h9MAxULzRBuihBwt%2FjqqCCu1wEl7fY4x8bRKOdYlKipMb1FwKQQ%2BUZY0p8uMcKTUb%2FViHJeF8FKbRMxv7y1hGccPTMogOllcTo4YYDYcPher9ffYAohMqIM%2BmpIOZm6ac58ZSyABPpNt6qMCcYjJKXgbfjUhTwlXpPHMto6mXbbb88A2BzygVxAwx%2FcOhZBmRFM7w4bZx3D7yB7VOPZgSrbGcRAcs82hcU%2B%2FXzfxWFxF7rqGH8GomEtefXtHUkhtLb1rM3XVJSXKRcCfChTF4eM20k%2F0NZLz3x7Pss14Jz9IQVgQ2hfk3jrVO3sOEp%2FMRWUQAVyCGm9Qq1uURcNO4brunWFUmuoCLg0WMQSQ8%2FagBiMwcjH28hASqqzKNOOx%2BiXbPo2YUIJtxdaGWRCcmbvtzTsp3X6Oy6AtAGFHiwnSHLWyuDbjwxZ5YX6PDribwFph3CRVeTJyuMipoRlcRvnObCyxAfNFM1X77EqHbX3jSRSQsrkW53wSE6kR0rGD4KnvEOi9%2FwV%2BdwgDxFirMmabP7%2BFgpye3oPG4Au6Y1UJdA23EbRHt6mZvivAvSwgdeOC%2FjXPNLm0mFq7GAT3B%2Bkwvi1jTDv3fzLBjqyAQN%2F9WGnVprg7sFLz%2FriIm12fq05n5de8n33BpDq2rdYmovfr2TMzyK4UWZ3zqXIfuxM2mCTHqDXtbxL3J2tPY5SyhtO4bYGxQ1A8b5g4O3YXiiaUW5%2BUx6m9G%2BgjdAiDbjbBij7OTE7B%2BFgPV7pRcVRH4TvPevnwRG4IYvenA%2FlJLDCopm77fPBL0K54faJKdlalLxL8btREjLuaPuMfv93%2BSSnerMdR1Lyw%2BrO1htAhO8%3D&amp;X-Amz-Algorithm=AWS4-HMAC-SHA256&amp;X-Amz-Date=20260201T121418Z&amp;X-Amz-SignedHeaders=host&amp;X-Amz-Expires=300&amp;X-Amz-Credential=ASIAQ3PHCVTYYKZEWIAW%2F20260201%2Fus-east-1%2Fs3%2Faws4_request&amp;X-Amz-Signature=04e2c81acbca0e6984d3496aa6184c24f592c75b4528d12b1bc0f89f973db461&amp;hash=7ee532c70f3ca958c85dd3999967d7b353c2797dbe11b66cd84821a66822a97c&amp;host=68042c943591013ac2b2430a89b270f6af2c76d8dfd086a07176afe7c76c2c61&amp;pii=S0140988325001999&amp;tid=spdf-83b5ba2a-f851-472d-bac0-a9c013e902fb&amp;sid=6bdf6a0b4968d044ca4b08412a6acbf88072gxrqb&amp;type=client&amp;tsoh=d3d3LnNjaWVuY2VkaXJlY3QuY29t&amp;rh=d3d3LnNjaWVuY2VkaXJlY3QuY29t&amp;ua=190e56055952530b5d505d&amp;rr=9c715e2289203dba&amp;cc=ch</rdf:value>
+            </dcterms:URI>
+        </dc:identifier>
+        <dcterms:dateSubmitted>2026-02-01 12:14:19</dcterms:dateSubmitted>
+        <z:linkMode>1</z:linkMode>
+        <link:type>application/pdf</link:type>
+    </z:Attachment>
+    <z:Attachment rdf:about="#item_45">
+        <z:itemType>attachment</z:itemType>
+        <rdf:resource rdf:resource="files/45/S0140988325001999.html"/>
+        <dc:title>ScienceDirect Snapshot</dc:title>
+        <dc:identifier>
+            <dcterms:URI>
+                <rdf:value>https://www.sciencedirect.com/science/article/pii/S0140988325001999</rdf:value>
+            </dcterms:URI>
+        </dc:identifier>
+        <dcterms:dateSubmitted>2026-02-01 12:14:29</dcterms:dateSubmitted>
+        <z:linkMode>1</z:linkMode>
+        <link:type>text/html</link:type>
+    </z:Attachment>
+    <bib:Article rdf:about="https://www.researchgate.net/publication/256058446_Fundamentals_and_Sovereign_Risk_of_Emerging_Markets">
+        <z:itemType>journalArticle</z:itemType>
+        <dcterms:isPartOf rdf:resource="urn:issn:1468-0106"/>
+        <dc:title>(PDF) Fundamentals and Sovereign Risk of Emerging Markets</dc:title>
+        <dcterms:abstract>PDF | We empirically assess the relative importance of various economic fundamentals in accounting for the sovereign credit default swap (CDS) spreads... | Find, read and cite all the research you need on ResearchGate</dcterms:abstract>
+        <dc:date>2025-08-09</dc:date>
+        <dc:identifier>
+            <dcterms:URI>
+                <rdf:value>https://www.researchgate.net/publication/256058446_Fundamentals_and_Sovereign_Risk_of_Emerging_Markets</rdf:value>
+            </dcterms:URI>
+        </dc:identifier>
+        <dcterms:dateSubmitted>2026-02-01 12:14:42</dcterms:dateSubmitted>
+        <z:language>en</z:language>
+        <z:libraryCatalog>www.researchgate.net</z:libraryCatalog>
+    </bib:Article>
+    <bib:Journal rdf:about="urn:issn:1468-0106">
+        <dc:title>ResearchGate</dc:title>
+        <dc:identifier>ISSN 1468-0106</dc:identifier>
+    </bib:Journal>
+    <bib:Article rdf:about="https://onlinelibrary.wiley.com/doi/abs/10.1111/1468-0106.12160">
+        <z:itemType>journalArticle</z:itemType>
+        <dcterms:isPartOf>
+            <bib:Journal>
+                <dc:identifier>DOI 10.1111/1468-0106.12160</dc:identifier>
+                <prism:volume>21</prism:volume>
+                <dc:title>Pacific Economic Review</dc:title>
+                <dc:identifier>ISSN 1468-0106</dc:identifier>
+                <prism:number>2</prism:number>
+            </bib:Journal>
+        </dcterms:isPartOf>
+        <bib:authors>
+            <rdf:Seq>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Aizenman</foaf:surname>
+                        <foaf:givenName>Joshua</foaf:givenName>
+                    </foaf:Person>
+                </rdf:li>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Jinjarak</foaf:surname>
+                        <foaf:givenName>Yothin</foaf:givenName>
+                    </foaf:Person>
+                </rdf:li>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Park</foaf:surname>
+                        <foaf:givenName>Donghyun</foaf:givenName>
+                    </foaf:Person>
+                </rdf:li>
+            </rdf:Seq>
+        </bib:authors>
+        <link:link rdf:resource="#item_48"/>
+        <dc:title>Fundamentals and Sovereign Risk of Emerging Markets</dc:title>
+        <dcterms:abstract>We empirically assess the relative importance of various economic fundamentals in accounting for the sovereign credit default swap (CDS) spreads of emerging markets during 2004–2012, which encompasses the global financial crisis of 2008–2009. Inflation, state fragility, external debt and commodity terms of trade volatility were positively associated, while trade openness and a more favourable fiscal balance/GDP ratio were negatively associated with sovereign CDS spreads. Yet the relative importance of economic fundamentals in the pricing of sovereign risk varies over time. The key factors are trade openness and state fragility in the pre-crisis period, the external debt/GDP ratio and inflation in the crisis period, and inflation and the public debt/GDP ratio in the post-crisis period. Asian countries enjoy lower sovereign spreads than Latin American countries, and this gap widened during and after the crisis. Trade openness was the biggest factor behind Asia's lower sovereign spreads before the crisis, and inflation during and after the crisis. The results imply that external factors were paramount in pricing sovereign risk prior to the crisis, but internal factors associated with the capacity to adjust to adverse shocks gained prominence during and after the crisis.</dcterms:abstract>
+        <dc:date>2016</dc:date>
+        <dc:identifier>
+            <dcterms:URI>
+                <rdf:value>https://onlinelibrary.wiley.com/doi/abs/10.1111/1468-0106.12160</rdf:value>
+            </dcterms:URI>
+        </dc:identifier>
+        <dcterms:dateSubmitted>2026-02-01 12:15:04</dcterms:dateSubmitted>
+        <z:language>en</z:language>
+        <z:libraryCatalog>Wiley Online Library</z:libraryCatalog>
+        <dc:rights>© 2016 John Wiley &amp; Sons Australia, Ltd</dc:rights>
+        <dc:description>_eprint: https://onlinelibrary.wiley.com/doi/pdf/10.1111/1468-0106.12160</dc:description>
+        <bib:pages>151-177</bib:pages>
+    </bib:Article>
+    <z:Attachment rdf:about="#item_48">
+        <z:itemType>attachment</z:itemType>
+        <rdf:resource rdf:resource="files/48/1468-0106.html"/>
+        <dc:title>Snapshot</dc:title>
+        <dc:identifier>
+            <dcterms:URI>
+                <rdf:value>https://onlinelibrary.wiley.com/doi/abs/10.1111/1468-0106.12160</rdf:value>
+            </dcterms:URI>
+        </dc:identifier>
+        <dcterms:dateSubmitted>2026-02-01 12:15:10</dcterms:dateSubmitted>
+        <z:linkMode>1</z:linkMode>
+        <link:type>text/html</link:type>
+    </z:Attachment>
+    <rdf:Description rdf:about="https://papers.ssrn.com/abstract=1150071">
+        <z:itemType>preprint</z:itemType>
+        <dc:publisher>
+            <foaf:Organization>
+                <vcard:adr>
+                    <vcard:Address>
+                       <vcard:locality>Rochester, NY</vcard:locality>
+                    </vcard:Address>
+                </vcard:adr>
+                <foaf:name>Social Science Research Network</foaf:name>
+            </foaf:Organization>
+        </dc:publisher>
+        <bib:authors>
+            <rdf:Seq>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Bollerslev</foaf:surname>
+                        <foaf:givenName>Tim</foaf:givenName>
+                    </foaf:Person>
+                </rdf:li>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Law</foaf:surname>
+                        <foaf:givenName>Tzuo Hann</foaf:givenName>
+                    </foaf:Person>
+                </rdf:li>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Tauchen</foaf:surname>
+                        <foaf:givenName>George</foaf:givenName>
+                    </foaf:Person>
+                </rdf:li>
+            </rdf:Seq>
+        </bib:authors>
+        <link:link rdf:resource="#item_50"/>
+        <dc:subject>
+           <z:AutomaticTag><rdf:value>diversification</rdf:value></z:AutomaticTag>
+        </dc:subject>
+        <dc:subject>
+           <z:AutomaticTag><rdf:value>risk</rdf:value></z:AutomaticTag>
+        </dc:subject>
+        <dc:title>Risk, Jumps, and Diversification</dc:title>
+        <dcterms:abstract>We test for price discontinuities, or jumps, in a panel of high-frequency intraday returns for forty large-cap stocks and an equiweighted index from these same stocks. Jumps are naturally classified into two types: common and idiosyncratic. Common jumps affect all stocks, albeit to varying degrees, while idiosyncratic jumps are stock-specific. Despite the fact that each of the stocks has a b of about unity with respect to the index, common jumps are virtually never detected in the individual stocks. This is truly puzzling, as an index can jump only if one or more of its components jump. To resolve this puzzle, we propose a new test for cojumps. Using this new test we find strong evidence for many modest-sized common jumps that simply pass through the standard jump detection statistic, while they appear highly significant in the cross section based on the new cojump identification scheme. Our results are further corroborated by a striking within-day pattern in the non-diversifiable cojumps.</dcterms:abstract>
+        <dc:date>2007-08-16</dc:date>
+        <dc:identifier>DOI 10.2139/ssrn.1150071</dc:identifier>
+        <dc:identifier>
+            <dcterms:URI>
+               <rdf:value>https://papers.ssrn.com/abstract=1150071</rdf:value>
+            </dcterms:URI>
+        </dc:identifier>
+        <dcterms:dateSubmitted>2026-02-01 12:15:44</dcterms:dateSubmitted>
+        <z:language>en</z:language>
+        <z:libraryCatalog>papers.ssrn.com</z:libraryCatalog>
+        <z:type>SSRN Scholarly Paper</z:type>
+        <prism:number>1150071</prism:number>
+    </rdf:Description>
+    <z:Attachment rdf:about="#item_50">
+        <z:itemType>attachment</z:itemType>
+        <rdf:resource rdf:resource="files/50/Bollerslev et al. - 2007 - Risk, Jumps, and Diversification.pdf"/>
+        <dc:title>Full Text PDF</dc:title>
+        <dc:identifier>
+            <dcterms:URI>
+                <rdf:value>https://papers.ssrn.com/sol3/Delivery.cfm/SSRN_ID1150071_code357906.pdf?abstractid=1150071&amp;mirid=1</rdf:value>
+            </dcterms:URI>
+        </dc:identifier>
+        <dcterms:dateSubmitted>2026-02-01 12:15:47</dcterms:dateSubmitted>
+        <z:linkMode>1</z:linkMode>
+        <link:type>application/pdf</link:type>
+    </z:Attachment>
+    <bib:Article rdf:about="http://www.ssrn.com/abstract=1839470">
+        <z:itemType>journalArticle</z:itemType>
+        <dcterms:isPartOf rdf:resource="urn:issn:1556-5068"/>
+        <bib:authors>
+            <rdf:Seq>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Martens</foaf:surname>
+                        <foaf:givenName>Martin P.E.</foaf:givenName>
+                    </foaf:Person>
+                </rdf:li>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Duyvesteyn</foaf:surname>
+                        <foaf:givenName>Johan G.</foaf:givenName>
+                    </foaf:Person>
+                </rdf:li>
+            </rdf:Seq>
+        </bib:authors>
+        <link:link rdf:resource="#item_51"/>
+        <dc:title>Explaining and Predicting Sovereign Credit Risk with Exchange Rate Volatility</dc:title>
+        <dcterms:abstract>Gray, Merton, and Bodie (2007) adapt Merton's (1974) structural model for corporations to make it applicable to sovereign countries that have issued both local and foreign currency debt. We apply this model to eight emerging markets. The model underestimates sovereign credit spreads, and often assigns a near-zero probability of default in contrast to CDS spreads. We do find, however, a strong timeseries correlation between the model implied credit spreads and the market CDS spreads. In addition we show that the most important determinant of the distance-todefault is the exchange rate volatility. Recent changes in exchange rate volatility can predict sovereign CDS spreads.</dcterms:abstract>
+        <dc:date>2011</dc:date>
+        <dc:identifier>
+            <dcterms:URI>
+               <rdf:value>http://www.ssrn.com/abstract=1839470</rdf:value>
+            </dcterms:URI>
+        </dc:identifier>
+        <dcterms:dateSubmitted>2026-02-01 13:15:50</dcterms:dateSubmitted>
+        <z:language>en</z:language>
+        <z:libraryCatalog>DOI.org (Crossref)</z:libraryCatalog>
+    </bib:Article>
+    <bib:Journal rdf:about="urn:issn:1556-5068">
+        <dc:identifier>DOI 10.2139/ssrn.1839470</dc:identifier>
+        <dc:title>SSRN Electronic Journal</dc:title>
+        <dc:identifier>ISSN 1556-5068</dc:identifier>
+        <dcterms:alternative>SSRN Journal</dcterms:alternative>
+    </bib:Journal>
+    <z:Attachment rdf:about="#item_51">
+        <z:itemType>attachment</z:itemType>
+        <rdf:resource rdf:resource="files/51/Martens and Duyvesteyn - 2011 - Explaining and Predicting Sovereign Credit Risk with Exchange Rate Volatility.pdf"/>
+        <dc:title>PDF</dc:title>
+        <dc:identifier>
+            <dcterms:URI>
+                <rdf:value>https://repub.eur.nl/pub/79058/SSRN-id1839470.pdf</rdf:value>
+            </dcterms:URI>
+        </dc:identifier>
+        <dcterms:dateSubmitted>2026-02-01 13:15:48</dcterms:dateSubmitted>
+        <z:linkMode>1</z:linkMode>
+        <link:type>application/pdf</link:type>
+    </z:Attachment>
+    <bib:Article rdf:about="https://ideas.repec.org//a/kap/rqfnac/v47y2016i4d10.1007_s11156-015-0532-2.html">
+        <z:itemType>journalArticle</z:itemType>
+        <dcterms:isPartOf>
+            <bib:Journal>
+                <prism:volume>47</prism:volume>
+                <dc:title>Review of Quantitative Finance and Accounting</dc:title>
+                <prism:number>4</prism:number>
+            </bib:Journal>
+        </dcterms:isPartOf>
+        <dc:publisher>
+           <foaf:Organization><foaf:name>Springer</foaf:name></foaf:Organization>
+        </dc:publisher>
+        <bib:authors>
+            <rdf:Seq>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Lee</foaf:surname>
+                        <foaf:givenName>Han-Hsing</foaf:givenName>
+                    </foaf:Person>
+                </rdf:li>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Shih</foaf:surname>
+                        <foaf:givenName>Kuanyu</foaf:givenName>
+                    </foaf:Person>
+                </rdf:li>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Wang</foaf:surname>
+                        <foaf:givenName>Kehluh</foaf:givenName>
+                    </foaf:Person>
+                </rdf:li>
+            </rdf:Seq>
+        </bib:authors>
+        <link:link rdf:resource="#item_54"/>
+        <dc:subject>
+           <z:AutomaticTag><rdf:value>CDS</rdf:value></z:AutomaticTag>
+        </dc:subject>
+        <dc:subject>
+            <z:AutomaticTag>
+               <rdf:value>Default probability</rdf:value>
+            </z:AutomaticTag>
+        </dc:subject>
+        <dc:subject>
+            <z:AutomaticTag>
+               <rdf:value>Sovereign credit risk</rdf:value>
+            </z:AutomaticTag>
+        </dc:subject>
+        <dc:subject>
+            <z:AutomaticTag>
+               <rdf:value>Structural model</rdf:value>
+            </z:AutomaticTag>
+        </dc:subject>
+        <dc:title>Measuring sovereign credit risk using a structural model approach</dc:title>
+        <dcterms:abstract>In this paper, we use three structural models to investigate a country’s credit risk by applying it to a sovereign balance sheet. The transformed-data maximum likelihood estimation method and the maximization–maximization algorithm are adopted for model calibration. The derived probability of default over time for four sample countries matched well with the events and economic conditions that occurred during the sample period. Our empirical analyses show that structural models can be used to determine with high accuracy whether the credit of a sovereign country is in a precarious situation. We then illustrate how the structural approach can be an effective tool to monitor the sovereign credit risk.</dcterms:abstract>
+        <dc:date>2016</dc:date>
+        <dc:identifier>
+            <dcterms:URI>
+                <rdf:value>https://ideas.repec.org//a/kap/rqfnac/v47y2016i4d10.1007_s11156-015-0532-2.html</rdf:value>
+            </dcterms:URI>
+        </dc:identifier>
+        <dcterms:dateSubmitted>2026-02-01 13:16:16</dcterms:dateSubmitted>
+        <z:language>en</z:language>
+        <z:libraryCatalog>ideas.repec.org</z:libraryCatalog>
+        <bib:pages>1097-1128</bib:pages>
+    </bib:Article>
+    <z:Attachment rdf:about="#item_54">
+        <z:itemType>attachment</z:itemType>
+        <rdf:resource rdf:resource="files/54/v47y2016i4d10.1007_s11156-015-0532-2.html"/>
+        <dc:title>Snapshot</dc:title>
+        <dc:identifier>
+            <dcterms:URI>
+                <rdf:value>https://ideas.repec.org//a/kap/rqfnac/v47y2016i4d10.1007_s11156-015-0532-2.html</rdf:value>
+            </dcterms:URI>
+        </dc:identifier>
+        <dcterms:dateSubmitted>2026-02-01 13:16:17</dcterms:dateSubmitted>
+        <z:linkMode>1</z:linkMode>
+        <link:type>text/html</link:type>
+    </z:Attachment>
+    <bib:Article rdf:about="https://www.sciencedirect.com/science/article/pii/S0140988318302779">
+        <z:itemType>journalArticle</z:itemType>
+        <dcterms:isPartOf>
+            <bib:Journal>
+                <dc:identifier>DOI 10.1016/j.eneco.2018.07.027</dc:identifier>
+                <prism:volume>74</prism:volume>
+                <dc:title>Energy Economics</dc:title>
+                <dc:identifier>ISSN 0140-9883</dc:identifier>
+                <dcterms:alternative>Energy Economics</dcterms:alternative>
+            </bib:Journal>
+        </dcterms:isPartOf>
+        <bib:authors>
+            <rdf:Seq>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Balcilar</foaf:surname>
+                        <foaf:givenName>Mehmet</foaf:givenName>
+                    </foaf:Person>
+                </rdf:li>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Hammoudeh</foaf:surname>
+                        <foaf:givenName>Shawkat</foaf:givenName>
+                    </foaf:Person>
+                </rdf:li>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Toparli</foaf:surname>
+                        <foaf:givenName>Elif Akay</foaf:givenName>
+                    </foaf:Person>
+                </rdf:li>
+            </rdf:Seq>
+        </bib:authors>
+        <link:link rdf:resource="#item_57"/>
+        <link:link rdf:resource="#item_56"/>
+        <dc:subject>
+           <z:AutomaticTag><rdf:value>MOVE</rdf:value></z:AutomaticTag>
+        </dc:subject>
+        <dc:subject>
+           <z:AutomaticTag><rdf:value>Risk</rdf:value></z:AutomaticTag>
+        </dc:subject>
+        <dc:subject>
+           <z:AutomaticTag><rdf:value>Sectoral CDS</rdf:value></z:AutomaticTag>
+        </dc:subject>
+        <dc:subject>
+           <z:AutomaticTag><rdf:value>SMOVE</rdf:value></z:AutomaticTag>
+        </dc:subject>
+        <dc:subject>
+           <z:AutomaticTag><rdf:value>VIX</rdf:value></z:AutomaticTag>
+        </dc:subject>
+        <dc:subject>
+            <z:AutomaticTag>
+               <rdf:value>Volatility impulse response</rdf:value>
+            </z:AutomaticTag>
+        </dc:subject>
+        <dc:title>On the risk spillover across the oil market, stock market, and the oil related CDS sectors: A volatility impulse response approach</dc:title>
+        <dcterms:abstract>Compared to Credit Default Swap (CDS) literature, this study focuses on the magnitude of volatility transmission and the risk spillover mechanism across the oil market, financial market risks, and the oil-related CDS sectors. Our dataset includes futures prices of West Texas Intermediate (WTI) and seven different measures of markets and credit risks. Four of the vast risk measures are the oil-related CDSs for auto, chemicals, natural gas, and utility sectors. In addition, three measures of the financial market risk, the one-month expected equity volatility measured by VIX, MOVE and SMOVE are included. The daily dataset covers the period from 6 January 2004 to 2 February 2016. The volatility transmission mechanism across the oil and financial markets and CDS sectors is examined using the volatility impulse response model. We evaluate the risk transmission due to several recent crisis shocks around the world and the results show complicated transmission mechanisms that spread over long periods. Among these events, the Lehman Brothers bankruptcy has destabilizing effects on all oil-related sectors. Findings also show that all oil market related shocks have significant risk transmission effects.</dcterms:abstract>
+        <dc:date>2018-08-01</dc:date>
+        <dc:identifier>
+            <dcterms:URI>
+                <rdf:value>https://www.sciencedirect.com/science/article/pii/S0140988318302779</rdf:value>
+            </dcterms:URI>
+        </dc:identifier>
+        <dcterms:dateSubmitted>2026-02-01 13:17:10</dcterms:dateSubmitted>
+        <z:shortTitle>On the risk spillover across the oil market, stock market, and the oil related CDS sectors</z:shortTitle>
+        <z:libraryCatalog>ScienceDirect</z:libraryCatalog>
+        <bib:pages>813-827</bib:pages>
+    </bib:Article>
+    <z:Attachment rdf:about="#item_57">
+        <z:itemType>attachment</z:itemType>
+        <rdf:resource rdf:resource="files/57/Balcilar et al. - 2018 - On the risk spillover across the oil market, stock market, and the oil related CDS sectors A volati.pdf"/>
+        <dc:title>ScienceDirect Full Text PDF</dc:title>
+        <dc:identifier>
+            <dcterms:URI>
+                <rdf:value>https://pdf.sciencedirectassets.com/271683/1-s2.0-S0140988318X00061/1-s2.0-S0140988318302779/main.pdf?X-Amz-Security-Token=IQoJb3JpZ2luX2VjEAQaCXVzLWVhc3QtMSJGMEQCIDcm8VDemttfsAY%2FTqFmB3jL6AUiOnnBbWop%2F8IfkNccAiA5X4DgQKJWarcuENDR42JXn5ESWQd16D8gMrIcNiCQsCq8BQjN%2F%2F%2F%2F%2F%2F%2F%2F%2F%2F8BEAUaDDA1OTAwMzU0Njg2NSIM2IEmtp96UnatooYfKpAFI65aSnCQ9eBLPV1908bFapVgsrs%2FvBXiCtG9bzYEo3gCRfZJnRPJf4qF9e0ZrhKfsGcF6dHd2bp1tuqzYYR168NZ2tj8D8byqRWVl7H8JtDsvStK74Xzh4jqM3ur3yL5mOYx5nSlnz19P13whI8NyzYQYszwHgTWHb4L4b3gh0KwrprkCS%2Fnq2FLSccjZ%2ByMP4CtSK9YnpSA%2FcF%2Bx7AfUtK7%2FYYosQ7z%2BkA84vJY1jg749%2BYwgZ%2Bb3q5OXPD9DiUAF%2Fsk076uhSD6Z4dutdHJtopBnAwA9Zi6SfywHLa6OcqZ%2FE4r0tbaRNhO%2BrjMYi49NZD%2FlTLtOp2n%2FJcHeCWa9YYetT3zx9pKvCLGepd%2FwHdBzklarRFTtJu2giNNrsmeRT%2FuXKp1R6nFy%2FHj3NrdFW0DrgFviHf59oDeVZcCQZeLOYHpSZOA8wWIaz9ds11KIyU%2BFYkUMl5ileEHJmD54YNDKilXRsjp%2BurcfTFt0%2BiLlroOnhtSa1MVpkxVFTVJ2hrIKTPWjtpNmx4%2FZSkKiAc5%2F6h6QscR1voppcvC0okLsiM6Lylj2QEq3qF26b99W%2FlzwZAWoGA%2FpzAdwyy88NMoV8Tnb5O8NSXRY57OFC7q%2BGz46FSFxfaOeLVAxdsemJJTYz40uxRZ%2FtCWmh6uEHI%2F6BprHl99npJD%2BqwPScgCe7w0izRA5sAa6Ez1kJWSZQo6%2FSKUpRK137XD6nVZjZyCVXmDRHtcNruFFbcILwD1%2Fy76xx1FC%2BYjXATKgsbX%2BDCHhbqqNztRW1%2B4gEQWYCvsoAYiA%2BVWvWeE1D3c6ZCYB0dxhKrOzwkqXTIPyYsbAReZDcUOi1S3ZuJ4empmUjoAEb5PyJj5uee0MNiYC0w8fX8ywY6sgFPtAOa0YTh%2Bwt%2BUhzHTZKuPzKZXRBOKYQLKLnPgWz15ambDPOlwKB9tCa7IPB8c9K5qD2GGW1E5QWQSrZMhioSC%2FvsdFCGT37k10UVM1kI1f9NA%2FejhVXZiSOU5l%2FujY1bE66Py1eJKWmITEbvKKrsx91bRqINBaBZG%2BGm28YRnYanUmdG6mN1AEJiMRTUz1VLJOWR2AMM2Lv54XqRyWZ3AZVHP%2F0aH%2FvA5Lqry8YXWnG%2F&amp;X-Amz-Algorithm=AWS4-HMAC-SHA256&amp;X-Amz-Date=20260201T131717Z&amp;X-Amz-SignedHeaders=host&amp;X-Amz-Expires=300&amp;X-Amz-Credential=ASIAQ3PHCVTY64PTMEOF%2F20260201%2Fus-east-1%2Fs3%2Faws4_request&amp;X-Amz-Signature=b0669c5d4f251cd0d8fd7bb0056ac0da6a02417c18f5c6554fd0d5e0d565e6b5&amp;hash=e9e4474b860678eeb8b4de85ad3c98f169b910070cd9b20f8ce2ac77eda74b2c&amp;host=68042c943591013ac2b2430a89b270f6af2c76d8dfd086a07176afe7c76c2c61&amp;pii=S0140988318302779&amp;tid=spdf-ea197ccd-6b15-49a2-9095-cee67d4df1f9&amp;sid=6bdf6a0b4968d044ca4b08412a6acbf88072gxrqb&amp;type=client&amp;tsoh=d3d3LnNjaWVuY2VkaXJlY3QuY29t&amp;rh=d3d3LnNjaWVuY2VkaXJlY3QuY29t&amp;ua=190e56055952040f590351&amp;rr=9c71ba6a4e54039c&amp;cc=ch</rdf:value>
+            </dcterms:URI>
+        </dc:identifier>
+        <dcterms:dateSubmitted>2026-02-01 13:17:19</dcterms:dateSubmitted>
+        <z:linkMode>1</z:linkMode>
+        <link:type>application/pdf</link:type>
+    </z:Attachment>
+    <z:Attachment rdf:about="#item_56">
+        <z:itemType>attachment</z:itemType>
+        <rdf:resource rdf:resource="files/56/S0140988318302779.html"/>
+        <dc:title>ScienceDirect Snapshot</dc:title>
+        <dc:identifier>
+            <dcterms:URI>
+                <rdf:value>https://www.sciencedirect.com/science/article/pii/S0140988318302779</rdf:value>
+            </dcterms:URI>
+        </dc:identifier>
+        <dcterms:dateSubmitted>2026-02-01 13:17:16</dcterms:dateSubmitted>
+        <z:linkMode>1</z:linkMode>
+        <link:type>text/html</link:type>
+    </z:Attachment>
+    <bib:Article rdf:about="https://onlinelibrary.wiley.com/doi/abs/10.1111/j.1540-6261.2008.01399.x">
+        <z:itemType>journalArticle</z:itemType>
+        <dcterms:isPartOf>
+            <bib:Journal>
+                <dc:identifier>DOI 10.1111/j.1540-6261.2008.01399.x</dc:identifier>
+                <prism:volume>63</prism:volume>
+                <dc:title>The Journal of Finance</dc:title>
+                <dc:identifier>ISSN 1540-6261</dc:identifier>
+                <prism:number>5</prism:number>
+            </bib:Journal>
+        </dcterms:isPartOf>
+        <bib:authors>
+            <rdf:Seq>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Pan</foaf:surname>
+                        <foaf:givenName>Jun</foaf:givenName>
+                    </foaf:Person>
+                </rdf:li>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Singleton</foaf:surname>
+                        <foaf:givenName>Kenneth J.</foaf:givenName>
+                    </foaf:Person>
+                </rdf:li>
+            </rdf:Seq>
+        </bib:authors>
+        <link:link rdf:resource="#item_59"/>
+        <dc:title>Default and Recovery Implicit in the Term Structure of Sovereign CDS Spreads</dc:title>
+        <dcterms:abstract>This paper explores the nature of default arrival and recovery implicit in the term structures of sovereign CDS spreads. We argue that term structures of spreads reveal not only the arrival rates of credit events (λℚ), but also the loss rates given credit events. Applying our framework to Mexico, Turkey, and Korea, we show that a single-factor model with λℚ following a lognormal process captures most of the variation in the term structures of spreads. The risk premiums associated with unpredictable variation in λℚ are found to be economically significant and co-vary importantly with several economic measures of global event risk, financial market volatility, and macroeconomic policy.</dcterms:abstract>
+        <dc:date>2008</dc:date>
+        <dc:identifier>
+            <dcterms:URI>
+                <rdf:value>https://onlinelibrary.wiley.com/doi/abs/10.1111/j.1540-6261.2008.01399.x</rdf:value>
+            </dcterms:URI>
+        </dc:identifier>
+        <dcterms:dateSubmitted>2026-02-01 13:26:56</dcterms:dateSubmitted>
+        <z:language>en</z:language>
+        <z:libraryCatalog>Wiley Online Library</z:libraryCatalog>
+        <dc:rights>© 2008 the American Finance Association</dc:rights>
+        <dc:description>_eprint: https://onlinelibrary.wiley.com/doi/pdf/10.1111/j.1540-6261.2008.01399.x</dc:description>
+        <bib:pages>2345-2384</bib:pages>
+    </bib:Article>
+    <z:Attachment rdf:about="#item_59">
+        <z:itemType>attachment</z:itemType>
+        <rdf:resource rdf:resource="files/59/j.1540-6261.2008.01399.html"/>
+        <dc:title>Snapshot</dc:title>
+        <dc:identifier>
+            <dcterms:URI>
+                <rdf:value>https://onlinelibrary.wiley.com/doi/abs/10.1111/j.1540-6261.2008.01399.x</rdf:value>
+            </dcterms:URI>
+        </dc:identifier>
+        <dcterms:dateSubmitted>2026-02-01 13:27:01</dcterms:dateSubmitted>
+        <z:linkMode>1</z:linkMode>
+        <link:type>text/html</link:type>
+    </z:Attachment>
+    <bib:Article rdf:about="#item_61">
+        <z:itemType>journalArticle</z:itemType>
+        <dcterms:isPartOf>
+           <bib:Journal></bib:Journal>
+        </dcterms:isPartOf>
+        <bib:authors>
+            <rdf:Seq>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Pan</foaf:surname>
+                        <foaf:givenName>Jun</foaf:givenName>
+                    </foaf:Person>
+                </rdf:li>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Singleton</foaf:surname>
+                        <foaf:givenName>Kenneth J</foaf:givenName>
+                    </foaf:Person>
+                </rdf:li>
+            </rdf:Seq>
+        </bib:authors>
+        <link:link rdf:resource="#item_60"/>
+        <dc:title>Default and Recovery Implicit in the Term Structure of Sovereign CDS Spreads</dc:title>
+        <dcterms:abstract>This paper explores the nature of default arrival and recovery implicit in the term structures of sovereign CDS spreads. We argue that term structures of spreads reveal not only the arrival rates of credit events (λQ), but also the loss rates given credit events. Applying our framework to Mexico, Turkey, and Korea, we show that a single-factor model with λQ following a lognormal process captures most of the variation in the term structures of spreads. The risk premiums associated with unpredictable variation in λQ are found to be economically significant and co-vary importantly with several economic measures of global event risk, financial market volatility, and macroeconomic policy.</dcterms:abstract>
+        <z:language>en</z:language>
+        <z:libraryCatalog>Zotero</z:libraryCatalog>
+    </bib:Article>
+    <z:Attachment rdf:about="#item_60">
+        <z:itemType>attachment</z:itemType>
+        <rdf:resource rdf:resource="files/60/Pan and Singleton - Default and Recovery Implicit in the Term Structure of Sovereign CDS Spreads.pdf"/>
+        <dc:title>PDF</dc:title>
+        <dc:identifier>
+            <dcterms:URI>
+                <rdf:value>https://en.saif.sjtu.edu.cn/junpan/Pan_Singleton.pdf</rdf:value>
+            </dcterms:URI>
+        </dc:identifier>
+        <dcterms:dateSubmitted>2026-02-01 13:27:09</dcterms:dateSubmitted>
+        <z:linkMode>1</z:linkMode>
+        <link:type>application/pdf</link:type>
+    </z:Attachment>
+    <bib:Article rdf:about="#item_63">
+        <z:itemType>journalArticle</z:itemType>
+        <dcterms:isPartOf>
+           <bib:Journal></bib:Journal>
+        </dcterms:isPartOf>
+        <bib:authors>
+            <rdf:Seq>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Naifar</foaf:surname>
+                        <foaf:givenName>Nader</foaf:givenName>
+                    </foaf:Person>
+                </rdf:li>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Shahzad</foaf:surname>
+                        <foaf:givenName>Syed Jawad Hussain</foaf:givenName>
+                    </foaf:Person>
+                </rdf:li>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Hammoudeh</foaf:surname>
+                        <foaf:givenName>Shawkat</foaf:givenName>
+                    </foaf:Person>
+                </rdf:li>
+            </rdf:Seq>
+        </bib:authors>
+        <link:link rdf:resource="#item_62"/>
+        <dc:title>THE IMPACT OF MAJOR OIL, FINANCIAL AND UNCERTAINTY FACTORS ON SOVEREIGN CDS SPREADS: EVIDENCE FROM GCC, OTHER OIL- EXPORTING COUNTRIES AND REGIONAL MARKETS</dc:title>
+        <dcterms:abstract>The aim of this paper is to investigate the impact of oil price volatility and major financial and uncertainty factors on sovereign credit default swap (CDS) spreads in the case of the oil-rich Gulf Cooperation Council (GCC) countries, other oil-exporting countries and regional markets namely the G7, BRICS, Council of Europe (CE), Asia, North America (NA) and the N11 nations. We first employ the standard quantile regression analysis that allows one to investigate the dependence dynamics of the sovereign CDS spreads under different market circumstances. Consequently, we use the causality-in-quantiles, which allows for identifying the quantile range for which causality is relevant. Empirical results show that the sovereign CDSs of the non GCC oil-exporting countries (i.e., Venezuela, Mexico and Russia) are the most affected by oil prices, which is more than those of major global regions/blocs. However, the results show no or little dependence for Saudi Arabia, UAE and Norway which have the largest sovereign wealth funds. The results also show that the sovereign CDS spreads are more sensitive to global bond market uncertainty factors than to global equity market uncertainty factors. Finally, we find causality-in-quantiles between sovereign CDS and global financial risk and uncertainty factors and this causality relationship is different across countries and regions/blocs, particularly in the lower quantiles (i.e., bearish markets).</dcterms:abstract>
+        <z:language>en</z:language>
+        <z:libraryCatalog>Zotero</z:libraryCatalog>
+    </bib:Article>
+    <z:Attachment rdf:about="#item_62">
+        <z:itemType>attachment</z:itemType>
+        <rdf:resource rdf:resource="files/62/Naifar et al. - THE IMPACT OF MAJOR OIL, FINANCIAL AND UNCERTAINTY FACTORS ON SOVEREIGN CDS SPREADS EVIDENCE FROM G.pdf"/>
+        <dc:title>PDF</dc:title>
+        <dc:identifier>
+            <dcterms:URI>
+                <rdf:value>https://erf.org.eg/app/uploads/2017/08/1129.pdf</rdf:value>
+            </dcterms:URI>
+        </dc:identifier>
+        <dcterms:dateSubmitted>2026-02-01 13:46:06</dcterms:dateSubmitted>
+        <z:linkMode>1</z:linkMode>
+        <link:type>application/pdf</link:type>
+    </z:Attachment>
+    <bib:Article rdf:about="https://doi.org/10.1080/14697680902814233">
+        <z:itemType>journalArticle</z:itemType>
+        <dcterms:isPartOf rdf:resource="urn:issn:1469-7688"/>
+        <dc:publisher>
+           <foaf:Organization><foaf:name>Routledge</foaf:name></foaf:Organization>
+        </dc:publisher>
+        <bib:authors>
+            <rdf:Seq>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Bruti-Liberati§</foaf:surname>
+                        <foaf:givenName>Nicola</foaf:givenName>
+                    </foaf:Person>
+                </rdf:li>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Nikitopoulos-Sklibosios</foaf:surname>
+                        <foaf:givenName>Christina</foaf:givenName>
+                    </foaf:Person>
+                </rdf:li>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Platen</foaf:surname>
+                        <foaf:givenName>Eckhard</foaf:givenName>
+                    </foaf:Person>
+                </rdf:li>
+            </rdf:Seq>
+        </bib:authors>
+        <dc:subject>
+            <z:AutomaticTag>
+               <rdf:value>Numerical simulation</rdf:value>
+            </z:AutomaticTag>
+        </dc:subject>
+        <dc:subject>
+            <z:AutomaticTag>
+               <rdf:value>Quantitative finance</rdf:value>
+            </z:AutomaticTag>
+        </dc:subject>
+        <dc:subject>
+            <z:AutomaticTag>
+               <rdf:value>Stochastic analysis</rdf:value>
+            </z:AutomaticTag>
+        </dc:subject>
+        <dc:subject>
+            <z:AutomaticTag>
+               <rdf:value>Stochastic volatility</rdf:value>
+            </z:AutomaticTag>
+        </dc:subject>
+        <dc:title>Real-world jump-diffusion term structure models</dc:title>
+        <dcterms:abstract>This paper considers interest rate term structure models in a market attracting both continuous and discrete types of uncertainty. The event-driven noise is modelled by a Poisson random measure. Using as numeraire the growth optimal portfolio, interest rate derivatives are priced under the real-world probability measure. In particular, the real-world dynamics of the forward rates are derived and, for specific volatility structures, finite-dimensional Markovian representations are obtained. Furthermore, allowing for a stochastic short rate in a non-Markovian setting, a class of tractable affine term structures is derived where an equivalent risk-neutral probability measure may not exist.</dcterms:abstract>
+        <dc:date>2010-01-01</dc:date>
+        <dc:identifier>
+            <dcterms:URI>
+               <rdf:value>https://doi.org/10.1080/14697680902814233</rdf:value>
+            </dcterms:URI>
+        </dc:identifier>
+        <dcterms:dateSubmitted>2026-02-01 13:47:57</dcterms:dateSubmitted>
+        <z:libraryCatalog>Taylor and Francis+NEJM</z:libraryCatalog>
+        <dc:description>_eprint: https://doi.org/10.1080/14697680902814233</dc:description>
+        <bib:pages>23-37</bib:pages>
+    </bib:Article>
+    <bib:Journal rdf:about="urn:issn:1469-7688">
+        <dc:identifier>DOI 10.1080/14697680902814233</dc:identifier>
+        <prism:volume>10</prism:volume>
+        <dc:title>Quantitative Finance</dc:title>
+        <dc:identifier>ISSN 1469-7688</dc:identifier>
+        <prism:number>1</prism:number>
+    </bib:Journal>
+    <bib:Article rdf:about="https://www.sciencedirect.com/science/article/pii/S0140988317304383">
+        <z:itemType>journalArticle</z:itemType>
+        <dcterms:isPartOf>
+            <bib:Journal>
+                <dc:identifier>DOI 10.1016/j.eneco.2017.12.018</dc:identifier>
+                <prism:volume>70</prism:volume>
+                <dc:title>Energy Economics</dc:title>
+                <dc:identifier>ISSN 0140-9883</dc:identifier>
+                <dcterms:alternative>Energy Economics</dcterms:alternative>
+            </bib:Journal>
+        </dcterms:isPartOf>
+        <bib:authors>
+            <rdf:Seq>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Bouri</foaf:surname>
+                        <foaf:givenName>Elie</foaf:givenName>
+                    </foaf:Person>
+                </rdf:li>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Shahzad</foaf:surname>
+                        <foaf:givenName>Syed Jawad Hussain</foaf:givenName>
+                    </foaf:Person>
+                </rdf:li>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Raza</foaf:surname>
+                        <foaf:givenName>Naveed</foaf:givenName>
+                    </foaf:Person>
+                </rdf:li>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Roubaud</foaf:surname>
+                        <foaf:givenName>David</foaf:givenName>
+                    </foaf:Person>
+                </rdf:li>
+            </rdf:Seq>
+        </bib:authors>
+        <link:link rdf:resource="#item_66"/>
+        <link:link rdf:resource="#item_67"/>
+        <dc:subject>
+           <z:AutomaticTag><rdf:value>BRICS CDS</rdf:value></z:AutomaticTag>
+        </dc:subject>
+        <dc:subject>
+            <z:AutomaticTag>
+               <rdf:value>Cross-quantilogram</rdf:value>
+            </z:AutomaticTag>
+        </dc:subject>
+        <dc:subject>
+            <z:AutomaticTag>
+               <rdf:value>Oil implied volatility</rdf:value>
+            </z:AutomaticTag>
+        </dc:subject>
+        <dc:subject>
+            <z:AutomaticTag>
+               <rdf:value>Quantile dependence</rdf:value>
+            </z:AutomaticTag>
+        </dc:subject>
+        <dc:subject>
+           <z:AutomaticTag><rdf:value>Sovereign risk</rdf:value></z:AutomaticTag>
+        </dc:subject>
+        <dc:subject>
+           <z:AutomaticTag><rdf:value>Spillover</rdf:value></z:AutomaticTag>
+        </dc:subject>
+        <dc:title>Oil volatility and sovereign risk of BRICS</dc:title>
+        <dcterms:abstract>We study the dependence between oil implied volatility shocks and BRICS sovereign risk from July 2009 to March 2017. First, we examine spillovers in value at risk using multivariate regression quantiles and reveal that oil volatility represents a common risk for oil-exporting and oil-importing BRICS countries. We also employ a quantile impulse-response function and reveal the presence of an asymmetry in the mechanisms of shock transmissions between oil exporters (Russia and Brazil) and oil importers (China and India): the former are more sensitive to positive oil shocks, whereas the latter are more sensitive to negative oil shocks. Second, we measure the directional predictability in the quantiles using the bivariate cross-quantilogram approach and show that in most cases, a low- (high-) volatility of oil market predicts low (high) sovereign risk at various quantiles and lags. Policy implications are discussed.</dcterms:abstract>
+        <dc:date>2018-02-01</dc:date>
+        <dc:identifier>
+            <dcterms:URI>
+                <rdf:value>https://www.sciencedirect.com/science/article/pii/S0140988317304383</rdf:value>
+            </dcterms:URI>
+        </dc:identifier>
+        <dcterms:dateSubmitted>2026-02-01 13:48:28</dcterms:dateSubmitted>
+        <z:libraryCatalog>ScienceDirect</z:libraryCatalog>
+        <bib:pages>258-269</bib:pages>
+    </bib:Article>
+    <z:Attachment rdf:about="#item_66">
+        <z:itemType>attachment</z:itemType>
+        <rdf:resource rdf:resource="files/66/Bouri et al. - 2018 - Oil volatility and sovereign risk of BRICS.pdf"/>
+        <dc:title>ScienceDirect Full Text PDF</dc:title>
+        <dc:identifier>
+            <dcterms:URI>
+                <rdf:value>https://pdf.sciencedirectassets.com/271683/1-s2.0-S0140988317X00091/1-s2.0-S0140988317304383/main.pdf?X-Amz-Security-Token=IQoJb3JpZ2luX2VjEAUaCXVzLWVhc3QtMSJGMEQCIAc99Nq3duInzNi7KbGioV1F3XzvGDKfW97oDsuxIQSkAiB5y9BcERJRwzNR6EqUvyQuD5LuylvWQ%2BKx2t1RkIBRcyq7BQjO%2F%2F%2F%2F%2F%2F%2F%2F%2F%2F8BEAUaDDA1OTAwMzU0Njg2NSIM28eNEwI%2FTcZM52VrKo8F9QhZKZUc2Ov12Kb3b%2F%2BQS8x1QHKfB9xU9RcuPb89Q4pB7cNm1BGANSDedDxF1X0tAIMkcndMpPDEY6rRZYYTfKx9EB0jrQXmJfZ553%2B5gzqBr6wii8rDvKvahJaOZ9KFIBY59zblVc%2B9xo4Hd4tZWfMuSPQkbbS2Y%2BykbnE%2B6IoZ07%2BF4AlLyIq0hd3QTL6NbIwfekHbBTffgZbaPD7%2F%2F3BR41O4jCc5E1ivHcJ7pAqOylci5B3BeKMqkv4%2BrYP28RvY4QJBIYURINc2rEuYNb9AVhI9oqy4myvQEcQKo9vR4lfudYjzLrm6zlOZS5d9IahZoxCS6%2FRaj4XaX4gvZRNMvo2Kd0gV1ljsiLeBCp2qZja6si%2FBxc3fJ7hUVGosSy04fYbzp36AT4CDu90CVPh7P7ix0nZZCRAVFM6nQQum9SegO1DPoLCYvItckezgqIn%2BU0VfSF09QsqjUJd3t7nOpVQ7LArJCTfUS7SLClM1%2BdciR5px63bXK8OK9fi21hWPNXRbB5AyDSsGG3FF2h7FnODjBRQ9fltxoGql2PyvumdD7m8d4tuAsq5LHPkvlDAd0p93%2FgTBa2QNXlRdx1yhMl28XZgAgBjH1VpUVvZxeyZX4te4ImevpCUUWZPGTiReAptonLYdyXdh1fUvSkDdYR%2B2HwOJx%2Bh2XIhpkZhR5S8zjCwhFHFAP8DA%2BQEW%2FjunsSfZW%2B9redfZpAQga1bzufZ06wXlVdL8d5jyoE61NMoJN4VTsusKzK2dB5R37n5kY19FK76aaiDqrXJXvGe8MdM%2F9dVgtz1Gy6Jy8cTafnKCYIc%2FZ%2FRSmu0Uhx2NATGHTNUX9Fhj5oKg1ZW3VDlIMr7VBXfBeuG9kwkW0zCwlv3LBjqyAZ73wJ27kN1e4caACTDdX5uL1M%2BkwJtH%2Fz2z%2F6mV3eyxREiZJioUl7nGWL3rVwKoSMEueZlM8%2FSpZKjoO3ZJ%2FbA8m8tWzDXAOmN2qFRzEOlxECHbosygMox0sC3jekErK4KbO3Bf01f3qImOl2VHLBvneqLWMUSwCe7EvzNPEI2dNqsZ9GK3ZOvmKRsdq%2Fh9MnRUMaNauMZ1ftVMaAOlSOqFhAycnygmtIKNqnnFiLZmUi4%3D&amp;X-Amz-Algorithm=AWS4-HMAC-SHA256&amp;X-Amz-Date=20260201T134838Z&amp;X-Amz-SignedHeaders=host&amp;X-Amz-Expires=300&amp;X-Amz-Credential=ASIAQ3PHCVTYXMEXOZJV%2F20260201%2Fus-east-1%2Fs3%2Faws4_request&amp;X-Amz-Signature=272ba23b436c3df1705cb6e8850a62f956f2e99206f6d2e526c614e13c88c80a&amp;hash=806ce3181f48b42c3733bbe67fb108b37ec518f9f30bed28a3d9aadf2f7ae6b9&amp;host=68042c943591013ac2b2430a89b270f6af2c76d8dfd086a07176afe7c76c2c61&amp;pii=S0140988317304383&amp;tid=spdf-2a192154-6cf2-495d-bdaf-836ab42c0c32&amp;sid=6bdf6a0b4968d044ca4b08412a6acbf88072gxrqb&amp;type=client&amp;tsoh=d3d3LnNjaWVuY2VkaXJlY3QuY29t&amp;rh=d3d3LnNjaWVuY2VkaXJlY3QuY29t&amp;ua=190e5605595203565a5604&amp;rr=9c71e854ad70be89&amp;cc=ch</rdf:value>
+            </dcterms:URI>
+        </dc:identifier>
+        <dcterms:dateSubmitted>2026-02-01 13:48:40</dcterms:dateSubmitted>
+        <z:linkMode>1</z:linkMode>
+        <link:type>application/pdf</link:type>
+    </z:Attachment>
+    <z:Attachment rdf:about="#item_67">
+        <z:itemType>attachment</z:itemType>
+        <rdf:resource rdf:resource="files/67/S0140988317304383.html"/>
+        <dc:title>ScienceDirect Snapshot</dc:title>
+        <dc:identifier>
+            <dcterms:URI>
+                <rdf:value>https://www.sciencedirect.com/science/article/pii/S0140988317304383</rdf:value>
+            </dcterms:URI>
+        </dc:identifier>
+        <dcterms:dateSubmitted>2026-02-01 13:48:41</dcterms:dateSubmitted>
+        <z:linkMode>1</z:linkMode>
+        <link:type>text/html</link:type>
+    </z:Attachment>
+    <bib:Article rdf:about="https://www.sciencedirect.com/science/article/pii/S0275531918301545">
+        <z:itemType>journalArticle</z:itemType>
+        <dcterms:isPartOf rdf:resource="urn:issn:0275-5319"/>
+        <bib:authors>
+            <rdf:Seq>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Sabkha</foaf:surname>
+                        <foaf:givenName>Saker</foaf:givenName>
+                    </foaf:Person>
+                </rdf:li>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>de Peretti</foaf:surname>
+                        <foaf:givenName>Christian</foaf:givenName>
+                    </foaf:Person>
+                </rdf:li>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Hmaied</foaf:surname>
+                        <foaf:givenName>Dorra</foaf:givenName>
+                    </foaf:Person>
+                </rdf:li>
+            </rdf:Seq>
+        </bib:authors>
+        <link:link rdf:resource="#item_69"/>
+        <dc:subject>
+           <z:AutomaticTag><rdf:value>FIAPARCH</rdf:value></z:AutomaticTag>
+        </dc:subject>
+        <dc:subject>
+           <z:AutomaticTag><rdf:value>Oil market</rdf:value></z:AutomaticTag>
+        </dc:subject>
+        <dc:subject>
+           <z:AutomaticTag><rdf:value>SETAR</rdf:value></z:AutomaticTag>
+        </dc:subject>
+        <dc:subject>
+            <z:AutomaticTag>
+               <rdf:value>Sovereign CDS volatility</rdf:value>
+            </z:AutomaticTag>
+        </dc:subject>
+        <dc:subject>
+            <z:AutomaticTag>
+               <rdf:value>Threshold regime-switching</rdf:value>
+            </z:AutomaticTag>
+        </dc:subject>
+        <dc:title>Nonlinearities in the oil effects on the sovereign credit risk: A self-exciting threshold autoregression approach</dc:title>
+        <dcterms:abstract>The unquenchable thirst of several sectors to crude oil in the recent years makes a common belief regarding its key role towards the acceleration of the recent economic recession and financial instability. This paper aims to examine the nonlinear impact of oil shocks on the sovereign credit risk for a sample of 38 worldwide oil-producing and oil-consuming countries, over a period ranging from January 2006 to March 2017. In contrast to the existing literature, CDS volatility is employed as a measure for the creditworthiness level, rather than the commonly used CDS spreads first-order moment. The methodological framework used in this paper goes beyond previous studies and takes into account more financial data features (long memory behavior, asymmetric effects and nonlinearities) according to a self-exciting regime switching model. Results reveal some dissimilarities in the explanatory power of the exogenous variables between regimes and across countries. Particularly, restricted evidences of the impact of oil shocks on sovereign CDS volatility are detected during the stable regime, whilst during the risky regime credit volatility becomes more sensitive to oil market conditions for most of the studied countries. Overall, the decline in oil price worsens the public finances tenability whether the country is oil-related or not.</dcterms:abstract>
+        <dc:date>2019-12-01</dc:date>
+        <dc:identifier>
+            <dcterms:URI>
+                <rdf:value>https://www.sciencedirect.com/science/article/pii/S0275531918301545</rdf:value>
+            </dcterms:URI>
+        </dc:identifier>
+        <dcterms:dateSubmitted>2026-02-01 13:48:54</dcterms:dateSubmitted>
+        <z:shortTitle>Nonlinearities in the oil effects on the sovereign credit risk</z:shortTitle>
+        <z:libraryCatalog>ScienceDirect</z:libraryCatalog>
+        <bib:pages>106-133</bib:pages>
+    </bib:Article>
+    <bib:Journal rdf:about="urn:issn:0275-5319">
+        <dc:identifier>DOI 10.1016/j.ribaf.2019.04.005</dc:identifier>
+        <prism:volume>50</prism:volume>
+        <dc:title>Research in International Business and Finance</dc:title>
+        <dc:identifier>ISSN 0275-5319</dc:identifier>
+        <dcterms:alternative>Research in International Business and Finance</dcterms:alternative>
+    </bib:Journal>
+    <z:Attachment rdf:about="#item_69">
+        <z:itemType>attachment</z:itemType>
+        <rdf:resource rdf:resource="files/69/Sabkha et al. - 2019 - Nonlinearities in the oil effects on the sovereign credit risk A self-exciting threshold autoregres.pdf"/>
+        <dc:title>ScienceDirect Full Text PDF</dc:title>
+        <dc:identifier>
+            <dcterms:URI>
+                <rdf:value>https://pdf.sciencedirectassets.com/273213/1-s2.0-S0275531919X00033/1-s2.0-S0275531918301545/main.pdf?X-Amz-Security-Token=IQoJb3JpZ2luX2VjEAUaCXVzLWVhc3QtMSJHMEUCICXv5mqPhUy2bQ8GlfQB%2BxDnog9HOs0Q40xKqgaUua%2FzAiEAyJ6WgwOiQjjFrPPH8B2uEmFuY9EXlyI%2FKvjcoOUHAi4quwUIzv%2F%2F%2F%2F%2F%2F%2F%2F%2F%2FARAFGgwwNTkwMDM1NDY4NjUiDGWnovagA4%2BM3z2WsyqPBZpZZtViq%2F%2BIni6sGAuAvqzM%2BaNBH%2BMTTU6SJFVZqFmZi%2BobUeWxjNih21udzBjgFnS7oey3p9hBFR33on%2B%2FCbfMS0Sgow7T%2BZ3OavkPl7bW5XIM3WEO%2BkzFlOudyJKvUBL7oZIhx6I5DOAryXs5SJJe696c1z%2BBOGYbCTgBr1N5bXW%2BFMV436EULCjtp1OyqFTsJ30OkXIqK0DyL5KS9O5iE8tVafE9CyFEJC2aaodup7E0zxRGi4LUh8pWFNIBzMDQSuKy4%2BI2pMcUuZYZ02TMgkWza4ncTzo7VjaPPiYEzjM3jnNYt4%2F1Hc49Duw8ReAkxP2RTC7ntqr01Ayf%2BOSvTTmzOZ0e2RypDiSLnw%2FM2AezMq%2BJ%2B%2BmGBPmd3ixYBx5tsSwBkOtSF%2FXN7fpewtvQSg%2BvUpkpIkKAXhMS4SYW9GoP%2FWCRXGZbijuJ8CFkGs1a39Q414RCYhTlc9UFTO9e9gx3sxVU7%2Bk2THOsIZnBoE7qRcVrlq8pbXNROBi536wA7dNvENkKXTb%2FzFVncO4OOFlTm5g8OueCMwGEkL%2FxBchRCqCTuEiaLeUjyYpxeHuYiBjCj0biexsQBdzCSqRR5wAdjkksqTPYrtBKPChli%2B6kQ85kDy7VuoukVWfwxJjua%2FtISyebJ2aqkAvoovz52lZ02vRsPPYlDEsl%2FcTGbHrIeDMfzavsFBoTYpI4nmmFmpVz1bsKiJAPyjbaHzoRdSXsWNnWNHr9BXDkEhcge5qqQYV3Nk7Ga062M%2F295Xk261fvPh2UIMreiDGyQxxNc4mtv3XjeHDRDcs25qQXarW3WFcwvlBOBzyacyNEGwXFlYhwxzn31s877A9lJvsbjX1xQ97zLMlygqCK7Aow2Zz9ywY6sQHBzdXCb4ra6m0CXldyb1TMxKIk6OAYHmD4ed0tQl4JQSa5xpUdZmXUM8s6nBog8OHCogQd41FYuvz8TgmDAPpH%2BAyDDEGE18DL2sgKC5Q3s1j%2B%2BN5kfXKz1uy0cvOfkRntnMbH7%2FTbVZ84F1kM4%2B0%2F048Saalnv2rCKXn8PyFBZektlrNPkD6uM8dI7c6p6Jc8nc2pHWiL56Zd4%2B8P52%2FUASlESaQXJ%2BCCTaLelk%2FC9EM%3D&amp;X-Amz-Algorithm=AWS4-HMAC-SHA256&amp;X-Amz-Date=20260201T134902Z&amp;X-Amz-SignedHeaders=host&amp;X-Amz-Expires=300&amp;X-Amz-Credential=ASIAQ3PHCVTYTUKRMDAH%2F20260201%2Fus-east-1%2Fs3%2Faws4_request&amp;X-Amz-Signature=537f77e047379f9aa0d753c91479e68325106e1aea73c940683fd2783062fbbc&amp;hash=6bdc8193bd99880ff16bf5d71a723e9293f64fa8384eef0a254a157a4f2a38b1&amp;host=68042c943591013ac2b2430a89b270f6af2c76d8dfd086a07176afe7c76c2c61&amp;pii=S0275531918301545&amp;tid=spdf-8c6bdf8d-d3bf-4624-bc6d-6f87a56b752c&amp;sid=6bdf6a0b4968d044ca4b08412a6acbf88072gxrqb&amp;type=client&amp;tsoh=d3d3LnNjaWVuY2VkaXJlY3QuY29t&amp;rh=d3d3LnNjaWVuY2VkaXJlY3QuY29t&amp;ua=190e5605595203560a005d&amp;rr=9c71e8eb8a64be89&amp;cc=ch</rdf:value>
+            </dcterms:URI>
+        </dc:identifier>
+        <dcterms:dateSubmitted>2026-02-01 13:49:05</dcterms:dateSubmitted>
+        <z:linkMode>1</z:linkMode>
+        <link:type>application/pdf</link:type>
+    </z:Attachment>
+    <bib:Article rdf:about="https://onlinelibrary.wiley.com/doi/abs/10.1002/ijfe.2894">
+        <z:itemType>journalArticle</z:itemType>
+        <dcterms:isPartOf rdf:resource="urn:issn:1099-1158"/>
+        <bib:authors>
+            <rdf:Seq>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Maghyereh</foaf:surname>
+                        <foaf:givenName>Aktham</foaf:givenName>
+                    </foaf:Person>
+                </rdf:li>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Ziadat</foaf:surname>
+                        <foaf:givenName>Salem Adel</foaf:givenName>
+                    </foaf:Person>
+                </rdf:li>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Al Rababa'a</foaf:surname>
+                        <foaf:givenName>Abdel Razzaq A.</foaf:givenName>
+                    </foaf:Person>
+                </rdf:li>
+            </rdf:Seq>
+        </bib:authors>
+        <link:link rdf:resource="#item_71"/>
+        <dc:subject>
+            <z:AutomaticTag>
+               <rdf:value>credit default swap</rdf:value>
+            </z:AutomaticTag>
+        </dc:subject>
+        <dc:subject>
+           <z:AutomaticTag><rdf:value>GCC country</rdf:value></z:AutomaticTag>
+        </dc:subject>
+        <dc:subject>
+           <z:AutomaticTag><rdf:value>oil shock</rdf:value></z:AutomaticTag>
+        </dc:subject>
+        <dc:subject>
+            <z:AutomaticTag>
+               <rdf:value>sovereign credit risk</rdf:value>
+            </z:AutomaticTag>
+        </dc:subject>
+        <dc:subject>
+           <z:AutomaticTag><rdf:value>spread</rdf:value></z:AutomaticTag>
+        </dc:subject>
+        <dc:subject>
+            <z:AutomaticTag>
+               <rdf:value>time-varying impact</rdf:value>
+            </z:AutomaticTag>
+        </dc:subject>
+        <dc:title>The pass-through effects of oil price shocks on sovereign credit risks of GCC countries: Evidence from the TVP-SVAR-SV framework</dc:title>
+        <dcterms:abstract>We implement a two-stage methodology based on the structural vector autoregressive and time-varying parameter vector autoregressive models to examine the time-varying effect of distinct types of oil-price shocks on sovereign credit risks measured by credit default swap (CDS) spreads in Gulf Cooperation Council countries. Using monthly data for the period from May 2011 to February 2022, our results show time-varying responses to structural oil shocks in the short- and medium-run periods, with more fluctuations in responses detected over the full sample period in the former. Overall, we detect a break in the contagious impacts of oil shocks during and in the aftermath of, the 2014–2015 oil crisis and COVID-19 crisis. Specifically, the Bahraini market is found to exhibit a positive (negative) reaction to the oil supply shocks (OS) and oil market-specific demand shocks (OSD) throughout the pandemic period. Furthermore, we uncover a transient response from the Saudi and Qatari CDS spreads to the aggregate demand shocks (ADS) and the OSD over the full sample period, indicating the need for portfolio rebalancing. In the UAE, we detect a positive impact over the three sampled years of OSD since 2011. Moreover, a notable decoupling pattern continues to appear between short- and medium-term innovations in the ADS. Our results suggest adopting more conservative trading in the CDS markets while understanding the oil price and the economic state. The complexity of the trading strategy should also depend on the target Gulf market itself and that seems essential when it comes to investing in Qatar and Saudi Arabia.</dcterms:abstract>
+        <dc:date>2024</dc:date>
+        <dc:identifier>
+            <dcterms:URI>
+                <rdf:value>https://onlinelibrary.wiley.com/doi/abs/10.1002/ijfe.2894</rdf:value>
+            </dcterms:URI>
+        </dc:identifier>
+        <dcterms:dateSubmitted>2026-02-01 13:49:26</dcterms:dateSubmitted>
+        <z:shortTitle>The pass-through effects of oil price shocks on sovereign credit risks of GCC countries</z:shortTitle>
+        <z:language>en</z:language>
+        <z:libraryCatalog>Wiley Online Library</z:libraryCatalog>
+        <dc:rights>© 2023 John Wiley &amp; Sons Ltd.</dc:rights>
+        <dc:description>_eprint: https://onlinelibrary.wiley.com/doi/pdf/10.1002/ijfe.2894</dc:description>
+        <bib:pages>4681-4703</bib:pages>
+    </bib:Article>
+    <bib:Journal rdf:about="urn:issn:1099-1158">
+        <dc:identifier>DOI 10.1002/ijfe.2894</dc:identifier>
+        <prism:volume>29</prism:volume>
+        <dc:title>International Journal of Finance &amp; Economics</dc:title>
+        <dc:identifier>ISSN 1099-1158</dc:identifier>
+        <prism:number>4</prism:number>
+    </bib:Journal>
+    <z:Attachment rdf:about="#item_71">
+        <z:itemType>attachment</z:itemType>
+        <rdf:resource rdf:resource="files/71/ijfe.html"/>
+        <dc:title>Snapshot</dc:title>
+        <dc:identifier>
+            <dcterms:URI>
+                <rdf:value>https://onlinelibrary.wiley.com/doi/abs/10.1002/ijfe.2894</rdf:value>
+            </dcterms:URI>
+        </dc:identifier>
+        <dcterms:dateSubmitted>2026-02-01 13:49:34</dcterms:dateSubmitted>
+        <z:linkMode>1</z:linkMode>
+        <link:type>text/html</link:type>
+    </z:Attachment>
+    <bib:Article rdf:about="https://www.sciencedirect.com/science/article/pii/S0140988320300864">
+        <z:itemType>journalArticle</z:itemType>
+        <dcterms:isPartOf>
+            <bib:Journal>
+                <dc:identifier>DOI 10.1016/j.eneco.2020.104747</dc:identifier>
+                <prism:volume>88</prism:volume>
+                <dc:title>Energy Economics</dc:title>
+                <dc:identifier>ISSN 0140-9883</dc:identifier>
+                <dcterms:alternative>Energy Economics</dcterms:alternative>
+            </bib:Journal>
+        </dcterms:isPartOf>
+        <bib:authors>
+            <rdf:Seq>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Naifar</foaf:surname>
+                        <foaf:givenName>Nader</foaf:givenName>
+                    </foaf:Person>
+                </rdf:li>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Shahzad</foaf:surname>
+                        <foaf:givenName>Syed Jawad Hussain</foaf:givenName>
+                    </foaf:Person>
+                </rdf:li>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Hammoudeh</foaf:surname>
+                        <foaf:givenName>Shawkat</foaf:givenName>
+                    </foaf:Person>
+                </rdf:li>
+            </rdf:Seq>
+        </bib:authors>
+        <link:link rdf:resource="#item_74"/>
+        <link:link rdf:resource="#item_73"/>
+        <dc:subject>
+            <z:AutomaticTag>
+               <rdf:value>Financial uncertainty</rdf:value>
+            </z:AutomaticTag>
+        </dc:subject>
+        <dc:subject>
+           <z:AutomaticTag><rdf:value>Oil volatility</rdf:value></z:AutomaticTag>
+        </dc:subject>
+        <dc:subject>
+            <z:AutomaticTag>
+               <rdf:value>Quantile-on-Quantile approach</rdf:value>
+            </z:AutomaticTag>
+        </dc:subject>
+        <dc:subject>
+            <z:AutomaticTag>
+               <rdf:value>Sovereign CDS spreads</rdf:value>
+            </z:AutomaticTag>
+        </dc:subject>
+        <dc:title>Dynamic nonlinear impacts of oil price returns and financial uncertainties on credit risks of oil-exporting countries</dc:title>
+        <dcterms:abstract>This paper investigates the dynamic and nonlinear impact of oil price returns on the sovereign credit default swap (CDS) spreads for the oil-rich countries of the Gulf Cooperation Council (GCC) and other important oil-exporting countries, namely Venezuela, Mexico and Russia. We employ the standard quantile regression analysis, the rolling quantile regression, and finally, the Quantile-on-quantile (QQ) approach that allows one to investigate the dependence dynamics of the sovereign CDS spreads under different credit market conditions. The empirical results show that oil price returns significantly and favorably decrease the sovereign credit risk premium of the non-GCC oil-exporting countries under consideration. However, the results also suggest no or little impact on the sovereign credit risk premium of Saudi Arabia, UAE and Norway, which have the most significant sovereign wealth funds in the world. The negative (i.e. favorable) impact of oil price returns on the sovereign CDS spreads, where present, gradually increases with the quantile level and is the highest during the bullish credit market conditions. The results also show that those CDS spreads are more sensitive to the global bond market uncertainty factor than to the global equity market uncertainty factor.</dcterms:abstract>
+        <dc:date>2020-05-01</dc:date>
+        <dc:identifier>
+            <dcterms:URI>
+                <rdf:value>https://www.sciencedirect.com/science/article/pii/S0140988320300864</rdf:value>
+            </dcterms:URI>
+        </dc:identifier>
+        <dcterms:dateSubmitted>2026-02-01 13:49:47</dcterms:dateSubmitted>
+        <z:libraryCatalog>ScienceDirect</z:libraryCatalog>
+        <bib:pages>104747</bib:pages>
+    </bib:Article>
+    <z:Attachment rdf:about="#item_74">
+        <z:itemType>attachment</z:itemType>
+        <rdf:resource rdf:resource="files/74/Naifar et al. - 2020 - Dynamic nonlinear impacts of oil price returns and financial uncertainties on credit risks of oil-ex.pdf"/>
+        <dc:title>ScienceDirect Full Text PDF</dc:title>
+        <dc:identifier>
+            <dcterms:URI>
+                <rdf:value>https://pdf.sciencedirectassets.com/271683/1-s2.0-S0140988320X00041/1-s2.0-S0140988320300864/main.pdf?X-Amz-Security-Token=IQoJb3JpZ2luX2VjEAYaCXVzLWVhc3QtMSJHMEUCIHRTPEtsZuoAqk06fz6wJUvz%2BITeyExo93UzbqOMR590AiEAwaVOP4Zt%2BXwj3Cic4PdoG5sx90B%2FxwiSuU5kfbk4arMquwUIzv%2F%2F%2F%2F%2F%2F%2F%2F%2F%2FARAFGgwwNTkwMDM1NDY4NjUiDBuOH94mmSFNijT4byqPBSlbhiQ%2B%2BQkdER8lbaFI7P9oUR%2BzLJ%2BzL2h6pGlipH2cUahSs83F%2BJTe1SiNRcblLBUB9i4XUomEbdZsbm3jNOcWKwQ%2BOcAddlGx8VP04qsQ8Chcv73j1a6%2FCXcHHWsZkFYSpiTR1pym6PHo7tqENp7NvO%2BIxffNKOx3JxF9vXh%2BAN1oLABVvMM7nTNE6UMxsrYJoCdHgeI3SQVaZNFpSg0zD6ouiTKyrv5ZpkXqE7lGsGoBAKbhbvG7t0v5RsKO%2FMSQ3x3XoypKBboMp5expLYmCH7ATOLsocgmBECnZy0yJ6QxgotEUdLIinQ9rz3xhRCQaTH%2Bydzlelq1Sswt9R%2F7svPo8hqVbh6wtt8Fz7RAzyxfvE7IE%2F0m0wpT4bOXtyGPNcGBSav3J9Pq8fmc%2B0O%2Fa7i2eev00VKVp0zaALL4u6yg1L4EA7%2Fz86se2uJqTf5nLRNXRtAH8L0dBf01imtBRxVj6Ny3obuUql3H8MWM1HT7BO3wuXZw9iFa4eiwL4NTDkpkd63mcr7dleURaU%2FvMc95M6AGNm2QGO3Ed7S8oBiXIX77duNxhgEbJzCTXusU6FS0e%2FFS3CD8QTEkw88DsJ%2BiGtleyPM5%2BpfkBp%2FqLeLYAI%2BpJOd2MmmvtAVmKexz6a2TPiUVYTmJ6xmm4Q9prSw0YZ%2FWqU8Qc9RC8M1IBz2gnwo1moJrs2GScLu1IMXgpbZs2cUuHftHCBgJZNd3Am7r2SrgaZxwuBiUlVWZcmataDNYF5LekWYTbQJRGPyRFK4cVyVPyKkpbIhJXHgbfeFKOX1IgAHnkwB0PLXM9SEQOswkpWqMdmwbo11e1l0%2FmpUMKxzV0hEVftMb1ZbkWIsc%2F84sxjPgT4Xe4xEwkaP9ywY6sQGHfQWarJefa8Cow%2BlqX4k8QwOWh%2FvCVGIikl5%2BzajnZr64usCJHuod70Vc1hHVRCY1LdAvll71viKfnQv9nHGhym49Hfh7nHh5DZ%2FDKPvR93D2rGtrHWaJSpx8RKSbHF5E9cHpQ6tIxdlwCfHQuSj0QR3YKAxzUz%2F3sWx0Yft72ZtOKQLYFgzjnfAffXnON%2F4oQq2NNw5KlPqrtAaeFaopbHJ%2Frj3VqqNoZI728Nqq%2BxQ%3D&amp;X-Amz-Algorithm=AWS4-HMAC-SHA256&amp;X-Amz-Date=20260201T134955Z&amp;X-Amz-SignedHeaders=host&amp;X-Amz-Expires=300&amp;X-Amz-Credential=ASIAQ3PHCVTY5OXMYT6S%2F20260201%2Fus-east-1%2Fs3%2Faws4_request&amp;X-Amz-Signature=9e8efde57dcfdea6214baa9e85508b54c730fa12c6f5c4c45f91623fa30f773b&amp;hash=42dcc441a0454d6271b9da3ea4d5b5fe9f4bd6bcd39c5355f2afba009ffb5771&amp;host=68042c943591013ac2b2430a89b270f6af2c76d8dfd086a07176afe7c76c2c61&amp;pii=S0140988320300864&amp;tid=spdf-383cd1ae-b02c-48fb-8e72-a1fdd04150d9&amp;sid=6bdf6a0b4968d044ca4b08412a6acbf88072gxrqb&amp;type=client&amp;tsoh=d3d3LnNjaWVuY2VkaXJlY3QuY29t&amp;rh=d3d3LnNjaWVuY2VkaXJlY3QuY29t&amp;ua=190e56055952030f5c515c&amp;rr=9c71ea339e03be89&amp;cc=ch</rdf:value>
+            </dcterms:URI>
+        </dc:identifier>
+        <dcterms:dateSubmitted>2026-02-01 13:49:56</dcterms:dateSubmitted>
+        <z:linkMode>1</z:linkMode>
+        <link:type>application/pdf</link:type>
+    </z:Attachment>
+    <z:Attachment rdf:about="#item_73">
+        <z:itemType>attachment</z:itemType>
+        <rdf:resource rdf:resource="files/73/S0140988320300864.html"/>
+        <dc:title>ScienceDirect Snapshot</dc:title>
+        <dc:identifier>
+            <dcterms:URI>
+                <rdf:value>https://www.sciencedirect.com/science/article/pii/S0140988320300864</rdf:value>
+            </dcterms:URI>
+        </dc:identifier>
+        <dcterms:dateSubmitted>2026-02-01 13:49:55</dcterms:dateSubmitted>
+        <z:linkMode>1</z:linkMode>
+        <link:type>text/html</link:type>
+    </z:Attachment>
+    <bib:Article rdf:about="#item_76">
+        <z:itemType>journalArticle</z:itemType>
+        <dcterms:isPartOf>
+           <bib:Journal></bib:Journal>
+        </dcterms:isPartOf>
+        <bib:authors>
+            <rdf:Seq>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Cheikh</foaf:surname>
+                        <foaf:givenName>Ben</foaf:givenName>
+                    </foaf:Person>
+                </rdf:li>
+            </rdf:Seq>
+        </bib:authors>
+        <link:link rdf:resource="#item_75"/>
+        <dc:title>Investigating the Asymmetric Impact of Oil Prices on GCC Stock Markets</dc:title>
+        <dc:date>2020</dc:date>
+        <z:language>en</z:language>
+        <z:libraryCatalog>Zotero</z:libraryCatalog>
+    </bib:Article>
+    <z:Attachment rdf:about="#item_75">
+        <z:itemType>attachment</z:itemType>
+        <rdf:resource rdf:resource="files/75/Cheikh - 2020 - Investigating the Asymmetric Impact of Oil Prices on GCC Stock Markets.pdf"/>
+        <dc:title>PDF</dc:title>
+        <dc:identifier>
+            <dcterms:URI>
+                <rdf:value>https://www.econstor.eu/bitstream/10419/227380/1/dp13853.pdf</rdf:value>
+            </dcterms:URI>
+        </dc:identifier>
+        <dcterms:dateSubmitted>2026-02-01 13:50:11</dcterms:dateSubmitted>
+        <z:linkMode>1</z:linkMode>
+        <link:type>application/pdf</link:type>
+    </z:Attachment>
+    <bib:Document rdf:about="https://am.lombardodier.com/contents/news/investment-viewpoints/2022/april/oil-shocks-and-their-impact-on-f.html">
+        <z:itemType>webpage</z:itemType>
+        <dcterms:isPartOf>
+           <z:Website></z:Website>
+        </dcterms:isPartOf>
+        <link:link rdf:resource="#item_78"/>
+        <dc:title>Oil shocks and their impact on fixed-income markets | Lombard Odier</dc:title>
+        <dcterms:abstract>What lessons from past oil shock episodes can help us understand the impact of the current situation on fixed income markets? Here is our breakdown of the scenario analysis.</dcterms:abstract>
+        <dc:date>2026-01-28</dc:date>
+        <dc:identifier>
+            <dcterms:URI>
+                <rdf:value>https://am.lombardodier.com/contents/news/investment-viewpoints/2022/april/oil-shocks-and-their-impact-on-f.html</rdf:value>
+            </dcterms:URI>
+        </dc:identifier>
+        <dcterms:dateSubmitted>2026-02-01 13:50:40</dcterms:dateSubmitted>
+        <z:language>en</z:language>
+    </bib:Document>
+    <z:Attachment rdf:about="#item_78">
+        <z:itemType>attachment</z:itemType>
+        <rdf:resource rdf:resource="files/78/oil-shocks-and-their-impact-on-f.html"/>
+        <dc:title>Snapshot</dc:title>
+        <dc:identifier>
+            <dcterms:URI>
+                <rdf:value>https://am.lombardodier.com/contents/news/investment-viewpoints/2022/april/oil-shocks-and-their-impact-on-f.html</rdf:value>
+            </dcterms:URI>
+        </dc:identifier>
+        <dcterms:dateSubmitted>2026-02-01 13:50:49</dcterms:dateSubmitted>
+        <z:linkMode>1</z:linkMode>
+        <link:type>text/html</link:type>
+    </z:Attachment>
+    <bib:Article rdf:about="https://linkinghub.elsevier.com/retrieve/pii/S0140988325001999">
+        <z:itemType>journalArticle</z:itemType>
+        <dcterms:isPartOf rdf:resource="urn:issn:01409883"/>
+        <bib:authors>
+            <rdf:Seq>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Wegener</foaf:surname>
+                        <foaf:givenName>Christoph</foaf:givenName>
+                    </foaf:Person>
+                </rdf:li>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Basse</foaf:surname>
+                        <foaf:givenName>Tobias</foaf:givenName>
+                    </foaf:Person>
+                </rdf:li>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Maiani</foaf:surname>
+                        <foaf:givenName>Stefano</foaf:givenName>
+                    </foaf:Person>
+                </rdf:li>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Nguyen</foaf:surname>
+                        <foaf:givenName>Tam Huu</foaf:givenName>
+                    </foaf:Person>
+                </rdf:li>
+            </rdf:Seq>
+        </bib:authors>
+        <link:link rdf:resource="#item_79"/>
+        <dc:title>Predictive power of oil prices on CDS spread dynamics of oil-producing countries</dc:title>
+        <dc:date>05/2025</dc:date>
+        <dc:identifier>
+            <dcterms:URI>
+                <rdf:value>https://linkinghub.elsevier.com/retrieve/pii/S0140988325001999</rdf:value>
+            </dcterms:URI>
+        </dc:identifier>
+        <dcterms:dateSubmitted>2026-02-01 13:51:07</dcterms:dateSubmitted>
+        <z:language>en</z:language>
+        <z:libraryCatalog>DOI.org (Crossref)</z:libraryCatalog>
+        <bib:pages>108375</bib:pages>
+    </bib:Article>
+    <bib:Journal rdf:about="urn:issn:01409883">
+        <dc:identifier>DOI 10.1016/j.eneco.2025.108375</dc:identifier>
+        <prism:volume>145</prism:volume>
+        <dc:title>Energy Economics</dc:title>
+        <dc:identifier>ISSN 01409883</dc:identifier>
+        <dcterms:alternative>Energy Economics</dcterms:alternative>
+    </bib:Journal>
+    <z:Attachment rdf:about="#item_79">
+        <z:itemType>attachment</z:itemType>
+        <rdf:resource rdf:resource="files/79/Wegener et al. - 2025 - Predictive power of oil prices on CDS spread dynamics of oil-producing countries.pdf"/>
+        <dc:title>PDF</dc:title>
+        <dc:identifier>
+            <dcterms:URI>
+                <rdf:value>https://www.econstor.eu/bitstream/10419/313644/1/1919897364.pdf</rdf:value>
+            </dcterms:URI>
+        </dc:identifier>
+        <dcterms:dateSubmitted>2026-02-01 13:51:03</dcterms:dateSubmitted>
+        <z:linkMode>1</z:linkMode>
+        <link:type>application/pdf</link:type>
+    </z:Attachment>
+    <bib:Article rdf:about="https://www.cambridge.org/core/journals/journal-of-financial-and-quantitative-analysis/article/abs/real-economic-shocks-and-sovereign-credit-risk/F4B19ED1D2F7E7E1095D6C6E8E54FD57">
+        <z:itemType>journalArticle</z:itemType>
+        <dcterms:isPartOf>
+            <bib:Journal>
+                <dc:identifier>DOI 10.1017/S0022109016000259</dc:identifier>
+                <prism:volume>51</prism:volume>
+                <dc:title>Journal of Financial and Quantitative Analysis</dc:title>
+                <dc:identifier>ISSN 0022-1090, 1756-6916</dc:identifier>
+                <prism:number>2</prism:number>
+            </bib:Journal>
+        </dcterms:isPartOf>
+        <bib:authors>
+            <rdf:Seq>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Augustin</foaf:surname>
+                        <foaf:givenName>Patrick</foaf:givenName>
+                    </foaf:Person>
+                </rdf:li>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Tédongap</foaf:surname>
+                        <foaf:givenName>Roméo</foaf:givenName>
+                    </foaf:Person>
+                </rdf:li>
+            </rdf:Seq>
+        </bib:authors>
+        <dc:title>Real Economic Shocks and Sovereign Credit Risk</dc:title>
+        <dcterms:abstract>We provide new empirical evidence that U.S. expected growth and consumption volatility are closely related to the strong comovement in sovereign spreads. We rationalize these findings in an equilibrium model with recursive utility for credit default swap (CDS) spreads. The framework links a reduced-form default process with country-specific sensitivity to expected growth and macroeconomic uncertainty. Exploiting the high-frequency information in the CDS term structure across 38 countries, we estimate the model and find parameters consistent with preference for early resolution of uncertainty. Our results confirm the existence of time-varying risk premia in sovereign spreads as compensation for exposure to common U.S. macroeconomic risk.</dcterms:abstract>
+        <dc:date>2016/04</dc:date>
+        <dc:identifier>
+            <dcterms:URI>
+                <rdf:value>https://www.cambridge.org/core/journals/journal-of-financial-and-quantitative-analysis/article/abs/real-economic-shocks-and-sovereign-credit-risk/F4B19ED1D2F7E7E1095D6C6E8E54FD57</rdf:value>
+            </dcterms:URI>
+        </dc:identifier>
+        <dcterms:dateSubmitted>2026-02-01 13:59:50</dcterms:dateSubmitted>
+        <z:language>en</z:language>
+        <z:libraryCatalog>Cambridge University Press</z:libraryCatalog>
+        <bib:pages>541-587</bib:pages>
+    </bib:Article>
+    <bib:Article rdf:about="https://www.cambridge.org/core/product/identifier/S0022109016000259/type/journal_article">
+        <z:itemType>journalArticle</z:itemType>
+        <dcterms:isPartOf>
+            <bib:Journal>
+                <dc:identifier>DOI 10.1017/S0022109016000259</dc:identifier>
+                <prism:volume>51</prism:volume>
+                <dc:title>Journal of Financial and Quantitative Analysis</dc:title>
+                <dc:identifier>ISSN 0022-1090, 1756-6916</dc:identifier>
+                <prism:number>2</prism:number>
+                <dcterms:alternative>J. Financ. Quant. Anal.</dcterms:alternative>
+            </bib:Journal>
+        </dcterms:isPartOf>
+        <bib:authors>
+            <rdf:Seq>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Augustin</foaf:surname>
+                        <foaf:givenName>Patrick</foaf:givenName>
+                    </foaf:Person>
+                </rdf:li>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Tédongap</foaf:surname>
+                        <foaf:givenName>Roméo</foaf:givenName>
+                    </foaf:Person>
+                </rdf:li>
+            </rdf:Seq>
+        </bib:authors>
+        <link:link rdf:resource="#item_82"/>
+        <dc:title>Real Economic Shocks and Sovereign Credit Risk</dc:title>
+        <dcterms:abstract>We provide new empirical evidence that U.S. expected growth and consumption volatility are closely related to the strong co-movement in sovereign spreads. We rationalize these ﬁndings in an equilibrium model with recursive utility for CDS spreads. The framework nests a reduced-form default process with country-speciﬁc sensitivity to expected growth and macroeconomic uncertainty. Exploiting the high-frequency information in the CDS term structure across 38 countries, we estimate the model and ﬁnd parameters consistent with preference for early resolution of uncertainty. Our results conﬁrm the existence of time-varying risk premia in sovereign spreads as compensation for exposure to common U.S. macroeconomic risk.</dcterms:abstract>
+        <dc:date>04/2016</dc:date>
+        <dc:identifier>
+            <dcterms:URI>
+                <rdf:value>https://www.cambridge.org/core/product/identifier/S0022109016000259/type/journal_article</rdf:value>
+            </dcterms:URI>
+        </dc:identifier>
+        <dcterms:dateSubmitted>2026-02-01 14:01:14</dcterms:dateSubmitted>
+        <z:language>en</z:language>
+        <z:libraryCatalog>DOI.org (Crossref)</z:libraryCatalog>
+        <dc:rights>https://www.cambridge.org/core/terms</dc:rights>
+        <bib:pages>541-587</bib:pages>
+    </bib:Article>
+    <z:Attachment rdf:about="#item_82">
+        <z:itemType>attachment</z:itemType>
+        <rdf:resource rdf:resource="files/82/Augustin and Tédongap - 2016 - Real Economic Shocks and Sovereign Credit Risk.pdf"/>
+        <dc:title>PDF</dc:title>
+        <dc:identifier>
+            <dcterms:URI>
+                <rdf:value>https://www.nasdaq.com/docs/Real%20Economic%20Shocks%20and%20Sovereign%20Credit%20Risk.pdf</rdf:value>
+            </dcterms:URI>
+        </dc:identifier>
+        <dcterms:dateSubmitted>2026-02-01 14:01:12</dcterms:dateSubmitted>
+        <z:linkMode>1</z:linkMode>
+        <link:type>application/pdf</link:type>
+    </z:Attachment>
+    <bib:Article rdf:about="#item_85">
+        <z:itemType>journalArticle</z:itemType>
+        <dcterms:isPartOf>
+           <bib:Journal></bib:Journal>
+        </dcterms:isPartOf>
+        <bib:authors>
+            <rdf:Seq>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Pan</foaf:surname>
+                        <foaf:givenName>Jun</foaf:givenName>
+                    </foaf:Person>
+                </rdf:li>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Singleton</foaf:surname>
+                        <foaf:givenName>Kenneth J</foaf:givenName>
+                    </foaf:Person>
+                </rdf:li>
+            </rdf:Seq>
+        </bib:authors>
+        <link:link rdf:resource="#item_84"/>
+        <dc:title>Default and Recovery Implicit in the Term Structure of Sovereign CDS Spreads</dc:title>
+        <dcterms:abstract>This paper explores the nature of default arrival and recovery implicit in the term structures of sovereign CDS spreads. We argue that term structures of spreads reveal not only the arrival rates of credit events (λQ), but also the loss rates given credit events. Applying our framework to Mexico, Turkey, and Korea, we show that a single-factor model with λQ following a lognormal process captures most of the variation in the term structures of spreads. The risk premiums associated with unpredictable variation in λQ are found to be economically significant and co-vary importantly with several economic measures of global event risk, financial market volatility, and macroeconomic policy.</dcterms:abstract>
+        <z:language>en</z:language>
+        <z:libraryCatalog>Zotero</z:libraryCatalog>
+    </bib:Article>
+    <z:Attachment rdf:about="#item_84">
+        <z:itemType>attachment</z:itemType>
+        <rdf:resource rdf:resource="files/84/Pan and Singleton - Default and Recovery Implicit in the Term Structure of Sovereign CDS Spreads.pdf"/>
+        <dc:title>PDF</dc:title>
+        <dc:identifier>
+            <dcterms:URI>
+                <rdf:value>https://en.saif.sjtu.edu.cn/junpan/Pan_Singleton.pdf</rdf:value>
+            </dcterms:URI>
+        </dc:identifier>
+        <dcterms:dateSubmitted>2026-02-01 14:01:19</dcterms:dateSubmitted>
+        <z:linkMode>1</z:linkMode>
+        <link:type>application/pdf</link:type>
+    </z:Attachment>
+    <z:Attachment rdf:about="#item_86">
+        <z:itemType>attachment</z:itemType>
+        <rdf:resource rdf:resource="files/86/Sidy Diop - PhD Thesis.pdf"/>
+        <dc:title>Sidy Diop - PhD Thesis.pdf</dc:title>
+        <dc:identifier>
+            <dcterms:URI>
+                <rdf:value>https://amsdottorato.unibo.it/id/eprint/8745/1/Sidy%20Diop%20-%20PhD%20Thesis.pdf</rdf:value>
+            </dcterms:URI>
+        </dc:identifier>
+        <dcterms:dateSubmitted>2026-02-01 14:02:05</dcterms:dateSubmitted>
+        <z:linkMode>1</z:linkMode>
+        <link:type>application/pdf</link:type>
+    </z:Attachment>
+    <rdf:Description rdf:about="https://papers.ssrn.com/abstract=1839470">
+        <z:itemType>preprint</z:itemType>
+        <dc:publisher>
+            <foaf:Organization>
+                <vcard:adr>
+                    <vcard:Address>
+                       <vcard:locality>Rochester, NY</vcard:locality>
+                    </vcard:Address>
+                </vcard:adr>
+                <foaf:name>Social Science Research Network</foaf:name>
+            </foaf:Organization>
+        </dc:publisher>
+        <bib:authors>
+            <rdf:Seq>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Duyvesteyn</foaf:surname>
+                        <foaf:givenName>Johan G.</foaf:givenName>
+                    </foaf:Person>
+                </rdf:li>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Martens</foaf:surname>
+                        <foaf:givenName>Martin</foaf:givenName>
+                    </foaf:Person>
+                </rdf:li>
+            </rdf:Seq>
+        </bib:authors>
+        <link:link rdf:resource="#item_88"/>
+        <dc:subject>
+           <z:AutomaticTag><rdf:value>emerging debt</rdf:value></z:AutomaticTag>
+        </dc:subject>
+        <dc:subject>
+            <z:AutomaticTag>
+               <rdf:value>Sovereign credit risk</rdf:value>
+            </z:AutomaticTag>
+        </dc:subject>
+        <dc:subject>
+            <z:AutomaticTag>
+               <rdf:value>structural model</rdf:value>
+            </z:AutomaticTag>
+        </dc:subject>
+        <dc:title>Forecasting Sovereign Default risk with Merton’s Model</dc:title>
+        <dcterms:abstract>Merton's structural model for sovereigns is proven to be useful to analyze the default risk of a country. We are the first to investigate how fast CDS spreads react to changes in model inputs and outputs. CDS spread changes strongly correlate with exchange rate returns, which are an input to the model. But CDS spread changes on average react with a delay to changes in model outputs such as the distance to default, the default probability and model spreads. Hence contingency claim analysis for sovereigns provides useful predictions for CDS spreads.</dcterms:abstract>
+        <dc:date>2015-06-08</dc:date>
+        <dc:identifier>DOI 10.2139/ssrn.1839470</dc:identifier>
+        <dc:identifier>
+            <dcterms:URI>
+               <rdf:value>https://papers.ssrn.com/abstract=1839470</rdf:value>
+            </dcterms:URI>
+        </dc:identifier>
+        <dcterms:dateSubmitted>2026-02-01 14:03:30</dcterms:dateSubmitted>
+        <z:language>en</z:language>
+        <z:libraryCatalog>papers.ssrn.com</z:libraryCatalog>
+        <z:type>SSRN Scholarly Paper</z:type>
+        <prism:number>1839470</prism:number>
+    </rdf:Description>
+    <z:Attachment rdf:about="#item_88">
+        <z:itemType>attachment</z:itemType>
+        <rdf:resource rdf:resource="files/88/Duyvesteyn and Martens - 2015 - Forecasting Sovereign Default risk with Merton’s Model.pdf"/>
+        <dc:title>Full Text PDF</dc:title>
+        <dc:identifier>
+            <dcterms:URI>
+                <rdf:value>https://papers.ssrn.com/sol3/Delivery.cfm/SSRN_ID1839470_code2517119.pdf?abstractid=1839470&amp;mirid=1</rdf:value>
+            </dcterms:URI>
+        </dc:identifier>
+        <dcterms:dateSubmitted>2026-02-01 14:03:33</dcterms:dateSubmitted>
+        <z:linkMode>1</z:linkMode>
+        <link:type>application/pdf</link:type>
+    </z:Attachment>
+    <bib:Article rdf:about="https://www.annualreviews.org/content/journals/10.1146/annurev.financial.050808.114316">
+        <z:itemType>journalArticle</z:itemType>
+        <dcterms:isPartOf rdf:resource="urn:issn:1941-1367,%201941-1375"/>
+        <dc:publisher>
+            <foaf:Organization>
+               <foaf:name>Annual Reviews</foaf:name>
+            </foaf:Organization>
+        </dc:publisher>
+        <bib:authors>
+            <rdf:Seq>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Gray</foaf:surname>
+                        <foaf:givenName>Dale F.</foaf:givenName>
+                    </foaf:Person>
+                </rdf:li>
+            </rdf:Seq>
+        </bib:authors>
+        <link:link rdf:resource="#item_90"/>
+        <dc:title>Modeling Financial Crises and Sovereign Risks</dc:title>
+        <dcterms:abstract>The complex interactions, spillovers, and feedbacks of the global crisis that began in 2007 remind us of how important it is to improve our analysis and modeling of financial crises and sovereign risk. This review provides a broad framework to examine how vulnerabilities can build up and suddenly erupt in a financial crisis, with potentially disastrous feedback effects for sovereign debt and economic growth. Traditional macroeconomic analyses overlook the importance of risk, which makes them ill-suited to examine interconnectedness, risk transmission mechanisms, and contagion. After presenting an overview of the key features of the global 2007-2009 crisis, this review discusses new directions for research on modeling financial crises and sovereign risk, including the need for integrating risk into macroeconomic policy models and enhancing early warning system and financial contagion models through a more comprehensive view of economy-wide risks. Also, new tools to mitigate and control macro risk need to be developed, along with new approaches to regulate financial sector risk-taking and monitor and manage the interactions between private sector and sovereign risk.</dcterms:abstract>
+        <dc:date>2009/08/01</dc:date>
+        <dc:identifier>
+            <dcterms:URI>
+                <rdf:value>https://www.annualreviews.org/content/journals/10.1146/annurev.financial.050808.114316</rdf:value>
+            </dcterms:URI>
+        </dc:identifier>
+        <dcterms:dateSubmitted>2026-02-01 14:03:41</dcterms:dateSubmitted>
+        <z:language>en</z:language>
+        <z:libraryCatalog>www.annualreviews.org</z:libraryCatalog>
+        <bib:pages>117-144</bib:pages>
+    </bib:Article>
+    <bib:Journal rdf:about="urn:issn:1941-1367,%201941-1375">
+        <dc:identifier>DOI 10.1146/annurev.financial.050808.114316</dc:identifier>
+        <prism:volume>1</prism:volume>
+        <dc:title>Annual Review of Financial Economics</dc:title>
+        <dc:identifier>ISSN 1941-1367, 1941-1375</dc:identifier>
+        <prism:number>Volume 1, 2009</prism:number>
+    </bib:Journal>
+    <z:Attachment rdf:about="#item_90">
+        <z:itemType>attachment</z:itemType>
+        <rdf:resource rdf:resource="files/90/annurev.financial.050808.html"/>
+        <dc:title>Snapshot</dc:title>
+        <dc:identifier>
+            <dcterms:URI>
+                <rdf:value>https://www.annualreviews.org/content/journals/10.1146/annurev.financial.050808.114316</rdf:value>
+            </dcterms:URI>
+        </dc:identifier>
+        <dcterms:dateSubmitted>2026-02-01 14:03:46</dcterms:dateSubmitted>
+        <z:linkMode>1</z:linkMode>
+        <link:type>text/html</link:type>
+    </z:Attachment>
+    <bib:Document rdf:about="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=1839470">
+        <z:itemType>webpage</z:itemType>
+        <dcterms:isPartOf>
+           <z:Website></z:Website>
+        </dcterms:isPartOf>
+        <link:link rdf:resource="#item_92"/>
+        <dc:title>Forecasting Sovereign Default risk with Merton’s Model by Johan G. Duyvesteyn, Martin Martens :: SSRN</dc:title>
+        <dc:identifier>
+            <dcterms:URI>
+                <rdf:value>https://papers.ssrn.com/sol3/papers.cfm?abstract_id=1839470</rdf:value>
+            </dcterms:URI>
+        </dc:identifier>
+        <dcterms:dateSubmitted>2026-02-01 14:06:36</dcterms:dateSubmitted>
+    </bib:Document>
+    <z:Attachment rdf:about="#item_92">
+        <z:itemType>attachment</z:itemType>
+        <rdf:resource rdf:resource="files/92/papers.html"/>
+        <dc:title>Forecasting Sovereign Default risk with Merton’s Model by Johan G. Duyvesteyn, Martin Martens :: SSRN</dc:title>
+        <dc:identifier>
+            <dcterms:URI>
+                <rdf:value>https://papers.ssrn.com/sol3/papers.cfm?abstract_id=1839470</rdf:value>
+            </dcterms:URI>
+        </dc:identifier>
+        <dcterms:dateSubmitted>2026-02-01 14:06:43</dcterms:dateSubmitted>
+        <z:linkMode>1</z:linkMode>
+        <link:type>text/html</link:type>
+    </z:Attachment>
+    <bib:Article rdf:about="https://www.sciencedirect.com/science/article/pii/S1566014105000531">
+        <z:itemType>journalArticle</z:itemType>
+        <dcterms:isPartOf rdf:resource="urn:issn:1566-0141"/>
+        <bib:authors>
+            <rdf:Seq>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Oshiro</foaf:surname>
+                        <foaf:givenName>Naoto</foaf:givenName>
+                    </foaf:Person>
+                </rdf:li>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Saruwatari</foaf:surname>
+                        <foaf:givenName>Yasufumi</foaf:givenName>
+                    </foaf:Person>
+                </rdf:li>
+            </rdf:Seq>
+        </bib:authors>
+        <link:link rdf:resource="#item_95"/>
+        <link:link rdf:resource="#item_94"/>
+        <dc:subject>
+            <z:AutomaticTag>
+               <rdf:value>Option-pricing model</rdf:value>
+            </z:AutomaticTag>
+        </dc:subject>
+        <dc:subject>
+            <z:AutomaticTag>
+               <rdf:value>Probability of default</rdf:value>
+            </z:AutomaticTag>
+        </dc:subject>
+        <dc:subject>
+           <z:AutomaticTag><rdf:value>Sovereign risk</rdf:value></z:AutomaticTag>
+        </dc:subject>
+        <dc:subject>
+            <z:AutomaticTag>
+               <rdf:value>Stock price index</rdf:value>
+            </z:AutomaticTag>
+        </dc:subject>
+        <dc:title>Quantification of sovereign risk: Using the information in equity market prices</dc:title>
+        <dcterms:abstract>This paper proposes a new approach to quantify the sovereign risk. We use the information of the stock price index as a proxy for the equity value of the country, and introduce a size parameter, which is a conversion factor of the stock price index to the equity value of the country, and adopted the extended Black–Scholes–Merton option-pricing model for the calculation of the probability of default. Our model is applied on two countries, Argentina as the case of debt crisis and Thailand as currency crisis. We demonstrated a capability of our model as an early warning indicator for both crises.</dcterms:abstract>
+        <dc:date>2005-12-01</dc:date>
+        <dc:identifier>
+            <dcterms:URI>
+                <rdf:value>https://www.sciencedirect.com/science/article/pii/S1566014105000531</rdf:value>
+            </dcterms:URI>
+        </dc:identifier>
+        <dcterms:dateSubmitted>2026-02-02 08:59:22</dcterms:dateSubmitted>
+        <z:shortTitle>Quantification of sovereign risk</z:shortTitle>
+        <z:libraryCatalog>ScienceDirect</z:libraryCatalog>
+        <bib:pages>346-362</bib:pages>
+    </bib:Article>
+    <bib:Journal rdf:about="urn:issn:1566-0141">
+        <dcterms:isPartOf>
+            <bib:Series>
+               <dc:title>Assessing Risk in Emerging Markets</dc:title>
+            </bib:Series>
+        </dcterms:isPartOf>
+        <dc:identifier>DOI 10.1016/j.ememar.2005.09.001</dc:identifier>
+        <prism:volume>6</prism:volume>
+        <dc:title>Emerging Markets Review</dc:title>
+        <dc:identifier>ISSN 1566-0141</dc:identifier>
+        <prism:number>4</prism:number>
+        <dcterms:alternative>Emerging Markets Review</dcterms:alternative>
+    </bib:Journal>
+    <z:Attachment rdf:about="#item_95">
+        <z:itemType>attachment</z:itemType>
+        <rdf:resource rdf:resource="files/95/Oshiro and Saruwatari - 2005 - Quantification of sovereign risk Using the information in equity market prices.pdf"/>
+        <dc:title>ScienceDirect Full Text PDF</dc:title>
+        <dc:identifier>
+            <dcterms:URI>
+                <rdf:value>https://pdf.sciencedirectassets.com/272143/1-s2.0-S1566014105X00218/1-s2.0-S1566014105000531/main.pdf?X-Amz-Security-Token=IQoJb3JpZ2luX2VjEBgaCXVzLWVhc3QtMSJGMEQCICeIhS7QPCb5f8ofrMl3kFaIEZDcFJXNcAqqlyjzNXW0AiAQ32OXE6noudbGnmaTZmjaCzilcjdNOcrnDNAUSBXUaCq8BQjh%2F%2F%2F%2F%2F%2F%2F%2F%2F%2F8BEAUaDDA1OTAwMzU0Njg2NSIMFrVdWgq%2BylZDdCP3KpAFWf8pNBQ7omyv0G9aYvfCZvpCFKO26JcD%2Fd7i7j0KgoozdnK2ZUNZv0tT1cWIgv%2FxaRfAo3J7gqgPpxHaDHMvNgEbsyyPi4APTa5CHNyXfbcc4rG9V8KVYSsYbU9LCXF8C34gKvjuCs1aKPR4zNdtN6Hu938wQtpvftTwcQtTuICJACDljBEDU6qKS97S5U0xhSzTanrdvCBwumOk1dISfAVh7sX8SZi76pjVQIQ7%2F4XQhyivFv%2FSW0KqDuVn2G5mZHKRTMTf0rEwaM8WqMnreQ%2Fu7NyxHb%2FlvuRW5d7AShVfpDoWndo5gbePFvaFAx4Pm9HTgLsxHyg0ua7E0J5Jb4y93DsvWy8XeesReAAjdL0ILtqOmpanKzlIQAcpaSAI0JfCv5N%2FVPdyHKL0pz3Ury9YVuocW4wwrldNKLFkrpN15FCTpYYoPVmO8HbS3NA4s%2FWN%2FLaw3ZtzlIKP079hv%2BcE7hPyyjfoZoTNBP9ysyD7FwXn0JjnYHggen4sP4q5a9zXlRH9cu1%2FqDnbVRaRywD9%2F6ihYTm2uK8ZD%2BRcQWf0SexoV9%2BwQ3S%2F4pTEZNyXaD5J9I3Babo5%2BJD2o75kUCulfTMvU1Yfph89hsshEXlPWtTIolRrJnMPu9ZczljBVaYfOYDfUXS2fXlerH8iCFdTl2EZeLiENTOZuC4y7Ps9p2mevBEF7QTXiXlGVsDBk8CiJSRgGyNyLVbPx%2FZ7yHJ8oP3In483e78Jq2o4OdmqT9T6BAyZFnTBiO8p0L78IhxLZmr6YgyHtm2ooE72mxO7BcU2XeOnDxi5kO0vXxeChigmuZ0g7fkGLs6S0eAkBhm3YkeR2ak1ga9y6iJzW3PRWECEPGl5P9m24Xk8Visw1aiBzAY6sgFC4VmSUclLlgcfcU9XRIcvOBxOwK0s7b63X5NiR%2FcXiwCbwrzGR6inFL%2FCGBpXUinEuDYA9U11GkTS93Z4X%2FgeZ66k7ZORsQnGgUGl1UJHaTEcISDv8b9M45Irk7gHmRvBNSeha7SzdjuBPa5kuInnbjnLKfyiGPGiBfvK%2FepfiO1fnH%2FcJrIZ8zY2%2FB9G0AZoFEhcV5HqBomlaLtQ9rlmDo3nHS4ohEdbYoWBQ9EkLwd4&amp;X-Amz-Algorithm=AWS4-HMAC-SHA256&amp;X-Amz-Date=20260202T085931Z&amp;X-Amz-SignedHeaders=host&amp;X-Amz-Expires=300&amp;X-Amz-Credential=ASIAQ3PHCVTY4SUQ4WCA%2F20260202%2Fus-east-1%2Fs3%2Faws4_request&amp;X-Amz-Signature=bd65230425ec24c00432f555c04061f4cec0d08282592a57cb15cea23d714323&amp;hash=562b980a0748a400cccc7eaad4aae0515158c721636e13c17d3f310bc37dacbe&amp;host=68042c943591013ac2b2430a89b270f6af2c76d8dfd086a07176afe7c76c2c61&amp;pii=S1566014105000531&amp;tid=spdf-18a33641-d531-4fe0-8954-bf5c6a76b679&amp;sid=6bdf6a0b4968d044ca4b08412a6acbf88072gxrqb&amp;type=client&amp;tsoh=d3d3LnNjaWVuY2VkaXJlY3QuY29t&amp;rh=d3d3LnNjaWVuY2VkaXJlY3QuY29t&amp;ua=190e5605595b510b5d0751&amp;rr=9c787e2e4dfe03b5&amp;cc=ch</rdf:value>
+            </dcterms:URI>
+        </dc:identifier>
+        <dcterms:dateSubmitted>2026-02-02 08:59:32</dcterms:dateSubmitted>
+        <z:linkMode>1</z:linkMode>
+        <link:type>application/pdf</link:type>
+    </z:Attachment>
+    <z:Attachment rdf:about="#item_94">
+        <z:itemType>attachment</z:itemType>
+        <rdf:resource rdf:resource="files/94/S1566014105000531.html"/>
+        <dc:title>ScienceDirect Snapshot</dc:title>
+        <dc:identifier>
+            <dcterms:URI>
+                <rdf:value>https://www.sciencedirect.com/science/article/pii/S1566014105000531</rdf:value>
+            </dcterms:URI>
+        </dc:identifier>
+        <dcterms:dateSubmitted>2026-02-02 08:59:28</dcterms:dateSubmitted>
+        <z:linkMode>1</z:linkMode>
+        <link:type>text/html</link:type>
+    </z:Attachment>
+</rdf:RDF>
