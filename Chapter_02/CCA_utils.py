@@ -167,6 +167,14 @@ def estimate_eta(r_lcl, r_oil):
 
     return model.params['r_oil']
 
+def pv_of_future_oil_revenue(government_take, prod_qty, reference_price, current_price, discount_rate, mean_reversion_spread):
+
+    delta = current_price - reference_price
+    discounting_factor = 1/(discount_rate+mean_reversion_spread)
+
+    return government_take * prod_qty * delta * discounting_factor
+
+
 
 ########################################################
 # Model 2: Adding jumps
@@ -297,6 +305,7 @@ class JumpDiffusionPricer:
                 spread = (np.log(B_f / risky_debt) / T - r_f) * 10000
 
             return {
+                'sigma_V': sigma_total, 
                 'd2': d2,
                 'default_prob': norm.cdf(-d2),
                 'credit_spread_bps': spread,
