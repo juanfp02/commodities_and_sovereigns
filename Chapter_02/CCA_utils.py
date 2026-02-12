@@ -10,6 +10,7 @@ import statsmodels.api as sm
 from scipy.special import gammaln
 from numba import jit, prange, float64, int64
 import numba as nb
+from scipy import stats
 
 
 #Core functions
@@ -522,132 +523,105 @@ def plot_changes(df,
         fig.savefig(save_path, dpi=150, bbox_inches='tight')
     return fig
 
+def nw_pvalue(x, y, nlags=None):
+    """Correlation significance with Newey-West correction for overlap."""
+    n = len(x)
+    if nlags is None:
+        nlags = int(n ** (1/3))
+    xd, yd = x - x.mean(), y - y.mean()
+    xy = xd * yd
+    gamma0 = np.var(xy, ddof=1)
+    nw = gamma0
+    for j in range(1, nlags + 1):
+        w = 1 - j / (nlags + 1)
+        nw += 2 * w * np.cov(xy[j:], xy[:-j], ddof=1)[0, 1]
+    t = np.mean(xy) / np.sqrt(nw / n)
+    return 2 * (1 - stats.t.cdf(abs(t), df=n-2))
 
 def correlation_table(df, dd_col='distance_to_distress', cds_col='cds_spread',
                       horizons=[1, 4, 13], horizon_labels=None,
                       group_map=None, save_path=None):
-    """
-    Duyvesteyn & Martens (2015) Table 4 style correlation table.
-    
-    Correlations between Δd2 and ΔCDS at multiple horizons,
-    per country, with significance stars and directional accuracy.
-    
-    Parameters
-    ----------
-    df : DataFrame with 'country', 'date', cds_col, and dd_col
-    dd_col : d2 column name
-    cds_col : CDS spread column name
-    horizons : list of ints, periods for differencing (1=1-week, 4≈1-month, 13≈3-month)
-    horizon_labels : list of str labels for horizons
-    group_map : dict mapping country -> group label (e.g. {'Saudi Arabia': 'Oil Exporter'})
-    save_path : if provided, saves table as CSV
-    
-    Returns
-    -------
-    display_df : formatted DataFrame
-    raw_df : DataFrame with raw numeric values for further analysis
-    """
     from scipy import stats
 
     if horizon_labels is None:
         horizon_labels = [f'{h}w' for h in horizons]
 
     countries = sorted(df['country'].unique())
-
     rows = []
+
     for country in countries:
         d = df[df['country'] == country].sort_values('date').copy()
-        d['date'] = pd.to_datetime(d['date'])
-
         group = group_map.get(country, 'Control') if group_map else ''
-
         row = {'Country': country, 'Group': group, 'N': d[dd_col].notna().sum()}
 
         for h, h_label in zip(horizons, horizon_labels):
-            d_cds = d[cds_col].diff(h)
-            d_dd = d[dd_col].diff(h)
-
-            valid = d_cds.notna() & d_dd.notna()
+            dx = d[dd_col].diff(h)
+            dy = d[cds_col].diff(h)
+            valid = dx.notna() & dy.notna()
             n = valid.sum()
 
             if n < 20:
-                row[f'ρ ({h_label})'] = np.nan
-                row[f'p ({h_label})'] = np.nan
-                row[f'Dir ({h_label})'] = np.nan
+                for k in ['ρ','ρ_S','p','Dir']:
+                    row[f'{k} ({h_label})'] = np.nan
                 continue
 
-            x = d_dd[valid].values
-            y = d_cds[valid].values
+            x, y = dx[valid].values, dy[valid].values
+            row[f'ρ ({h_label})'], row[f'p ({h_label})'] = stats.pearsonr(x, y)
+            row[f'ρ_S ({h_label})'], _ = stats.spearmanr(x, y)
 
-            rho, pval = stats.pearsonr(x, y)
-
-            # Directional accuracy: d2 up → CDS down
-            nonzero = (x != 0) & (y != 0)
-            dir_acc = np.mean((x[nonzero] > 0) == (y[nonzero] < 0)) if nonzero.sum() > 0 else np.nan
-
-            row[f'ρ ({h_label})'] = rho
-            row[f'p ({h_label})'] = pval
-            row[f'Dir ({h_label})'] = dir_acc
+            nz = (x != 0) & (y != 0)
+            row[f'Dir ({h_label})'] = np.mean((x[nz] > 0) == (y[nz] < 0)) if nz.sum() > 0 else np.nan
 
         rows.append(row)
 
     raw = pd.DataFrame(rows)
 
-    # ── Group averages ──
+    # group averages
     if group_map:
-        for group_name in sorted(set(group_map.values())):
-            group_rows = raw[raw['Group'] == group_name]
-            if len(group_rows) == 0:
-                continue
-            avg_row = {'Country': f'── {group_name} avg ──', 'Group': group_name, 'N': ''}
+        for gname in sorted(set(group_map.values())):
+            gr = raw[raw['Group'] == gname]
+            if len(gr) == 0: continue
+            avg = {'Country': f'── {gname} avg ──', 'Group': gname, 'N': ''}
             for h_label in horizon_labels:
-                rho_vals = group_rows[f'ρ ({h_label})'].dropna()
-                dir_vals = group_rows[f'Dir ({h_label})'].dropna()
-                avg_row[f'ρ ({h_label})'] = rho_vals.mean() if len(rho_vals) > 0 else np.nan
-                avg_row[f'p ({h_label})'] = np.nan
-                avg_row[f'Dir ({h_label})'] = dir_vals.mean() if len(dir_vals) > 0 else np.nan
-            rows.append(avg_row)
+                for k in ['ρ','ρ_S','Dir']:
+                    vals = gr[f'{k} ({h_label})'].dropna()
+                    avg[f'{k} ({h_label})'] = vals.mean() if len(vals) > 0 else np.nan
+                avg[f'p ({h_label})'] = np.nan
+            rows.append(avg)
 
-        # Overall average
-        avg_row = {'Country': '── All avg ──', 'Group': '', 'N': ''}
+        avg = {'Country': '── All avg ──', 'Group': '', 'N': ''}
         for h_label in horizon_labels:
-            rho_vals = raw[f'ρ ({h_label})'].dropna()
-            dir_vals = raw[f'Dir ({h_label})'].dropna()
-            avg_row[f'ρ ({h_label})'] = rho_vals.mean() if len(rho_vals) > 0 else np.nan
-            avg_row[f'p ({h_label})'] = np.nan
-            avg_row[f'Dir ({h_label})'] = dir_vals.mean() if len(dir_vals) > 0 else np.nan
-        rows.append(avg_row)
+            for k in ['ρ','ρ_S','Dir']:
+                vals = raw[f'{k} ({h_label})'].dropna()
+                avg[f'{k} ({h_label})'] = vals.mean() if len(vals) > 0 else np.nan
+            avg[f'p ({h_label})'] = np.nan
+        rows.append(avg)
 
     full = pd.DataFrame(rows)
 
-    # ── Format display version ──
-    def _fmt_rho(rho, pval):
-        if np.isnan(rho):
-            return ''
-        stars = ''
-        if pval < 0.01:
-            stars = '***'
-        elif pval < 0.05:
-            stars = '**'
-        elif pval < 0.10:
-            stars = '*'
-        return f'{rho:.2f}{stars}'
-
-    def _fmt_dir(d):
-        if np.isnan(d):
-            return ''
-        return f'{d:.0%}'
+    # format display
+    def _stars(p):
+        if pd.isna(p): return ''
+        if p < 0.01: return '***'
+        if p < 0.05: return '**'
+        if p < 0.10: return '*'
+        return ''
 
     display = full[['Country', 'Group', 'N']].copy()
     for h_label in horizon_labels:
         display[f'ρ ({h_label})'] = [
-            _fmt_rho(r, p) for r, p in zip(full[f'ρ ({h_label})'], full[f'p ({h_label})'])
+            f"{r:.2f}{_stars(p)}" if pd.notna(r) else ''
+            for r, p in zip(full[f'ρ ({h_label})'], full[f'p ({h_label})'])
         ]
-        display[f'Dir ({h_label})'] = full[f'Dir ({h_label})'].apply(_fmt_dir)
+        display[f'ρ_S ({h_label})'] = full[f'ρ_S ({h_label})'].apply(
+            lambda v: f'{v:.2f}' if pd.notna(v) else ''
+        )
+        display[f'Dir ({h_label})'] = full[f'Dir ({h_label})'].apply(
+            lambda v: f'{v:.0%}' if pd.notna(v) else ''
+        )
 
     if not group_map:
         display = display.drop(columns=['Group'])
-
     if save_path:
         display.to_csv(save_path, index=False)
 
