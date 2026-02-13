@@ -182,88 +182,87 @@ def pv_of_future_oil_revenue(government_take, prod_qty, reference_price, current
 ########################################################
 
 @jit(nopython=True, cache=True)
-def montecarlo_jump_paths_numba(S, T, r, sigma, lam, eta, steps, n_paths):
-    
+def montecarlo_jump_paths_numba(S, T, r, sigma, lam, mu_J, sigma_J, n_paths, steps):
+    """
+    12 monthly steps over T=1 year.
+    Jump risk only at step 1 (next month). Steps 2-12 pure diffusion.
+    """
     dt = T / steps
-    drift_term = (r - 0.5 * sigma**2 + lam / (eta + 1.0)) * dt
     vol_term = sigma * np.sqrt(dt)
+
+    # drift compensation only for the jump step
+    k = np.exp(mu_J + 0.5 * sigma_J**2) - 1.0
+    drift_jump = (r - 0.5 * sigma**2 - lam * k) * dt
+    drift_smooth = (r - 0.5 * sigma**2) * dt
 
     paths = np.empty((steps, n_paths))
 
     for i in range(steps):
-        normal_diffusion = np.random.normal(0.0, 1.0, n_paths)
-        poisson_counts = np.random.poisson(lam * dt, n_paths)
-
-        step_jump = np.zeros(n_paths)
-        for j in range(n_paths):
-            k = poisson_counts[j]
-            if k > 0:
-                step_jump[j] = -np.random.gamma(k, 1.0 / eta)  # sum of k exponentials, negated
+        z = np.random.normal(0.0, 1.0, n_paths)
 
         if i == 0:
-            paths[i] = drift_term + vol_term * normal_diffusion + step_jump
+            # first month: diffusion + jump
+            step_jump = np.zeros(n_paths)
+            for j in range(n_paths):
+                if np.random.random() < lam:
+                    step_jump[j] = np.random.normal(mu_J, sigma_J)
+            paths[i] = drift_jump + vol_term * z + step_jump
         else:
-            paths[i] = paths[i - 1] + drift_term + vol_term * normal_diffusion + step_jump
+            # months 2-12: pure diffusion
+            if i == 1:
+                paths[i] = paths[0] + drift_smooth + vol_term * z
+            else:
+                paths[i] = paths[i-1] + drift_smooth + vol_term * z
 
     return S * np.exp(paths)
 
 @jit(nopython=True, cache=True)
 def montecarlo_option_pricer_numba(paths, T, K, r_f, option_type):
-    """Numba-optimized option pricing"""
     final_prices = paths[-1]
-    
     if option_type == 'Call':
         payoffs = np.maximum(final_prices - K, 0.0)
-    else:  # Put
+    else:
         payoffs = np.maximum(K - final_prices, 0.0)
-    
-    price = np.mean(payoffs) * np.exp(-r_f * T)
-    return price
+    return np.mean(payoffs) * np.exp(-r_f * T)
 
 @jit(nopython=True, cache=True)
 def compute_black_scholes_jump(V, B_f, r_f, T, sigma_total):
-    """Black-Scholes formulas for jump diffusion"""
     d1 = (np.log(V / B_f) + (r_f + 0.5 * sigma_total**2) * T) / (sigma_total * np.sqrt(T))
     d2 = d1 - sigma_total * np.sqrt(T)
     return d1, d2
 
-from scipy.optimize import fsolve
-from scipy.stats import norm
-import numpy as np
-
-def sigma_total_from_exp_jumps(sigma_diff, lam, eta):
-    # instantaneous variance add-on from compound Poisson with Y=-Exp(eta)
-    return np.sqrt(sigma_diff**2 + lam * (2.0 / (eta**2)))
+def sigma_total_from_normal_jumps(sigma_diff, lam, mu_J, sigma_J):
+    return np.sqrt(sigma_diff**2 + lam * (mu_J**2 + sigma_J**2))
 
 class JumpDiffusionPricer:
     def __init__(self, steps=252, n_paths=50000):
         self.steps = steps
         self.n_paths = n_paths
 
-    def montecarlo_jump_paths(self, S, T, r, sigma, lam, eta, seed=None):
+    def montecarlo_jump_paths(self, S, T, r, sigma, lam, mu_J, sigma_J, seed=None):
         if seed is not None:
             np.random.seed(seed)
-        return montecarlo_jump_paths_numba(S, T, r, sigma, lam, eta, self.steps, self.n_paths)
+        return montecarlo_jump_paths_numba(S, T, r, sigma, lam, mu_J, sigma_J, self.steps, self.n_paths)
 
-    def CCA_system_jd(self, unknowns, LCL_usd, sigma_lcl, B_f, r_f, T, lam, eta, seed):
+    def CCA_system_jd(self, unknowns, LCL_usd, sigma_lcl, B_f, r_f, T, lam, mu_J, sigma_J, seed):
         V, sigma_diff = unknowns
 
         if V <= 0 or sigma_diff <= 0:
             return np.array([1e10, 1e10])
 
         # Eq1: equity = call(V, B)
-        paths = self.montecarlo_jump_paths(V, T, r_f, sigma_diff, lam, eta, seed)
+        paths = self.montecarlo_jump_paths(V, T, r_f, sigma_diff, lam, mu_J, sigma_J, seed)
         call_jd = montecarlo_option_pricer_numba(paths, T, B_f, r_f, 'Call')
         eq1 = call_jd - LCL_usd
 
-        # Eq2: volatility matching (CCA-style)
-        sigma_total = sigma_total_from_exp_jumps(sigma_diff, lam, eta)
+        # Eq2: volatility matching
+        sigma_total = sigma_total_from_normal_jumps(sigma_diff, lam, mu_J, sigma_J)
         d1 = (np.log(V / B_f) + (r_f + 0.5 * sigma_total**2) * T) / (sigma_total * np.sqrt(T))
         eq2 = V * sigma_total * norm.cdf(d1) - LCL_usd * sigma_lcl
 
         return np.array([eq1, eq2])
 
-    def solve_CCA_jd(self, LCL_usd, sigma_lcl, B_f, r_f, T, lam, eta, seed=42):
+    def solve_CCA_jd(self, LCL_usd, sigma_lcl, B_f, r_f, T, lam, mu_J, sigma_J, seed=42):
         if any(np.isnan(x) or x <= 0 for x in [LCL_usd, sigma_lcl, B_f]):
             return self._nan_result()
 
@@ -272,31 +271,30 @@ class JumpDiffusionPricer:
 
         try:
             sol = fsolve(
-                lambda x: self.CCA_system_jd(x, LCL_usd, sigma_lcl, B_f, r_f, T, lam, eta, seed),
+                lambda x: self.CCA_system_jd(x, LCL_usd, sigma_lcl, B_f, r_f, T, lam, mu_J, sigma_J, seed),
                 x0=[V0, sig0],
                 full_output=True
             )
             V, sig_diff = sol[0]
 
             if (sol[2] == 1) and (V > 0) and (sig_diff > 0):
-                sigma_total = sigma_total_from_exp_jumps(sig_diff, lam, eta)
+                sigma_total = sigma_total_from_normal_jumps(sig_diff, lam, mu_J, sigma_J)
                 return {'V': V, 'sigma_diff': sig_diff, 'sigma_total': sigma_total, 'converged': True}
 
             return self._nan_result()
         except:
             return self._nan_result()
 
-    def compute_risk_jd(self, V, sigma_diff, B_f, r_f, T, lam, eta, seed=42):
+    def compute_risk_jd(self, V, sigma_diff, B_f, r_f, T, lam, mu_J, sigma_J, seed=42):
         if any(np.isnan(x) for x in [V, sigma_diff, B_f]) or V <= 0 or sigma_diff <= 0:
             return self._nan_risk_result()
 
         try:
-            paths = self.montecarlo_jump_paths(V, T, r_f, sigma_diff, lam, eta, seed)
-            put_jd  = montecarlo_option_pricer_numba(paths, T, B_f, r_f, 'Put')
+            paths = self.montecarlo_jump_paths(V, T, r_f, sigma_diff, lam, mu_J, sigma_J, seed)
+            put_jd = montecarlo_option_pricer_numba(paths, T, B_f, r_f, 'Put')
 
-            sigma_total = sigma_total_from_exp_jumps(sigma_diff, lam, eta)
-            d1 = (np.log(V / B_f) + (r_f + 0.5 * sigma_total**2) * T) / (sigma_total * np.sqrt(T))
-            d2 = d1 - sigma_total * np.sqrt(T)
+            sigma_total = sigma_total_from_normal_jumps(sigma_diff, lam, mu_J, sigma_J)
+            d1, d2 = compute_black_scholes_jump(V, B_f, r_f, T, sigma_total)
 
             df_debt = B_f * np.exp(-r_f * T)
             risky_debt = df_debt - put_jd
@@ -306,7 +304,7 @@ class JumpDiffusionPricer:
                 spread = (np.log(B_f / risky_debt) / T - r_f) * 10000
 
             return {
-                'sigma_V': sigma_total, 
+                'sigma_V': sigma_total,
                 'd2': d2,
                 'default_prob': norm.cdf(-d2),
                 'credit_spread_bps': spread,
@@ -323,25 +321,18 @@ class JumpDiffusionPricer:
 
     @staticmethod
     def _nan_risk_result():
-        return {k: np.nan for k in ['d2', 'default_prob', 'credit_spread_bps',
+        return {k: np.nan for k in ['sigma_V', 'd2', 'default_prob', 'credit_spread_bps',
                                     'put_value', 'risky_debt', 'leverage']}
 
 
-
 @jit(nopython=True, parallel=True, cache=True)
-def batch_montecarlo_jump_paths(S0, T, r, sigma, lam, eta, steps, n_paths, n_batches, K):
+def batch_montecarlo_jump_paths(S0, T, r, sigma, lam, mu_J, sigma_J, steps, n_paths, n_batches, K):
     results = np.empty((n_batches, 2))
-
     for i in prange(n_batches):
-        paths = montecarlo_jump_paths_numba(S0, T, r, sigma, lam, eta, steps, n_paths)
+        paths = montecarlo_jump_paths_numba(S0, T, r, sigma, lam, mu_J, sigma_J, steps, n_paths)
         ST = paths[-1]
-
-        call_price = np.mean(np.maximum(ST - K, 0.0)) * np.exp(-r * T)
-        put_price  = np.mean(np.maximum(K - ST, 0.0)) * np.exp(-r * T)
-
-        results[i, 0] = call_price
-        results[i, 1] = put_price
-
+        results[i, 0] = np.mean(np.maximum(ST - K, 0.0)) * np.exp(-r * T)
+        results[i, 1] = np.mean(np.maximum(K - ST, 0.0)) * np.exp(-r * T)
     return results
 
 ########################################################
