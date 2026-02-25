@@ -181,18 +181,25 @@ def pv_of_future_oil_revenue(government_take, prod_qty, reference_price, current
 # Model 2: Adding jumps
 ########################################################
 
+########################################################
+# Model 2: Adding double jumps (Baseline + OVX)
+########################################################
+
 @jit(nopython=True, cache=True)
-def montecarlo_jump_paths_numba(S, T, r, sigma, lam, mu_J, sigma_J, n_paths, steps):
+def montecarlo_jump_paths_numba(S, T, r, sigma, lam_base, mu_base, sig_base, lam_ovx, mu_ovx, sig_ovx, n_paths, steps):
     """
-    12 monthly steps over T=1 year.
-    Jump risk only at step 1 (next month). Steps 2-12 pure diffusion.
+    Simulates asset paths with two independent jump processes: 
+    1. Baseline jumps (political, global shocks)
+    2. OVX-driven jumps (oil market specific)
     """
     dt = T / steps
     vol_term = sigma * np.sqrt(dt)
 
-    # drift compensation only for the jump step
-    k = np.exp(mu_J + 0.5 * sigma_J**2) - 1.0
-    drift_jump = (r - 0.5 * sigma**2 - lam * k) * dt
+    # Drift compensation for both jump processes
+    k_base = np.exp(mu_base + 0.5 * sig_base**2) - 1.0
+    k_ovx = np.exp(mu_ovx + 0.5 * sig_ovx**2) - 1.0
+    
+    drift_jump = (r - 0.5 * sigma**2 - lam_base * k_base - lam_ovx * k_ovx) * dt
     drift_smooth = (r - 0.5 * sigma**2) * dt
 
     paths = np.empty((steps, n_paths))
@@ -200,19 +207,22 @@ def montecarlo_jump_paths_numba(S, T, r, sigma, lam, mu_J, sigma_J, n_paths, ste
     for i in range(steps):
         z = np.random.normal(0.0, 1.0, n_paths)
 
-        if i == 0:
-            # first month: diffusion + jump
+        if i < 4:
             step_jump = np.zeros(n_paths)
             for j in range(n_paths):
-                if np.random.random() < lam:
-                    step_jump[j] = np.random.normal(mu_J, sigma_J)
-            paths[i] = drift_jump + vol_term * z + step_jump
-        else:
-            # months 2-12: pure diffusion
-            if i == 1:
-                paths[i] = paths[0] + drift_smooth + vol_term * z
+                # Check for baseline jump
+                if np.random.random() < lam_base:
+                    step_jump[j] += np.random.normal(mu_base, sig_base)
+                # Check for OVX-driven jump
+                if np.random.random() < lam_ovx:
+                    step_jump[j] += np.random.normal(mu_ovx, sig_ovx)
+                    
+            if i == 0:
+                paths[i] = drift_jump + vol_term * z + step_jump
             else:
-                paths[i] = paths[i-1] + drift_smooth + vol_term * z
+                paths[i] = paths[i-1] + drift_jump + vol_term * z + step_jump
+        else:
+            paths[i] = paths[i-1] + drift_smooth + vol_term * z
 
     return S * np.exp(paths)
 
@@ -231,38 +241,43 @@ def compute_black_scholes_jump(V, B_f, r_f, T, sigma_total):
     d2 = d1 - sigma_total * np.sqrt(T)
     return d1, d2
 
-def sigma_total_from_normal_jumps(sigma_diff, lam, mu_J, sigma_J):
-    return np.sqrt(sigma_diff**2 + lam * (mu_J**2 + sigma_J**2))
+def sigma_total_from_normal_jumps(sigma_diff, lam_base, mu_base, sig_base, lam_ovx, mu_ovx, sig_ovx):
+    """
+    Splits total variance into continuous variance + baseline jump variance + OVX jump variance
+    """
+    var_base = lam_base * (mu_base**2 + sig_base**2)
+    var_ovx = lam_ovx * (mu_ovx**2 + sig_ovx**2)
+    return np.sqrt(sigma_diff**2 + var_base + var_ovx)
 
 class JumpDiffusionPricer:
     def __init__(self, steps=252, n_paths=50000):
         self.steps = steps
         self.n_paths = n_paths
 
-    def montecarlo_jump_paths(self, S, T, r, sigma, lam, mu_J, sigma_J, seed=None):
+    def montecarlo_jump_paths(self, S, T, r, sigma, lam_base, mu_base, sig_base, lam_ovx, mu_ovx, sig_ovx, seed=None):
         if seed is not None:
             np.random.seed(seed)
-        return montecarlo_jump_paths_numba(S, T, r, sigma, lam, mu_J, sigma_J, self.steps, self.n_paths)
+        return montecarlo_jump_paths_numba(S, T, r, sigma, lam_base, mu_base, sig_base, lam_ovx, mu_ovx, sig_ovx, self.steps, self.n_paths)
 
-    def CCA_system_jd(self, unknowns, LCL_usd, sigma_lcl, B_f, r_f, T, lam, mu_J, sigma_J, seed):
+    def CCA_system_jd(self, unknowns, LCL_usd, sigma_lcl, B_f, r_f, T, lam_base, mu_base, sig_base, lam_ovx, mu_ovx, sig_ovx, seed):
         V, sigma_diff = unknowns
 
         if V <= 0 or sigma_diff <= 0:
             return np.array([1e10, 1e10])
 
-        # Eq1: equity = call(V, B)
-        paths = self.montecarlo_jump_paths(V, T, r_f, sigma_diff, lam, mu_J, sigma_J, seed)
+        # Eq1: equity = call(V, B) with double jumps
+        paths = self.montecarlo_jump_paths(V, T, r_f, sigma_diff, lam_base, mu_base, sig_base, lam_ovx, mu_ovx, sig_ovx, seed)
         call_jd = montecarlo_option_pricer_numba(paths, T, B_f, r_f, 'Call')
         eq1 = call_jd - LCL_usd
 
-        # Eq2: volatility matching
-        sigma_total = sigma_total_from_normal_jumps(sigma_diff, lam, mu_J, sigma_J)
+        # Eq2: volatility matching splitting variance into 3 buckets
+        sigma_total = sigma_total_from_normal_jumps(sigma_diff, lam_base, mu_base, sig_base, lam_ovx, mu_ovx, sig_ovx)
         d1 = (np.log(V / B_f) + (r_f + 0.5 * sigma_total**2) * T) / (sigma_total * np.sqrt(T))
         eq2 = V * sigma_total * norm.cdf(d1) - LCL_usd * sigma_lcl
 
         return np.array([eq1, eq2])
 
-    def solve_CCA_jd(self, LCL_usd, sigma_lcl, B_f, r_f, T, lam, mu_J, sigma_J, seed=42):
+    def solve_CCA_jd(self, LCL_usd, sigma_lcl, B_f, r_f, T, lam_base, mu_base, sig_base, lam_ovx, mu_ovx, sig_ovx, seed=42):
         if any(np.isnan(x) or x <= 0 for x in [LCL_usd, sigma_lcl, B_f]):
             return self._nan_result()
 
@@ -271,29 +286,29 @@ class JumpDiffusionPricer:
 
         try:
             sol = fsolve(
-                lambda x: self.CCA_system_jd(x, LCL_usd, sigma_lcl, B_f, r_f, T, lam, mu_J, sigma_J, seed),
+                lambda x: self.CCA_system_jd(x, LCL_usd, sigma_lcl, B_f, r_f, T, lam_base, mu_base, sig_base, lam_ovx, mu_ovx, sig_ovx, seed),
                 x0=[V0, sig0],
                 full_output=True
             )
             V, sig_diff = sol[0]
 
             if (sol[2] == 1) and (V > 0) and (sig_diff > 0):
-                sigma_total = sigma_total_from_normal_jumps(sig_diff, lam, mu_J, sigma_J)
+                sigma_total = sigma_total_from_normal_jumps(sig_diff, lam_base, mu_base, sig_base, lam_ovx, mu_ovx, sig_ovx)
                 return {'V': V, 'sigma_diff': sig_diff, 'sigma_total': sigma_total, 'converged': True}
 
             return self._nan_result()
         except:
             return self._nan_result()
 
-    def compute_risk_jd(self, V, sigma_diff, B_f, r_f, T, lam, mu_J, sigma_J, seed=42):
+    def compute_risk_jd(self, V, sigma_diff, B_f, r_f, T, lam_base, mu_base, sig_base, lam_ovx, mu_ovx, sig_ovx, seed=42):
         if any(np.isnan(x) for x in [V, sigma_diff, B_f]) or V <= 0 or sigma_diff <= 0:
             return self._nan_risk_result()
 
         try:
-            paths = self.montecarlo_jump_paths(V, T, r_f, sigma_diff, lam, mu_J, sigma_J, seed)
+            paths = self.montecarlo_jump_paths(V, T, r_f, sigma_diff, lam_base, mu_base, sig_base, lam_ovx, mu_ovx, sig_ovx, seed)
             put_jd = montecarlo_option_pricer_numba(paths, T, B_f, r_f, 'Put')
 
-            sigma_total = sigma_total_from_normal_jumps(sigma_diff, lam, mu_J, sigma_J)
+            sigma_total = sigma_total_from_normal_jumps(sigma_diff, lam_base, mu_base, sig_base, lam_ovx, mu_ovx, sig_ovx)
             d1, d2 = compute_black_scholes_jump(V, B_f, r_f, T, sigma_total)
 
             df_debt = B_f * np.exp(-r_f * T)
@@ -324,7 +339,6 @@ class JumpDiffusionPricer:
         return {k: np.nan for k in ['sigma_V', 'd2', 'default_prob', 'credit_spread_bps',
                                     'put_value', 'risky_debt', 'leverage']}
 
-
 @jit(nopython=True, parallel=True, cache=True)
 def batch_montecarlo_jump_paths(S0, T, r, sigma, lam, mu_J, sigma_J, steps, n_paths, n_batches, K):
     results = np.empty((n_batches, 2))
@@ -335,6 +349,137 @@ def batch_montecarlo_jump_paths(S0, T, r, sigma, lam, mu_J, sigma_J, steps, n_pa
         results[i, 1] = np.mean(np.maximum(K - ST, 0.0)) * np.exp(-r * T)
     return results
 
+
+
+import numpy as np
+from scipy.stats import norm
+from scipy.optimize import least_squares
+import math
+
+def sigma_total_from_normal_jumps(sigma_diff, lam_base, mu_base, sig_base, lam_ovx, mu_ovx, sig_ovx):
+    """ Calculates total annualized variance including both jump buckets """
+    var_base = lam_base * (mu_base**2 + sig_base**2)
+    var_ovx = lam_ovx * (mu_ovx**2 + sig_ovx**2)
+    return np.sqrt(sigma_diff**2 + var_base + var_ovx)
+
+class AnalyticalJumpDiffusionPricer:
+    def __init__(self, max_jumps=4):
+        self.max_jumps = max_jumps # Summing up to 4 jumps is mathematically sufficient for T=1
+
+    def double_jump_call_and_delta(self, V, B, r, T, sigma_diff, lam_base, mu_base, sig_base, lam_ovx, mu_ovx, sig_ovx):
+        """ Closed-form analytical pricer for Call Option and Delta under Double Jump-Diffusion """
+        # Compensators to keep the asset drift risk-neutral
+        k_base = np.exp(mu_base + 0.5 * sig_base**2) - 1.0
+        k_ovx = np.exp(mu_ovx + 0.5 * sig_ovx**2) - 1.0
+        
+        # Risk-neutral jump intensities
+        lam_prime_base = lam_base * (1.0 + k_base)
+        lam_prime_ovx = lam_ovx * (1.0 + k_ovx)
+        
+        call_price = 0.0
+        delta_jd = 0.0
+        put_price = 0.0
+        
+        # Double summation: n baseline jumps, m OVX jumps
+        for n in range(self.max_jumps + 1):
+            prob_n = np.exp(-lam_prime_base * T) * (lam_prime_base * T)**n / math.factorial(n)
+            
+            for m in range(self.max_jumps + 1):
+                prob_m = np.exp(-lam_prime_ovx * T) * (lam_prime_ovx * T)**m / math.factorial(m)
+                weight = prob_n * prob_m
+                
+                if weight < 1e-8:
+                    continue
+                    
+                # Adjusted variance and volatility for this specific (n, m) jump path
+                var_nm = sigma_diff**2 + (n * sig_base**2 + m * sig_ovx**2) / T
+                sig_nm = np.sqrt(var_nm)
+                
+                # Adjusted risk-free rate for this specific path
+                r_nm = r - lam_base * k_base - lam_ovx * k_ovx + (n * (mu_base + 0.5 * sig_base**2) + m * (mu_ovx + 0.5 * sig_ovx**2)) / T
+                
+                # Black-Scholes metrics
+                d1 = (np.log(V / B) + (r_nm + 0.5 * sig_nm**2) * T) / (sig_nm * np.sqrt(T))
+                d2 = d1 - sig_nm * np.sqrt(T)
+                
+                bs_call = V * norm.cdf(d1) - B * np.exp(-r_nm * T) * norm.cdf(d2)
+                bs_put = B * np.exp(-r_nm * T) * norm.cdf(-d2) - V * norm.cdf(-d1)
+                bs_delta = norm.cdf(d1)
+                
+                call_price += weight * bs_call
+                put_price += weight * bs_put
+                delta_jd += weight * bs_delta
+                
+        return call_price, put_price, delta_jd
+
+    def CCA_system_jd(self, unknowns, LCL_usd, sigma_lcl, B_f, r_f, T, lam_base, mu_base, sig_base, lam_ovx, mu_ovx, sig_ovx):
+        V, sigma_diff = unknowns
+
+        # Get analytical price and delta
+        call_jd, _, delta_jd = self.double_jump_call_and_delta(V, B_f, r_f, T, sigma_diff, lam_base, mu_base, sig_base, lam_ovx, mu_ovx, sig_ovx)
+        
+        # Get total volatility to map to observable equity volatility
+        sigma_total = sigma_total_from_normal_jumps(sigma_diff, lam_base, mu_base, sig_base, lam_ovx, mu_ovx, sig_ovx)
+        
+        # The two fundamental CCA calibration equations
+        eq1 = call_jd - LCL_usd
+        eq2 = V * delta_jd * sigma_total - LCL_usd * sigma_lcl
+
+        return np.array([eq1, eq2])
+
+    def solve_CCA_jd(self, LCL_usd, sigma_lcl, B_f, r_f, T, lam_base, mu_base, sig_base, lam_ovx, mu_ovx, sig_ovx, v_guess, sig_guess):
+        if any(np.isnan(x) or x <= 0 for x in [LCL_usd, sigma_lcl, B_f]):
+            return {'V': np.nan, 'sigma_diff': np.nan, 'sigma_total': np.nan, 'converged': False}
+
+        # Strict bounds to prevent impossible negative values
+        bounds = ([LCL_usd * 0.5, 0.001], [np.inf, np.inf])
+
+        try:
+            sol = least_squares(
+                lambda x: self.CCA_system_jd(x, LCL_usd, sigma_lcl, B_f, r_f, T, lam_base, mu_base, sig_base, lam_ovx, mu_ovx, sig_ovx),
+                x0=[v_guess, sig_guess],
+                bounds=bounds,
+                method='trf',
+                xtol=1e-8,
+                ftol=1e-8
+            )
+            
+            V, sig_diff = sol.x
+
+            if sol.success and V > 0 and sig_diff > 0:
+                sigma_total = sigma_total_from_normal_jumps(sig_diff, lam_base, mu_base, sig_base, lam_ovx, mu_ovx, sig_ovx)
+                return {'V': V, 'sigma_diff': sig_diff, 'sigma_total': sigma_total, 'converged': True}
+
+            return {'V': np.nan, 'sigma_diff': np.nan, 'sigma_total': np.nan, 'converged': False}
+        except:
+            return {'V': np.nan, 'sigma_diff': np.nan, 'sigma_total': np.nan, 'converged': False}
+
+    def compute_risk_jd(self, V, sigma_diff, B_f, r_f, T, lam_base, mu_base, sig_base, lam_ovx, mu_ovx, sig_ovx):
+        """ Analytically computes default probability, spreads, and implied distance to default """
+        _, put_jd, _ = self.double_jump_call_and_delta(V, B_f, r_f, T, sigma_diff, lam_base, mu_base, sig_base, lam_ovx, mu_ovx, sig_ovx)
+        
+        sigma_total = sigma_total_from_normal_jumps(sigma_diff, lam_base, mu_base, sig_base, lam_ovx, mu_ovx, sig_ovx)
+        
+        # Risk metrics
+        df_debt = B_f * np.exp(-r_f * T)
+        risky_debt = df_debt - put_jd
+        
+        spread = np.nan
+        if risky_debt > 0:
+            spread = (np.log(B_f / risky_debt) / T - r_f) * 10000
+            
+        # Distance to default using total volatility
+        d2 = (np.log(V / B_f) + (r_f - 0.5 * sigma_total**2) * T) / (sigma_total * np.sqrt(T))
+
+        return {
+            'sigma_total': sigma_total,
+            'd2': d2,
+            'default_prob': norm.cdf(-d2),
+            'credit_spread_bps': spread,
+            'put_value': put_jd,
+            'risky_debt': risky_debt,
+            'leverage': B_f / V
+        }
 ########################################################
 # Graphs
 ########################################################
@@ -617,3 +762,65 @@ def correlation_table(df, dd_col='distance_to_distress', cds_col='cds_spread',
         display.to_csv(save_path, index=False)
 
     return display, raw
+
+
+def plot_d2_scatter_grouped(df, exporter_countries, control_countries,
+                            save_path=None, figsize=(8, 6)):
+    """
+    Aggregated scatter: z-scored DtD vs z-scored CDS, exporters vs controls,
+    with separate power-law fits.
+    """
+    # Filter to relevant countries
+    df = df[df['country'].isin(exporter_countries + control_countries)].copy()
+    df = df.dropna(subset=['distance_to_distress', 'cds_spread'])
+    df = df[(df['distance_to_distress'] > 0) & (df['cds_spread'] > 0)]
+
+    # Z-score per country
+    for col in ['distance_to_distress', 'cds_spread']:
+        df[f'{col}_z'] = df.groupby('country')[col].transform(
+            lambda s: (s - s.mean()) / s.std()
+        )
+
+    df['group'] = np.where(
+        df['country'].isin(exporter_countries), 'Oil Exporters', 'Controls'
+    )
+
+    colors = {'Oil Exporters': '#C0392B', 'Controls': '#2C5F8A'}
+
+    fig, ax = plt.subplots(figsize=figsize)
+
+    for group, color in colors.items():
+        g = df[df['group'] == group]
+        x = g['distance_to_distress_z'].values
+        y = g['cds_spread_z'].values
+
+        ax.scatter(x, y, s=8, alpha=0.3, color=color, edgecolors='none', label=f'{group} (n={len(g)})')
+
+        # Polynomial fit (quadratic) on z-scores — power law doesn't apply
+        # on z-scores which can be negative, so use polynomial instead
+        mask = np.isfinite(x) & np.isfinite(y)
+        if mask.sum() > 20:
+            coeffs = np.polyfit(x[mask], y[mask], 2)
+            x_fit = np.linspace(np.percentile(x[mask], 1), np.percentile(x[mask], 99), 300)
+            y_fit = np.polyval(coeffs, x_fit)
+            ax.plot(x_fit, y_fit, color=color, lw=2.5, zorder=5)
+
+            # R²
+            y_pred = np.polyval(coeffs, x[mask])
+            ss_res = np.sum((y[mask] - y_pred) ** 2)
+            ss_tot = np.sum((y[mask] - y[mask].mean()) ** 2)
+            r2 = 1 - ss_res / ss_tot if ss_tot > 0 else np.nan
+            ax.plot([], [], ' ', label=f'  R² = {r2:.3f}')
+
+    ax.set_xlabel('Distance-to-Distress (z-score)', fontsize=11)
+    ax.set_ylabel('CDS Spread (z-score)', fontsize=11)
+    ax.set_title('Aggregated DtD vs CDS: Oil Exporters vs Controls', fontsize=13, fontweight='bold')
+    ax.legend(fontsize=9, framealpha=0.9)
+    ax.axhline(0, color='grey', lw=0.5, ls='--', alpha=0.5)
+    ax.axvline(0, color='grey', lw=0.5, ls='--', alpha=0.5)
+    ax.grid(True, alpha=0.15)
+    fig.tight_layout()
+
+    if save_path:
+        fig.savefig(save_path, dpi=150, bbox_inches='tight')
+    return fig
