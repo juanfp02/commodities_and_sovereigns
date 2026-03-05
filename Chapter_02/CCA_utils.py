@@ -185,6 +185,10 @@ def pv_of_future_oil_revenue(government_take, prod_qty, reference_price, current
 # Model 2: Adding double jumps (Baseline + OVX)
 ########################################################
 
+def eta_to_jump_params(eta):
+    """Single-parameter exponential jump: ln(1+J) ~ -Exp(η)"""
+    return -eta, eta  # mu_J, sigma_J
+
 @jit(nopython=True, cache=True)
 def montecarlo_jump_paths_numba(S, T, r, sigma, lam_base, mu_base, sig_base, lam_ovx, mu_ovx, sig_ovx, n_paths, steps):
     """
