@@ -367,8 +367,8 @@ def sigma_total_from_normal_jumps(sigma_diff, lam_base, mu_base, sig_base, lam_o
     return np.sqrt(sigma_diff**2 + var_base + var_ovx)
 
 class AnalyticalJumpDiffusionPricer:
-    def __init__(self, max_jumps=4):
-        self.max_jumps = max_jumps # Summing up to 4 jumps is mathematically sufficient for T=1
+    def __init__(self, max_jumps=20):
+        self.max_jumps = max_jumps  # Truncated at 20 terms per Merton (1976), Section 4.3.4
 
     def double_jump_call_and_delta(self, V, B, r, T, sigma_diff, lam_base, mu_base, sig_base, lam_ovx, mu_ovx, sig_ovx):
         """ Closed-form analytical pricer for Call Option and Delta under Double Jump-Diffusion """
