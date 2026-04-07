@@ -3,6 +3,7 @@ import numpy as np
 import pandas as pd
 from scipy.stats import norm
 from scipy.optimize import fsolve, brentq
+from scipy.optimize import root
 import matplotlib.pyplot as plt
 import matplotlib.dates as mdates
 from scipy.optimize import curve_fit
@@ -14,53 +15,158 @@ from scipy import stats
 
 
 #Core functions
-def CCA_system(unknowns, LCL_usd, sigma_lcl, B_f, r_f,T):
 
-    """
-    Returns the values of the two CCA equations:
+def CCA_system_M0(log_unknowns, LCL_usd, sigma_lcl, B_f, r_f, T):
+    """Log-transformed unknowns for positivity: log_unknowns = [ln(V), ln(σ)]"""
+    V = np.exp(log_unknowns[0])
+    sigma_V = np.exp(log_unknowns[1])
 
-    Eq1: Call pricing: LCL_usd = V N(d1) - B_f e^{-rT} N(d2) 
-    Eq2: Volatility transfer: LCL_usd·sigma_LCL = V sigma_V N(d1)
-
-    """
-
-    V, sigma_V = unknowns
-
-    if V<=0 or sigma_V<=0:
-        return (1e10, 1e10)
-    
     d1 = (np.log(V / B_f) + (r_f + 0.5 * sigma_V**2) * T) / (sigma_V * np.sqrt(T))
     d2 = d1 - sigma_V * np.sqrt(T)
-    
+
     eq1 = V * norm.cdf(d1) - B_f * np.exp(-r_f * T) * norm.cdf(d2) - LCL_usd
     eq2 = V * sigma_V * norm.cdf(d1) - LCL_usd * sigma_lcl
-    
-    return (eq1, eq2)
 
-def solve_CCA(LCL_usd, sigma_lcl, B_f, r_f, T):
-    """
-    Solve for implied sovereign asset value (V) and volatility (sigma_V).
-    
-    Returns dict: {'V', 'sigma_V', 'converged'}
-    """
+    return np.array([eq1, eq2])
+
+
+
+def solve_CCA_M0(LCL_usd, sigma_lcl, B_f, r_f, T):
     if any(np.isnan(x) or x <= 0 for x in [LCL_usd, sigma_lcl, B_f]):
         return {'V': np.nan, 'sigma_V': np.nan, 'converged': False}
-    
-    # Initial guess: V ≈ LCL + B_f, σ_V ≈ de-levered σ_LCL
-    V0 = LCL_usd + B_f
-    sig0 = sigma_lcl * LCL_usd / V0
-    
-    try:
-        sol, info, ier, msg = fsolve(
-            CCA_system, x0=(V0, sig0),
-            args=(LCL_usd, sigma_lcl, B_f, r_f, T),
-            full_output=True
-        )
-        V, sig = sol
-        ok = (ier == 1) and (V > 0) and (sig > 0)
-        return {'V': V if ok else np.nan, 'sigma_V': sig if ok else np.nan, 'converged': ok}
-    except Exception:
+
+    # Multiple initial guesses
+    V_base = LCL_usd + B_f
+    sig_base = sigma_lcl * LCL_usd / V_base
+
+    guesses = [
+        (V_base, sig_base),       # standard M0 guess
+        (V_base * 1.5, sig_base),    # overshoot V
+        (V_base * 0.5, sig_base),    # undershoot V
+        (V_base, sig_base * 2),   # higher vol
+        (V_base, sig_base * 0.5), # lower vol
+        (LCL_usd * 2, sig_base), # LCL-scaled
+        (B_f * 1.5, sig_base),   # barrier-scaled
+    ]
+
+    best = {'V': np.nan, 'sigma_V': np.nan, 'converged': False}
+    best_resid = np.inf
+
+    for V0, sig0 in guesses:
+        if V0 <= 0 or sig0 <= 0:
+            continue
+
+        # Method 1: fsolve on log-transformed
+        try:
+            sol, info, ier, msg = fsolve(
+                CCA_system_M0,
+                x0=[np.log(V0), np.log(sig0)],
+                args=(LCL_usd, sigma_lcl, B_f, r_f, T),
+                full_output=True
+            )
+            V, sig = np.exp(sol[0]), np.exp(sol[1])
+            resid = np.sum(info['fvec']**2)
+            if ier == 1 and V > 0 and sig > 0 and resid < best_resid:
+                best = {'V': V, 'sigma_V': sig, 'converged': True}
+                best_resid = resid
+                if resid < 1e-12:
+                    return best
+        except:
+            pass
+
+        # Method 2: least_squares with bounds
+        try:
+            def resid_func(x):
+                V, sig = x
+                if V <= 0 or sig <= 0:
+                    return np.array([1e10, 1e10])
+                d1 = (np.log(V / B_f) + (r_f + 0.5 * sig**2) * T) / (sig * np.sqrt(T))
+                d2 = d1 - sig * np.sqrt(T)
+                eq1 = V * norm.cdf(d1) - B_f * np.exp(-r_f * T) * norm.cdf(d2) - LCL_usd
+                eq2 = V * sig * norm.cdf(d1) - LCL_usd * sigma_lcl
+                return np.array([eq1, eq2])
+
+            from scipy.optimize import least_squares
+            sol = least_squares(
+                resid_func,
+                x0=[V0, sig0],
+                bounds=([LCL_usd * 0.1, 1e-4], [V0 * 20, 5.0]),
+                method='trf',
+                xtol=1e-10, ftol=1e-10,
+                max_nfev=5000
+            )
+            V, sig = sol.x
+            resid = np.sum(sol.fun**2)
+            if sol.success and V > 0 and sig > 0 and resid < best_resid:
+                best = {'V': V, 'sigma_V': sig, 'converged': True}
+                best_resid = resid
+                if resid < 1e-12:
+                    return best
+        except:
+            pass
+
+    # Accept if residual is small enough even if not flagged converged
+    if best_resid < 1e-6 and not best['converged']:
+        best['converged'] = True
+
+    return best
+
+
+
+def CCA_system(unknowns, LCL_usd, sigma_lcl, B_f, r_f, T):
+    V, sigma_V = unknowns
+    if V <= 0 or sigma_V <= 0:
+        return (1e10, 1e10)
+    d1 = (np.log(V / B_f) + (r_f + 0.5 * sigma_V**2) * T) / (sigma_V * np.sqrt(T))
+    d2 = d1 - sigma_V * np.sqrt(T)
+    eq1 = V * norm.cdf(d1) - B_f * np.exp(-r_f * T) * norm.cdf(d2) - LCL_usd
+    eq2 = V * sigma_V * norm.cdf(d1) - LCL_usd * sigma_lcl
+    return (eq1, eq2)
+
+
+def solve_CCA(LCL_usd, sigma_lcl, B_f, r_f, T):
+    if any(np.isnan(x) or x <= 0 for x in [LCL_usd, sigma_lcl, B_f]):
         return {'V': np.nan, 'sigma_V': np.nan, 'converged': False}
+
+    V0   = LCL_usd + B_f
+    sig0 = sigma_lcl * LCL_usd / V0
+
+    guesses = [
+        (V0,         sig0),
+        (V0 * 1.1,   sig0 * 0.8),
+        (V0 * 0.9,   sig0 * 1.2),
+        (B_f * 1.01, sigma_lcl * 3.0),
+        (B_f * 1.05, sigma_lcl * 2.0),
+        (B_f * 1.75, sigma_lcl * 2.0),
+        (B_f * 1.10, sigma_lcl * 1.5),
+        (B_f * 1.20, sigma_lcl * 1.0),
+    ]
+
+    best       = {'V': np.nan, 'sigma_V': np.nan, 'converged': False}
+    best_resid = np.inf
+
+    for V_init, sig_init in guesses:
+        try:
+            sol, info, ier, _ = fsolve(
+                CCA_system,
+                x0=(V_init, sig_init),
+                args=(LCL_usd, sigma_lcl, B_f, r_f, T),
+                full_output=True,
+                xtol=1e-10,
+                maxfev=10000
+            )
+            V, sig  = sol
+            resid   = np.sum(np.array(info['fvec'])**2)
+            ok      = (ier == 1) and (V > 0) and (sig > 0) and (resid < best_resid)
+            if ok:
+                best       = {'V': V, 'sigma_V': sig, 'converged': True}
+                best_resid = resid
+            if resid < 1e-12:
+                return best
+        except Exception:
+            continue
+
+    return best
 
 def compute_risk(V, sigma_V, B_f, r_f, T=1.0):
     """
@@ -145,17 +251,17 @@ def compute_fx_volatility(fx_series, window=52):
 ########################################################
 
 def CCA_system_M1(log_unknowns, LCL_usd, sigma_lcl, B_f, r_f, y, gamma, T):
-    """Log-transformed unknowns for positivity: log_unknowns = [ln(V), ln(σ)]"""
     V = np.exp(log_unknowns[0])
     sigma_V = np.exp(log_unknowns[1])
 
     gy = gamma * y
-    Ve = V * np.exp(-gy * T)
+    Veff = V * np.exp(-gy * T)
+
     d1 = (np.log(V / B_f) + (r_f - gy + 0.5 * sigma_V**2) * T) / (sigma_V * np.sqrt(T))
     d2 = d1 - sigma_V * np.sqrt(T)
 
-    eq1 = Ve * norm.cdf(d1) - B_f * np.exp(-r_f * T) * norm.cdf(d2) - LCL_usd
-    eq2 = Ve * sigma_V * norm.cdf(d1) - LCL_usd * sigma_lcl
+    eq1 = Veff * norm.cdf(d1) - B_f * np.exp(-r_f * T) * norm.cdf(d2) - LCL_usd
+    eq2 = Veff * sigma_V * norm.cdf(d1) - LCL_usd * sigma_lcl
 
     return np.array([eq1, eq2])
 
@@ -172,8 +278,8 @@ def solve_CCA_M1(LCL_usd, sigma_lcl, B_f, r_f, y, gamma, T):
     # Multiple initial guesses
     V_base = LCL_usd + B_f
     sig_base = sigma_lcl * LCL_usd / V_base
-    V_cy = V_base * np.exp(gy * T)
-    sig_cy = sigma_lcl * LCL_usd / (V_cy * np.exp(-gy * T)) if V_cy * np.exp(-gy * T) > 0 else sig_base
+    V_cy = V_base * np.exp(gy * T)  # CORRECT
+    sig_cy = sigma_lcl * LCL_usd / (V_cy * np.exp(-gy * T)) 
 
     guesses = [
         (V_cy, sig_cy),           # convenience yield adjusted
@@ -217,12 +323,15 @@ def solve_CCA_M1(LCL_usd, sigma_lcl, B_f, r_f, y, gamma, T):
                 V, sig = x
                 if V <= 0 or sig <= 0:
                     return np.array([1e10, 1e10])
+
                 gy_loc = gamma * y
-                Ve = V * np.exp(-gy_loc * T)
+                Veff = V * np.exp(-gy_loc * T)
+
                 d1 = (np.log(V / B_f) + (r_f - gy_loc + 0.5 * sig**2) * T) / (sig * np.sqrt(T))
                 d2 = d1 - sig * np.sqrt(T)
-                eq1 = Ve * norm.cdf(d1) - B_f * np.exp(-r_f * T) * norm.cdf(d2) - LCL_usd
-                eq2 = Ve * sig * norm.cdf(d1) - LCL_usd * sigma_lcl
+
+                eq1 = Veff * norm.cdf(d1) - B_f * np.exp(-r_f * T) * norm.cdf(d2) - LCL_usd
+                eq2 = Veff * sig * norm.cdf(d1) - LCL_usd * sigma_lcl
                 return np.array([eq1, eq2])
 
             from scipy.optimize import least_squares
@@ -290,45 +399,49 @@ def pv_of_future_oil_revenue(government_take, prod_qty, reference_price, current
 ########################################################
 # Model 2: Adding jumps
 ########################################################
+from scipy.optimize import least_squares
+from scipy.special import gammaln
+from scipy.stats import norm
+import numpy as np
+
+
 class FixedJumpCCAPricer:
     """
     M2: Fixed jump size J, OVX-driven intensity λ.
     Single Merton (1976) series — no Monte Carlo, no double summation.
     """
+
     def __init__(self, J, max_terms=20):
-        self.J = J
+        self.J         = J
         self.max_terms = max_terms
-        self.log1J = np.log(1 + J)
-        self.k = J  # compensator: exp(ln(1+J)) - 1 = J
+        self.log1J     = np.log(1 + J)
+        self.k         = J
 
     def sigma_total(self, sigma_diff, lam):
-        """Total annualized vol: diffusion + jump variance"""
         return np.sqrt(sigma_diff**2 + lam * self.log1J**2)
 
     def _series(self, V, B, r, T, sigma_diff, lam):
         lam_prime = lam * (1 + self.k)
-        lam_T = lam_prime * T
-        sqt = np.sqrt(T)
+        lam_T     = lam_prime * T
+        sqt       = np.sqrt(T)
 
-        # Determine summation range around Poisson mode
-        mode = max(int(lam_T), 0)
-        n_low = max(0, mode - 40)
+        mode   = max(int(lam_T), 0)
+        n_low  = max(0, mode - 40)
         n_high = mode + 40
 
-        call = 0.0
-        put = 0.0
+        call  = 0.0
+        put   = 0.0
         delta = 0.0
 
         for n in range(n_low, n_high + 1):
-            # Log-weight to avoid factorial overflow
-            log_w = -lam_T + n * np.log(lam_T + 1e-300) - gammaln(n + 1)
+            log_w  = -lam_T + n * np.log(lam_T + 1e-300) - gammaln(n + 1)
             weight = np.exp(log_w)
             if weight < 1e-15:
                 continue
 
             r_n = r - lam * self.k + n * self.log1J / T
-            d1 = (np.log(V / B) + (r_n + 0.5 * sigma_diff**2) * T) / (sigma_diff * sqt)
-            d2 = d1 - sigma_diff * sqt
+            d1  = (np.log(V / B) + (r_n + 0.5 * sigma_diff**2) * T) / (sigma_diff * sqt)
+            d2  = d1 - sigma_diff * sqt
 
             call  += weight * (V * norm.cdf(d1) - B * np.exp(-r_n * T) * norm.cdf(d2))
             put   += weight * (B * np.exp(-r_n * T) * norm.cdf(-d2) - V * norm.cdf(-d1))
@@ -346,90 +459,32 @@ class FixedJumpCCAPricer:
 
         eq1 = call - LCL_usd
         eq2 = V * delta * sig_total - LCL_usd * sigma_lcl
+
         return np.array([eq1, eq2])
 
     def solve_CCA(self, LCL_usd, sigma_lcl, B_f, r_f, T, lam, v_guess=None, sig_guess=None):
         if any(np.isnan(x) or x <= 0 for x in [LCL_usd, sigma_lcl, B_f]):
             return {'V': np.nan, 'sigma_diff': np.nan, 'sigma_total': np.nan, 'converged': False}
 
-        V0 = v_guess if v_guess else LCL_usd + B_f
+        V0   = v_guess   if v_guess   else LCL_usd + B_f
         sig0 = sig_guess if sig_guess else sigma_lcl * LCL_usd / V0
 
         try:
             sol = least_squares(
                 lambda x: self.CCA_system(x, LCL_usd, sigma_lcl, B_f, r_f, T, lam),
                 x0=[V0, sig0],
-                bounds=([LCL_usd * 0.5, 0.001], [np.inf, np.inf]),
+                bounds=([LCL_usd * 0.5, 1e-6], [np.inf, np.inf]),
                 method='trf',
-                xtol=1e-8, ftol=1e-8
+                xtol=1e-10, ftol=1e-10, gtol=1e-10,
+                max_nfev=10000
             )
             V, sig_diff = sol.x
             if sol.success and V > 0 and sig_diff > 0:
                 return {'V': V, 'sigma_diff': sig_diff,
                         'sigma_total': self.sigma_total(sig_diff, lam), 'converged': True}
             return {'V': np.nan, 'sigma_diff': np.nan, 'sigma_total': np.nan, 'converged': False}
-        except:
+        except Exception:
             return {'V': np.nan, 'sigma_diff': np.nan, 'sigma_total': np.nan, 'converged': False}
-
-    def compute_risk(self, V, sigma_diff, B_f, r_f, T, lam):
-        nans = {k: np.nan for k in ['sigma_total', 'd2', 'default_prob',
-                                     'credit_spread_bps', 'put_value', 'risky_debt', 'leverage']}
-        if any(np.isnan(x) for x in [V, sigma_diff, B_f]) or V <= 0 or sigma_diff <= 0:
-            return nans
-
-        _, put, _ = self._series(V, B_f, r_f, T, sigma_diff, lam)
-        put = max(put, 0.0)
-
-        sig_total = self.sigma_total(sigma_diff, lam)
-        df_debt = B_f * np.exp(-r_f * T)
-        risky_debt = df_debt - put
-
-        if risky_debt > 0:
-            spread = (np.log(B_f / risky_debt) / T - r_f) * 10000
-        else:
-            spread = np.nan
-
-        # DD from jump-adjusted drift
-        df_debt = B_f * np.exp(-r_f * T)
-        pd_implied = put / df_debt
-        d2 = -norm.ppf(min(pd_implied, 1 - 1e-10))
-
-        return {
-            'sigma_total': sig_total,
-            'd2': d2,
-            'default_prob': norm.cdf(-d2),
-            'credit_spread_bps': spread,
-            'put_value': put,
-            'risky_debt': risky_debt,
-            'leverage': B_f / V
-        }
-
-
-def compute_rns_M2(df, J, t, n_terms=20):
-    V    = df['implied_V_M2'].values
-    sA   = df['implied_sigma_V_M2'].values  # this is sigma_diff
-    B    = df['B_f_M2'].values
-    rf   = df['risk_free_rate'].values
-    lam  = df['lambda_annual_M2'].values
-
-    k = J
-    log1k = np.log(1 + k)
-    lam_prime = lam * (1 + k)
-    sqt = np.sqrt(t)
-
-    put = np.zeros(len(V))
-    for n in range(n_terms):
-        r_n  = rf - lam * k + n * log1k / t
-        d1_n = (np.log(V / B) + (r_n + 0.5 * sA**2) * t) / (sA * sqt)
-        d2_n = d1_n - sA * sqt
-        bs_put = B * np.exp(-r_n * t) * norm.cdf(-d2_n) - V * norm.cdf(-d1_n)
-        weight = np.exp(-lam_prime * t) * (lam_prime * t)**n / math.factorial(n)
-        put += weight * np.maximum(bs_put, 0)
-
-    V_fcl = B * np.exp(-rf * t) - put
-    with np.errstate(divide='ignore', invalid='ignore'):
-        rns = np.where(V_fcl > 0, (1/t) * np.log(B / V_fcl) - rf, np.nan)
-    return rns * 10000
 ########################################################
 # Model 2: Adding double jumps (Baseline + OVX)
 ########################################################
