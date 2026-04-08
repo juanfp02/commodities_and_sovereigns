@@ -251,48 +251,48 @@ def compute_fx_volatility(fx_series, window=52):
 ########################################################
 
 def CCA_system_M1(log_unknowns, LCL_usd, sigma_lcl, B_f, r_f, y, gamma, T):
-    V = np.exp(log_unknowns[0])
-    sigma_V = np.exp(log_unknowns[1])
+    log_V = np.clip(log_unknowns[0], -50, 50)
+    log_sig = np.clip(log_unknowns[1], -50, 10)
+    V = np.exp(log_V)
+    sigma_total = np.exp(log_sig)
 
     gy = gamma * y
     Veff = V * np.exp(-gy * T)
 
-    d1 = (np.log(V / B_f) + (r_f - gy + 0.5 * sigma_V**2) * T) / (sigma_V * np.sqrt(T))
-    d2 = d1 - sigma_V * np.sqrt(T)
+    d1 = (np.log(V / B_f) + (r_f - gy + 0.5 * sigma_total**2) * T) / (sigma_total * np.sqrt(T))
+    d2 = d1 - sigma_total * np.sqrt(T)
 
     eq1 = Veff * norm.cdf(d1) - B_f * np.exp(-r_f * T) * norm.cdf(d2) - LCL_usd
-    eq2 = Veff * sigma_V * norm.cdf(d1) - LCL_usd * sigma_lcl
+    eq2 = Veff * sigma_total * norm.cdf(d1) - LCL_usd * sigma_lcl
 
     return np.array([eq1, eq2])
 
 
-
 def solve_CCA_M1(LCL_usd, sigma_lcl, B_f, r_f, y, gamma, T):
     if any(np.isnan(x) or x <= 0 for x in [LCL_usd, sigma_lcl, B_f]):
-        return {'V': np.nan, 'sigma_V': np.nan, 'converged': False}
+        return {'V': np.nan, 'sigma_total': np.nan, 'converged': False}
     if np.isnan(y):
-        return {'V': np.nan, 'sigma_V': np.nan, 'converged': False}
+        return {'V': np.nan, 'sigma_total': np.nan, 'converged': False}
 
     gy = gamma * y
 
-    # Multiple initial guesses
     V_base = LCL_usd + B_f
     sig_base = sigma_lcl * LCL_usd / V_base
-    V_cy = V_base * np.exp(gy * T)  # CORRECT
-    sig_cy = sigma_lcl * LCL_usd / (V_cy * np.exp(-gy * T)) 
+    V_cy = V_base * np.exp(gy * T)
+    sig_cy = sigma_lcl * LCL_usd / (V_cy * np.exp(-gy * T))
 
     guesses = [
-        (V_cy, sig_cy),           # convenience yield adjusted
-        (V_base, sig_base),       # standard M0 guess
-        (V_cy * 1.5, sig_cy),    # overshoot V
-        (V_cy * 0.5, sig_cy),    # undershoot V
-        (V_base, sig_base * 2),   # higher vol
-        (V_base, sig_base * 0.5), # lower vol
-        (LCL_usd * 2, sig_base), # LCL-scaled
-        (B_f * 1.5, sig_base),   # barrier-scaled
+        (V_cy, sig_cy),
+        (V_base, sig_base),
+        (V_cy * 1.5, sig_cy),
+        (V_cy * 0.5, sig_cy),
+        (V_base, sig_base * 2),
+        (V_base, sig_base * 0.5),
+        (LCL_usd * 2, sig_base),
+        (B_f * 1.5, sig_base),
     ]
 
-    best = {'V': np.nan, 'sigma_V': np.nan, 'converged': False}
+    best = {'V': np.nan, 'sigma_total': np.nan, 'converged': False}
     best_resid = np.inf
 
     for V0, sig0 in guesses:
@@ -310,7 +310,7 @@ def solve_CCA_M1(LCL_usd, sigma_lcl, B_f, r_f, y, gamma, T):
             V, sig = np.exp(sol[0]), np.exp(sol[1])
             resid = np.sum(info['fvec']**2)
             if ier == 1 and V > 0 and sig > 0 and resid < best_resid:
-                best = {'V': V, 'sigma_V': sig, 'converged': True}
+                best = {'V': V, 'sigma_total': sig, 'converged': True}
                 best_resid = resid
                 if resid < 1e-12:
                     return best
@@ -346,19 +346,17 @@ def solve_CCA_M1(LCL_usd, sigma_lcl, B_f, r_f, y, gamma, T):
             V, sig = sol.x
             resid = np.sum(sol.fun**2)
             if sol.success and V > 0 and sig > 0 and resid < best_resid:
-                best = {'V': V, 'sigma_V': sig, 'converged': True}
+                best = {'V': V, 'sigma_total': sig, 'converged': True}
                 best_resid = resid
                 if resid < 1e-12:
                     return best
         except:
             pass
 
-    # Accept if residual is small enough even if not flagged converged
     if best_resid < 1e-6 and not best['converged']:
         best['converged'] = True
 
     return best
-
 ########################################################
 # Model 1: LCL augmentation and eta estimation
 ########################################################
@@ -454,11 +452,14 @@ class FixedJumpCCAPricer:
         if V <= 0 or sigma_diff <= 0:
             return np.array([1e10, 1e10])
 
-        call, _, delta = self._series(V, B_f, r_f, T, sigma_diff, lam)
-        sig_total = self.sigma_total(sigma_diff, lam)
+        call,  _, delta = self._series(V,              B_f, r_f, T, sigma_diff, lam)
+        call_up, _, _   = self._series(V * (1 + self.J), B_f, r_f, T, sigma_diff, lam)
+
+        diffusion_var = (V * delta * sigma_diff) ** 2
+        jump_var      = lam * (call_up - call) ** 2
 
         eq1 = call - LCL_usd
-        eq2 = V * delta * sig_total - LCL_usd * sigma_lcl
+        eq2 = np.sqrt(diffusion_var + jump_var) - LCL_usd * sigma_lcl
 
         return np.array([eq1, eq2])
 
