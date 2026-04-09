@@ -136,14 +136,14 @@ class ConvenienceYieldCCAPricer:
     def _equations(self, V, sigma_V, LCL_usd, sigma_lcl, B_f, r_f, y, sigma_y, T):
         gy          = self.gamma * y
         Veff        = V * np.exp(-gy * T)
-        sigma_total = self._sigma_total(sigma_V, sigma_y)
+        sigma_total = np.sqrt(sigma_V**2 + (self.gamma * sigma_y)**2)
         sqt         = np.sqrt(T)
 
         d1 = (np.log(V / B_f) + (r_f - gy + 0.5 * sigma_total**2) * T) / (sigma_total * sqt)
         d2 = d1 - sigma_total * sqt
 
         eq1 = Veff * norm.cdf(d1) - B_f * np.exp(-r_f * T) * norm.cdf(d2) - LCL_usd
-        eq2 = Veff * sigma_total * norm.cdf(d1) - LCL_usd * sigma_lcl
+        eq2 = Veff * sigma_V * norm.cdf(d1) - LCL_usd * sigma_lcl  # σ_V not σ_total
 
         return np.array([eq1, eq2])
 
