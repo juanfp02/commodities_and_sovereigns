@@ -143,7 +143,7 @@ class ConvenienceYieldCCAPricer:
         d2 = d1 - sigma_total * sqt
 
         eq1 = Veff * norm.cdf(d1) - B_f * np.exp(-r_f * T) * norm.cdf(d2) - LCL_usd
-        eq2 = Veff * sigma_V * norm.cdf(d1) - LCL_usd * sigma_lcl  # σ_V not σ_total
+        eq2 = Veff * sigma_total * norm.cdf(d1) - LCL_usd * sigma_lcl
 
         return np.array([eq1, eq2])
 
