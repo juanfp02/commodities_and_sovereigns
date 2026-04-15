@@ -135,11 +135,15 @@ class ConvenienceYieldCCAPricer:
 
     def _equations(self, V, sigma_V, LCL_usd, sigma_lcl, B_f, r_f, y, sigma_y, T):
         gy          = self.gamma * y
-        Veff        = V * np.exp(-gy * T)
-        sigma_total = np.sqrt(sigma_V**2 + (self.gamma * sigma_y)**2)
+        gs          = self.gamma * sigma_y
+        sigma_total = np.sqrt(sigma_V**2 + gs**2)
         sqt         = np.sqrt(T)
 
-        d1 = (np.log(V / B_f) + (r_f - gy + 0.5 * sigma_total**2) * T) / (sigma_total * sqt)
+        # Geske (1978) stochastic dividend discount
+        phi_inv = np.exp(-gy * T + 0.5 * gs**2 * T)
+        Veff    = V * phi_inv
+
+        d1 = (np.log(Veff / B_f) + (r_f + 0.5 * sigma_total**2) * T) / (sigma_total * sqt)
         d2 = d1 - sigma_total * sqt
 
         eq1 = Veff * norm.cdf(d1) - B_f * np.exp(-r_f * T) * norm.cdf(d2) - LCL_usd
@@ -171,71 +175,71 @@ class ConvenienceYieldCCAPricer:
         ]
 
     def solve_CCA_M1(self, LCL_usd, sigma_lcl, B_f, r_f, y, sigma_y, T):
-        if any(np.isnan(x) or x <= 0 for x in [LCL_usd, sigma_lcl, B_f]):
-            return {'implied_V': np.nan, 'implied_sigma_V': np.nan, 'converged': False}
-        if np.isnan(y):
-            return {'implied_V': np.nan, 'implied_sigma_V': np.nan, 'converged': False}
+            if any(np.isnan(x) or x <= 0 for x in [LCL_usd, sigma_lcl, B_f]):
+                return {'implied_V': np.nan, 'implied_sigma_V': np.nan, 'converged': False, 'convenience_yield': np.nan}
+            if np.isnan(y):
+                return {'implied_V': np.nan, 'implied_sigma_V': np.nan, 'converged': False, 'convenience_yield': np.nan}
 
-        best        = {'implied_V': np.nan, 'implied_sigma_V': np.nan, 'converged': False}
-        best_resid  = np.inf
+            best        = {'implied_V': np.nan, 'implied_sigma_V': np.nan, 'converged': False, 'convenience_yield': y}
+            best_resid  = np.inf
 
-        for V0, sig0 in self._guesses(LCL_usd, sigma_lcl, B_f, y, T):
-            if V0 <= 0 or sig0 <= 0:
-                continue
+            for V0, sig0 in self._guesses(LCL_usd, sigma_lcl, B_f, y, T):
+                if V0 <= 0 or sig0 <= 0:
+                    continue
 
-            # --- Method 1: fsolve on log-transformed unknowns ---
-            try:
-                sol, info, ier, _ = fsolve(
-                    self.CCA_system_M1,
-                    x0=[np.log(V0), np.log(sig0)],
-                    args=(LCL_usd, sigma_lcl, B_f, r_f, y, sigma_y, T),
-                    full_output=True
-                )
-                V, sig = np.exp(sol[0]), np.exp(sol[1])
-                resid  = np.sum(info['fvec']**2)
-                if ier == 1 and V > 0 and sig > 0 and resid < best_resid:
-                    best       = {'implied_V': V,
-                                  'implied_sigma_V': self._sigma_total(sig, sigma_y),
-                                  'converged': True}
-                    best_resid = resid
-                    if resid < 1e-12:
-                        return best
-            except Exception:
-                pass
+                try:
+                    sol, info, ier, _ = fsolve(
+                        self.CCA_system_M1,
+                        x0=[np.log(V0), np.log(sig0)],
+                        args=(LCL_usd, sigma_lcl, B_f, r_f, y, sigma_y, T),
+                        full_output=True
+                    )
+                    V, sig = np.exp(sol[0]), np.exp(sol[1])
+                    resid  = np.sum(info['fvec']**2)
+                    if ier == 1 and V > 0 and sig > 0 and resid < best_resid:
+                        best       = {'implied_V': V,
+                                    'implied_sigma_V': self._sigma_total(sig, sigma_y),
+                                    'converged': True,
+                                    'convenience_yield': y}
+                        best_resid = resid
+                        if resid < 1e-12:
+                            return best
+                except Exception:
+                    pass
 
-            # --- Method 2: least_squares with bounds ---
-            try:
-                def resid_func(x):
-                    V, sig = x
-                    if V <= 0 or sig <= 0:
-                        return np.array([1e10, 1e10])
-                    return self._equations(V, sig, LCL_usd, sigma_lcl,
-                                           B_f, r_f, y, sigma_y, T)
+                try:
+                    def resid_func(x):
+                        V, sig = x
+                        if V <= 0 or sig <= 0:
+                            return np.array([1e10, 1e10])
+                        return self._equations(V, sig, LCL_usd, sigma_lcl,
+                                            B_f, r_f, y, sigma_y, T)
 
-                sol   = least_squares(
-                    resid_func,
-                    x0=[V0, sig0],
-                    bounds=([LCL_usd * 0.1, 1e-4], [V0 * 20, 5.0]),
-                    method='trf',
-                    xtol=1e-10, ftol=1e-10,
-                    max_nfev=5000
-                )
-                V, sig = sol.x
-                resid  = np.sum(sol.fun**2)
-                if sol.success and V > 0 and sig > 0 and resid < best_resid:
-                    best       = {'implied_V': V,
-                                  'implied_sigma_V': self._sigma_total(sig, sigma_y),
-                                  'converged': True}
-                    best_resid = resid
-                    if resid < 1e-12:
-                        return best
-            except Exception:
-                pass
+                    sol   = least_squares(
+                        resid_func,
+                        x0=[V0, sig0],
+                        bounds=([LCL_usd * 0.1, 1e-4], [V0 * 20, 5.0]),
+                        method='trf',
+                        xtol=1e-10, ftol=1e-10,
+                        max_nfev=5000
+                    )
+                    V, sig = sol.x
+                    resid  = np.sum(sol.fun**2)
+                    if sol.success and V > 0 and sig > 0 and resid < best_resid:
+                        best       = {'implied_V': V,
+                                    'implied_sigma_V': self._sigma_total(sig, sigma_y),
+                                    'converged': True,
+                                    'convenience_yield': y}
+                        best_resid = resid
+                        if resid < 1e-12:
+                            return best
+                except Exception:
+                    pass
 
-        if best_resid < 1e-6 and not best['converged']:
-            best['converged'] = True
+            if best_resid < 1e-6 and not best['converged']:
+                best['converged'] = True
 
-        return best
+            return best
 
 class FixedJumpCCAPricer:
     """
